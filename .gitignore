@@ -3,7 +3,7 @@ tools
 !tools/packages.config
 
 # Website output directory
-Docs/
+docs/
 
 # WYAM generated files
 config.wyam.dll
