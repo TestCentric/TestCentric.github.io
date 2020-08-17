@@ -23,5 +23,4 @@ if [ $? -ne 0 ]; then
 fi
 
 # Start Cake
-echo $CAKE_ARGUMENTS
 dotnet tool run dotnet-cake "$SCRIPT" "${CAKE_ARGUMENTS[@]}"

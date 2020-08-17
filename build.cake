@@ -6,7 +6,7 @@ var target = Argument("target", "Default");
 
 const string WYAM = "wyam";
 //var PROJECT_DIR = Context.Environment.WorkingDirectory.FullPath + "/";
-var OUTPUT_DIR = Path.GetFullPath("docs/");
+var OUTPUT_DIR = Path.GetFullPath("output/");
 var DEPLOY_DIR = Path.GetFullPath("../testcentric.github.io.deploy/");
 
 var PROJECT_URI = "https://github.com/TestCentric/testcentric.github.io";
@@ -28,20 +28,20 @@ Setup((context) =>
 });
 
 Task("Build")
-    .Does(() => StartProcess(WYAM, $"build -o {OUTPUT_DIR}"));
+    .Does(() => StartProcess(WYAM, "build"));
 
 Task("Preview")
     .IsDependentOn("Build")
-    .Does(() => StartProcess(WYAM, $"preview {OUTPUT_DIR}"));
+    .Does(() => StartProcess(WYAM, "preview"));
 
 Task("Deploy")
     .IsDependentOn("Build")
     .Does(() => 
     {
         if(FileExists("./CNAME"))
-            CopyFile("./CNAME", $"{OUTPUT_DIR}CNAME");
+            CopyFileToDirectory("./CNAME", OUTPUT_DIR);
 
-        EnsureDirectoryExists(DEPLOY_DIR); // Temporary
+        //EnsureDirectoryExists(DEPLOY_DIR); // Temporary
 
         DeleteDirectory(DEPLOY_DIR, new DeleteDirectorySettings {
             Recursive = true,
@@ -54,15 +54,11 @@ Task("Deploy")
             BranchName = "master"
         });
 
-        //CopyDirectory(OUTPUT_DIR, DEPLOY_DIR);
+        CopyDirectory(OUTPUT_DIR, DEPLOY_DIR);
 
-        // GitAddAll(DEPLOY_DIR);
-        // GitCommit(DEPLOY_DIR, UserId, UserEmail, "Deploy site to GitHub Pages");
-        // GitPush(DEPLOY_DIR, UserId, GitHubPassword);
-
-        // GitAddAll("./");
-        // GitCommit("./", UserId, UserEmail, "Deploy site to GitHub Pages");
-        // GitPush("./", UserId, GitHubPassword);
+        GitAddAll(DEPLOY_DIR);
+        GitCommit(DEPLOY_DIR, UserId, UserEmail, "Deploy site to GitHub Pages");
+        GitPush(DEPLOY_DIR, UserId, GitHubPassword);
     });
 
 Task("Default")
