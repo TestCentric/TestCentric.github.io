@@ -5,12 +5,13 @@ using Path = System.IO.Path;
 var target = Argument("target", "Default");
 
 const string WYAM = "wyam";
-//var PROJECT_DIR = Context.Environment.WorkingDirectory.FullPath + "/";
 var OUTPUT_DIR = Path.GetFullPath("output/");
 var DEPLOY_DIR = Path.GetFullPath("../testcentric.github.io.deploy/");
 
 var PROJECT_URI = "https://github.com/TestCentric/testcentric.github.io";
 var PREVIEW_URI = "http://localhost#5080";
+
+var DEPLOY_BRANCH = "master";
 
 const string USER_ID = "USER_ID";
 const string USER_EMAIL = "USER_EMAIL";
@@ -41,17 +42,16 @@ Task("Deploy")
         if(FileExists("./CNAME"))
             CopyFileToDirectory("./CNAME", OUTPUT_DIR);
 
-        //EnsureDirectoryExists(DEPLOY_DIR); // Temporary
-
-        DeleteDirectory(DEPLOY_DIR, new DeleteDirectorySettings {
-            Recursive = true,
-            Force = true
-        });
+        if (Directory.Exists(DEPLOY_DIR))
+            DeleteDirectory(DEPLOY_DIR, new DeleteDirectorySettings {
+                Recursive = true,
+                Force = true
+            });
 
         GitClone(PROJECT_URI, DEPLOY_DIR, new GitCloneSettings()
         {
             Checkout = true,
-            BranchName = "master"
+            BranchName = DEPLOY_BRANCH
         });
 
         CopyDirectory(OUTPUT_DIR, DEPLOY_DIR);
