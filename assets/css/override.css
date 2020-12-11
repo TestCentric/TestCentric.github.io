@@ -7,6 +7,7 @@
   color: black;
   font-style: normal;
 }
+body.layout-top-nav .main-header .navbar,
 .main-header .navbar {
   min-height: 60px;
   margin-left: 300px;
