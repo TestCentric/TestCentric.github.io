@@ -42,7 +42,7 @@ Task("Deploy")
         if(FileExists("./CNAME"))
             CopyFileToDirectory("./CNAME", OUTPUT_DIR);
 
-        if (Directory.Exists(DEPLOY_DIR))
+        if (DirectoryExists(DEPLOY_DIR))
             DeleteDirectory(DEPLOY_DIR, new DeleteDirectorySettings {
                 Recursive = true,
                 Force = true
@@ -58,7 +58,7 @@ Task("Deploy")
 
         GitAddAll(DEPLOY_DIR);
         GitCommit(DEPLOY_DIR, UserId, UserEmail, "Deploy site to GitHub Pages");
-        GitPush(DEPLOY_DIR, UserId, GitHubPassword);
+        GitPush(DEPLOY_DIR, UserId, GitHubPassword, DEPLOY_BRANCH);
     });
 
 Task("Default")
