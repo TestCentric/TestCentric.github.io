@@ -10,5 +10,6 @@ body.layout-top-nav .main-header > .navbar {
   min-height: 60px;
 }
 .main-header .logo {
+  text-align: left;
   margin: 5px 0;
 }
