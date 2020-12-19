@@ -176,6 +176,8 @@
 
                     </ul>
                 </li>
+                <li><a href="/tc-lite/api">TC-Lite API</a></li>
+                <li><a href="/tc-lite/license">License</a></li>
 
                     </ul>
                             
@@ -273,7 +275,7 @@ static class AnotherClass
 </code></pre>
 <h1 id="variations">Variations</h1>
 <p>All three examples above provide the data using a static field of type <code>TestCaseData[]</code>,
-which is initialized with three <code>TestCaseData</code> members containing the actual arguments.
+which is initialized with three <code><a href="/tc-lite/api/TCLite/TestCaseData">TestCaseData</a></code> members containing the actual arguments.
 We could have used a property or a method rather than a field and each of them could
 be initialized in different ways. Here are some variations.</p>
 <h2 id="using-fields">Using Fields</h2>
@@ -313,7 +315,7 @@ in a separate class to avoid exposing a field publicly. For example...</p>
         };
 </code></pre>
 <p>With properties, you may also use a <code>yield</code> expression...</p>
-<pre><code class="language-csharp">        static IEnumerable&lt;TestCaseData&gt; DivideCases
+<pre><code class="language-csharp">        static IEnumerable&lt;<a href="/tc-lite/api/TCLite/TestCaseData">TestCaseData</a>&gt; DivideCases
         {
             get
             {
@@ -337,7 +339,7 @@ some situations...</p>
         }
 </code></pre>
 <p>and...</p>
-<pre><code class="language-csharp">        static IEnumerable&lt;TestCaseData&gt; DivideCases()
+<pre><code class="language-csharp">        static IEnumerable&lt;<a href="/tc-lite/api/TCLite/TestCaseData">TestCaseData</a>&gt; DivideCases()
         {
             yield return new TestCaseData(12, 3, 4);
             yield return new TestCaseData(12, 2, 6);
@@ -357,7 +359,7 @@ static int[] EvenNumbers = new int[] { 2, 4, 6, 8 };
 </code></pre>
 <p>If your test method actually takes an array as an argument, some of the techniques using
 nested arrays may not work. <strong>TC-Lite</strong> may be confused and give an error. With too many
-levels of nested arrays, the user may be confused as well. Use <code>TestCaseData</code> in such cases...</p>
+levels of nested arrays, the user may be confused as well. Use <code><a href="/tc-lite/api/TCLite/TestCaseData">TestCaseData</a></code> in such cases...</p>
 <pre><code class="language-csharp">[TestCaseData(nameof(ArrayData))]
 public void TestMethod(object[][] array)
 {

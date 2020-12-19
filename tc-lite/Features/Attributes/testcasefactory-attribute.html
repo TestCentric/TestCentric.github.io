@@ -173,6 +173,8 @@
 
                     </ul>
                 </li>
+                <li><a href="/tc-lite/api">TC-Lite API</a></li>
+                <li><a href="/tc-lite/license">License</a></li>
 
                     </ul>
                             
@@ -205,9 +207,9 @@ as follows:</p>
     }
 }
 
-class DivideCases : ITestCaseFactory
+class DivideCases : <a href="/tc-lite/api/TCLite.Interfaces/ITestCaseFactory">ITestCaseFactory</a>
 {
-    public IEnumerator&lt;ITestCaseData&gt; GetEnumerator()
+    public IEnumerator&lt;<a href="/tc-lite/api/TCLite.Interfaces/ITestCaseData">ITestCaseData</a>&gt; GetEnumerator()
     {
         yield return new TestCaseData( 12, 3, 4 );
         yield return new TestCaseData( 12, 2, 6 );
@@ -216,8 +218,8 @@ class DivideCases : ITestCaseFactory
 }
 </code></pre>
 <p>The Type argument in this form represents the class that provides test cases.
-It must have a default constructor and implement <code>ITestCaseFactory</code>. The enumerator
-must return <code>ITestCaseData</code> items compatible with the signature of the test on which
+It must have a default constructor and implement <code><a href="/tc-lite/api/TCLite.Interfaces/ITestCaseFactory">ITestCaseFactory</a></code>. The enumerator
+must return <code><a href="/tc-lite/api/TCLite.Interfaces/ITestCaseData">ITestCaseData</a></code> items compatible with the signature of the test on which
 the attribute appears.</p>
 <p>See the <strong>Test Case Construction</strong> section below for details.</p>
 <p>Note that it is not possible to pass parameters to the source, even if the source is a method.</p>

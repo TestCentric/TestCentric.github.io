@@ -172,6 +172,8 @@
 
                     </ul>
                 </li>
+                <li><a href="/tc-lite/api">TC-Lite API</a></li>
+                <li><a href="/tc-lite/license">License</a></li>
 
                     </ul>
                             
@@ -252,7 +254,7 @@ from the test run using the <code>--where</code> option.</p>
 </tbody>
 </table>
 <p><strong>Note:</strong> When the attribute is applied to a class, it is not technically present "on" the
-individual cases. That is, if you wee to use reflection, you would not find <code>CategoryAttribute</code>
+individual cases. That is, if you wee to use reflection, you would not find <code><a href="/tc-lite/api/TCLite/CategoryAttribute">CategoryAttribute</a></code>
 on the methods. However, when <strong>TC-Lite</strong> runs the tests, the result is the same as if the
 attribute were placed on every test method in the class.</p>
 <h1 id="custom-category-attributes">Custom Category Attributes</h1>
@@ -263,7 +265,7 @@ sets the category name to the name of your class.</p>
 just like any other category, but has a simpler syntax. A test reporting
 system might make use of the attribute to provide special reports.</p>
 <pre><code class="language-csharp">[AttributeUsage(AttributeTargets.Method, AllowMultiple=false)]
-public class CriticalAttribute : CategoryAttribute
+public class CriticalAttribute : <a href="/tc-lite/api/TCLite/CategoryAttribute">CategoryAttribute</a>
 { }
 </code></pre>
 <pre><code class="language-csharp">[Test, Critical]

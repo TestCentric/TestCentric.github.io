@@ -172,6 +172,8 @@
 
                     </ul>
                 </li>
+                <li><a href="/tc-lite/api">TC-Lite API</a></li>
+                <li><a href="/tc-lite/license">License</a></li>
 
                     </ul>
                             
@@ -214,16 +216,16 @@ namespace Tests
 </code></pre>
 <h1 id="notes">Notes</h1>
 <ol>
-<li><p>As seen above, when there are multiple test cases, <code>DescriptionAttribute</code> applies to
+<li><p>As seen above, when there are multiple test cases, <code><a href="/tc-lite/api/TCLite/DescriptionAttribute">DescriptionAttribute</a></code> applies to
 <strong>each</strong> of them. If you want to specify a separate description to each case, then
-use the <code>Description</code> <strong>property</strong> of the <code>TestCaseAttribute</code>, like this:</p>
+use the <code>Description</code> <strong>property</strong> of the <code><a href="/tc-lite/api/TCLite/TestCaseAttribute">TestCaseAttribute</a></code>, like this:</p>
 <pre><code class="language-csharp">[TestCase(1, Description="Description1")]
 [TestCase(2, Description="Description2")]
 ...
 </code></pre>
 </li>
 <li><p>The C# syntax can sometimes be a bit confusing. To make it easier for your code
-to be read, consider placing any <code>DescriptionAttribute</code> on a separate line either
+to be read, consider placing any <code><a href="/tc-lite/api/TCLite/DescriptionAttribute">DescriptionAttribute</a></code> on a separate line either
 before or after all the test cases. In particular, novice programmers are often
 confused when the attribute is interleaved with the test cases.</p>
 </li>
