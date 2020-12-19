@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>TestCentric - New Release</title>
+        <title>TestCentric - TestCentric Runner</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
@@ -63,7 +63,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li class="active"><a href="/">Home</a></li>
-        <li><a href="/testcentric-gui">GUI Runner</a></li>
+        <li class="active"><a href="/testcentric-gui">GUI Runner</a></li>
         <li><a href="/tc-lite">TC-Lite</a></li>
  
                         </ul>       
@@ -88,14 +88,35 @@
                     <ul class="sidebar-menu">
                         
 
-        <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
-            <li><a href="/blog/Release">Release</a></li>
-    
-    <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
-        <li><a href="/blog/archive/2016/01">January, 2016</a></li>
-    
-        <li class="header"><i class="fa fa-user"></i> Authors</li>    
-            <li><a href="/blog/author/me">me</a></li>
+                <li><a href="/testcentric-gui/overview">Overview</a></li>
+                <li class="treeview">
+                    <a href="/testcentric-gui/GettingStarted">Getting Started</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/testcentric-gui/GettingStarted/installation">Installing the GUI</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/starting">Starting the GUI</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/running-tests">Running Tests</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/stopping-tests">Stopping a Test Run</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/testcentric-gui/Features">GUI Elements</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/testcentric-gui/Features/main-window">Main Window</a></li>
+                <li><a href="/testcentric-gui/Features/main-menu">Main Menu</a></li>
+                <li><a href="/testcentric-gui/Features/context-menu">Context Menu</a></li>
+                <li><a href="/testcentric-gui/Features/mini-gui">Mini-Gui</a></li>
+                <li><a href="/testcentric-gui/Features/settings-dialog">Settings Dialog</a></li>
+                <li><a href="/testcentric-gui/Features/extensions-dialog">Extensions Dialog</a></li>
+                <li><a href="/testcentric-gui/Features/test-properties">Test Properties</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/testcentric-gui/command-line">Command Line</a></li>
+                <li><a href="/testcentric-gui/release-notes">Release Notes</a></li>
+                <li><a href="/testcentric-gui/license">License</a></li>
 
                     </ul>
                             
@@ -109,25 +130,94 @@
 
 
 		<section class="content-header">
-			<h1>New Release</h1>
+			<h1>TestCentric Runner</h1>
 		</section>
 	<section class="content">
-		
-
-
-
-<dl class="dl-horizontal" style="margin-bottom: 12px;">
-    <dt style="text-align: left;"><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Friday, January 1, 2016</dd>
-        <dt style="text-align: left;"><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release">Release</a></dd>
-            <dt style="text-align: left;"><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/me">me</a></dd>
-</dl>
-
-
-<p>There is a new release out, go get it now.</p>
-
+		    <h2>Overview</h2>
+        <p>Provides a <a href="overview">general overview</a> of the TestCentric GUI.</p>
+    <h2>Getting Started</h2>
+        <p>How to <a href="GettingStarted">install and use</a> the TestCentric GUI.</p>
+			<div class="box">
+				<div class="box-body no-padding">
+					<table class="table table-striped table-hover two-cols-alt table-responsive">
+						
+						<tbody>
+								<tr>
+									<td><strong><a href="/testcentric-gui/GettingStarted/installation">Installing the GUI</a></strong></td>
+									<td>
+How to install the TestCentric GUI.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/testcentric-gui/GettingStarted/starting">Starting the GUI</a></strong></td>
+									<td>
+Starting the TestCentric GUI.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/testcentric-gui/GettingStarted/running-tests">Running Tests</a></strong></td>
+									<td>
+How to load and run a set of tests under.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/testcentric-gui/GettingStarted/stopping-tests">Stopping a Test Run</a></strong></td>
+									<td>
+How to stop a test run without waiting for it to complete.									</td>
+								</tr>
+						</tbody>				
+					</table>
+				</div>
+			</div> 
+    <h2>GUI Elements</h2>
+        <p>Describes <a href="Features">the principal elements</a> of the TestCentric GUI.</p>
+			<div class="box">
+				<div class="box-body no-padding">
+					<table class="table table-striped table-hover two-cols-alt table-responsive">
+						
+						<tbody>
+								<tr>
+									<td><strong><a href="/testcentric-gui/Features/main-window">Main Window</a></strong></td>
+									<td>
+Describes the Main Window of the runner, where a user spends most of their time.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/testcentric-gui/Features/main-menu">Main Menu</a></strong></td>
+									<td>
+Explains commands available in the main menu of the runner.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/testcentric-gui/Features/context-menu">Context Menu</a></strong></td>
+									<td>
+Explains commands available in the context menu displayed by the test tree.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/testcentric-gui/Features/mini-gui">Mini-Gui</a></strong></td>
+									<td>
+Describes an alternative GUI display requiring less screen space.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/testcentric-gui/Features/settings-dialog">Settings Dialog</a></strong></td>
+									<td>
+Displays settings that control TestCentric and allows changing them.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/testcentric-gui/Features/extensions-dialog">Extensions Dialog</a></strong></td>
+									<td>
+Lists engine extension points and installed extensions.									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/testcentric-gui/Features/test-properties">Test Properties</a></strong></td>
+									<td>
+Displays details about an individual test and its execution.									</td>
+								</tr>
+						</tbody>				
+					</table>
+				</div>
+			</div> 
+    <h2>Command Line</h2>
+        <p>Shows to run TestCentric from the command line and lists available options.</p>
+    <h2>Release Notes</h2>
+        <p>Displays the <a href="release-notes.html">Release Notes</a> showing changes made in each release of TestCentric.</p>
+    <h2>License</h2>
+        <p>Displays the <a href="license.html">TestCentric Runner license</a>.</p>
 
 	</section>
                 

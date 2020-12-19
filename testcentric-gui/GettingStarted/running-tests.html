@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>TestCentric - TestCentric</title>
+        <title>TestCentric - Running Tests</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -29,7 +29,7 @@
 
         
     </head>
-    <body class="hold-transition wyam layout-boxed layout-top-nav ">    
+    <body class="hold-transition wyam layout-boxed  ">    
         <div class="top-banner"></div>
         <div class="wrapper with-container">
             <!-- Header -->
@@ -45,6 +45,10 @@
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
                                         
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -57,7 +61,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li class="active"><a href="/">Home</a></li>
-        <li><a href="/testcentric-gui">GUI Runner</a></li>
+        <li class="active"><a href="/testcentric-gui">GUI Runner</a></li>
         <li><a href="/tc-lite">TC-Lite</a></li>
  
                         </ul>       
@@ -69,12 +73,13 @@
             </header>
             
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="main-sidebar hidden">
+            <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#about-the-name">About the Name</a></p>
-<p><a href="#about-me">About Me</a></p>
-<p><a href="#software">Software</a></p>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#loading-tests">Loading Tests</a></p>
+<p><a href="#using-the-run-button">Using the Run Button</a></p>
+<p><a href="#using-the-context-menu">Using the Context Menu</a></p>
+<p><a href="#using-the-tests-menu">Using the Tests Menu</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -85,6 +90,36 @@
 
                     <ul class="sidebar-menu">
                         
+
+                <li><a href="/testcentric-gui/overview">Overview</a></li>
+                <li class="treeview active">
+                    <a href="/testcentric-gui/GettingStarted">Getting Started</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/testcentric-gui/GettingStarted/installation">Installing the GUI</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/starting">Starting the GUI</a></li>
+                <li class="selected"><a href="/testcentric-gui/GettingStarted/running-tests">Running Tests</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/stopping-tests">Stopping a Test Run</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/testcentric-gui/Features">GUI Elements</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/testcentric-gui/Features/main-window">Main Window</a></li>
+                <li><a href="/testcentric-gui/Features/main-menu">Main Menu</a></li>
+                <li><a href="/testcentric-gui/Features/context-menu">Context Menu</a></li>
+                <li><a href="/testcentric-gui/Features/mini-gui">Mini-Gui</a></li>
+                <li><a href="/testcentric-gui/Features/settings-dialog">Settings Dialog</a></li>
+                <li><a href="/testcentric-gui/Features/extensions-dialog">Extensions Dialog</a></li>
+                <li><a href="/testcentric-gui/Features/test-properties">Test Properties</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/testcentric-gui/command-line">Command Line</a></li>
+                <li><a href="/testcentric-gui/release-notes">Release Notes</a></li>
+                <li><a href="/testcentric-gui/license">License</a></li>
 
                     </ul>
                             
@@ -98,53 +133,41 @@
 
 
 		<section class="content-header">
-			<h1>TestCentric</h1>
+			<h1>Running Tests</h1>
 		</section>
 	<section class="content">
-		<h1 id="about-the-name">About the Name</h1>
-<p>Our name comes from the phrase "Test-Centric Development," a term I use when working with
-software teams. It describes an approach where pretty much everything a team does has a test of
-some kind behind it, ranging from micro-tests of the software to more subjective "tests" that
-help us decide what engineering practices work best for us.</p>
-<p>In addition to working with teams and conducting training, the TestCentric group is focused on
-developing tools and techniques that support that approach to software development. Currently,
-all the TestCentric tools are Open Source, although there may be commercial versions of some of
-them in the future.</p>
-<h1 id="about-me">About Me</h1>
-<p>I'm Charlie Poole and I've worked in software development since the 1970s. In 2001 I came across Extreme Programming and in particular Test-Driven Development. I was involved in the NUnit project
-beginning around 2002 and still have some involvement today.</p>
-<p>Much of the tooling that I'm hoping to create will leverage my own work on NUnit but will hopefully go beyond what has been done before.</p>
-<h1 id="software">Software</h1>
-<h2 id="testcentric-gui-runner">TestCentric GUI Runner</h2>
-<p>NUnit V2 came with a GUI runner in addition to the console runner. Beginning with NUnit 3,
-no GUI runner is provided. The TestCentric Runner fills that need.</p>
-<p>The 1.x releases of the GUI look and work very much like the NUnit V2 GUI. Of course, they support NUnit 3 tests and - using the standard NUnit extension - NUnit V2 tests as well.</p>
-<p>Documentation for the TestCentric Runner is available <a href="/testcentric-gui">here</a>.</p>
-<h2 id="experimental-gui-runner">Experimental GUI Runner</h2>
-<p>A separate Experimental GUI runner is being developed in conjunction with the standard runner. It departs significantly in appearance and function from the version 1 GUI. It will eventually be released as a major upgrade of the TestCentric Runner, version 2.0 or higher.</p>
-<p>Currently, the experimental GUI is included in our packages but is considered as pre-alpha software.</p>
-<h2 id="tc-lite-test-framework">TC-Lite Test Framework</h2>
-<p>TC-Lite is a lightweight test framework in the spirit of NUnitLite, aimed at the creation and
-execution of fast, independent micro-tests. Tests are self-executing, being incorporated in an
-executable assembly, and require no additional infrastructure beyond the framework itself.</p>
-<p>Work on TC-Lite is ongoing. Documentation for what has been implemented so far is available <a href="/tc-lite">here</a>.</p>
-<!-- ## TestCentric Framework
-
-This is still on the drawing board, so I won't say much about it.
-
-Generally, I'm thinking of carrying forward some of NUnit's syntactic innovations in a slightly expanded form and separating the assertion facility from the test framework itself. I would also like to allow users to choose among alternate sets of features for different kinds of testing - micro-tests versus functional testing, for example.
-
-Many of the ideas that have been germinating around this new framework were nurtured by folks in the Lonely Coaches Sodality group.
-
-## TestCentric Extension for Visual Studio
-
-This is a bit more futuristic and will build on the experimental GUI to create a true VS extension (not an adapter) for running tests. This will allow the user to have the same views of tests either within VS or in a standalone GUI.
-
-I have not yet decided whether this will be Open Source, commercial or dual-licensed using two different versions.
-
-## TestCentric Test Engine
-
-I'll be evaluating whether the NUnit engine can be used to carry out all the goals of the other projects. If necessary, a separate engine will be created. -->
+		<h1 id="loading-tests">Loading Tests</h1>
+<p>Normally, when you start the GUI, the most recently used test file will be loaded.</p>
+<p>If this is the first time you have used the GUI or if you want to load a different file,
+use the <code>File | Open</code> menu item, select a test assembly and open it. If you want to
+re-open a file that has been used before, you may use the <code>File | Recent Files</code> menu item.</p>
+<p>You may also select the file to open from the command-line, by putting it's path after
+the name of the program when you execute it.</p>
+<p>When a test assembly has been loaded, the tests it contains are shown in the tree display.</p>
+<h1 id="using-the-run-button">Using the Run Button</h1>
+<p>The simplest way to run tests is to select the test or tests you want to run in the tree
+display and then click the Run button.</p>
+<p>Tests may be selected in two main ways.</p>
+<ol>
+<li><p>Clicking on any test in the tree display highlights it, which means it has been selected.
+While only one tree node may be selected in this way, all the tests under that node are also
+considered to have been selected for execution.</p>
+</li>
+<li><p>If you right click in the tree display, the context menu allows you to enable the display
+of checkboxes. When checkboxes are enabled, you may use them to select a single test or even
+multiple tests.</p>
+</li>
+</ol>
+<h1 id="using-the-context-menu">Using the Context Menu</h1>
+<p>You may run a test - and any tests under it - by right-clicking on the node in the tree display
+and selecting <code>Run</code> in the menu that appears.</p>
+<h1 id="using-the-tests-menu">Using the Tests Menu</h1>
+<p>The <code>Tests</code> menu includes three menu items for running tests, each one with a shortcut key defined:</p>
+<ul>
+<li>Run All (F5) - Runs all the tests.</li>
+<li>Run Selected (F6) - Runs the currently selected tests, just like the Run button.</li>
+<li>Run Failed (F7) - Runs the tests that failed in the previous run.</li>
+</ul>
 
 	</section>
                 

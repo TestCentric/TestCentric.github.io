@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>TestCentric - Settings Dialog</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/testcentriclogo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/testcentriclogo.png"></span>
+                                            </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li class="active"><a href="/">Home</a></li>
+        <li class="active"><a href="/testcentric-gui">GUI Runner</a></li>
+        <li><a href="/tc-lite">TC-Lite</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#gui-settings-general">Gui Settings - General</a></p>
+<p><a href="#gui-settings-tree-display">Gui Settings - Tree Display</a></p>
+<p><a href="#gui-settings-text-output">Gui Settings - Text Output</a></p>
+<p><a href="#gui-settings-assembly-reload">Gui Settings - Assembly Reload</a></p>
+<p><a href="#engine-settings-advanced">Engine Settings - Advanced</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+                <li><a href="/testcentric-gui/overview">Overview</a></li>
+                <li class="treeview">
+                    <a href="/testcentric-gui/GettingStarted">Getting Started</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/testcentric-gui/GettingStarted/installation">Installing the GUI</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/starting">Starting the GUI</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/running-tests">Running Tests</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/stopping-tests">Stopping a Test Run</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview active">
+                    <a href="/testcentric-gui/Features">GUI Elements</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/testcentric-gui/Features/main-window">Main Window</a></li>
+                <li><a href="/testcentric-gui/Features/main-menu">Main Menu</a></li>
+                <li><a href="/testcentric-gui/Features/context-menu">Context Menu</a></li>
+                <li><a href="/testcentric-gui/Features/mini-gui">Mini-Gui</a></li>
+                <li class="selected"><a href="/testcentric-gui/Features/settings-dialog">Settings Dialog</a></li>
+                <li><a href="/testcentric-gui/Features/extensions-dialog">Extensions Dialog</a></li>
+                <li><a href="/testcentric-gui/Features/test-properties">Test Properties</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/testcentric-gui/command-line">Command Line</a></li>
+                <li><a href="/testcentric-gui/release-notes">Release Notes</a></li>
+                <li><a href="/testcentric-gui/license">License</a></li>
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+		<section class="content-header">
+			<h1>Settings Dialog</h1>
+		</section>
+	<section class="content">
+		<!-- Page-specific styles -->
+<style>
+  img {float:right; margin-left: 20px; margin-bottom: 20px; max-width: 500px}
+</style>
+<h1 id="gui-settings-general">Gui Settings - General</h1>
+<p><img src="/testcentric-gui/img/generalSettings.png" class="img-fluid" alt="Settings Dialog"></p>
+<h2 id="gui-display">Gui Display</h2>
+<h3 id="full-gui">Full Gui</h3>
+<p>Displays the complete gui - as in prior versions of NUnit. This includes the
+test result tabs and the progress bar.</p>
+<h3 id="mini-gui">Mini Gui</h3>
+<p>Switches the display to the mini-gui, which consists of the tree display only.</p>
+<h2 id="recent-files">Recent Files</h2>
+<h3 id="list.files-in-menu">List ... files in menu</h3>
+<p>This is an UpDown Counter, which allows the user to choose the maximum number
+of entries to be shown in the recent files list.</p>
+<h3 id="check-that-files-exist-before-listing">Check that files exist before listing</h3>
+<p>Normally, TestCentric checks that files still exist before
+displaying them in the recent files list. This can cause long delays if the
+file is on a network connection that is no longer available. Unchecking
+this box will avoid the delay, so long as the missing file is not actually selected.</p>
+<h3 id="load-most-recent-project-at-startup">Load most recent project at startup</h3>
+<p>If this is checked, the GUI will load the
+last file opened unless it is run with a specific filename or with the
+<code>/noload</code> parameter.</p>
+<!-- Gui Settings - Tree Display -->
+<h1 id="gui-settings-tree-display">Gui Settings - Tree Display</h1>
+<p><img src="/testcentric-gui/img/treeDisplaySettings.png" class="img-fluid" alt="Tree Display Settings"></p>
+<h2 id="tree-view">Tree View</h2>
+<h3 id="initial-display">Initial Display</h3>
+<p>This list box allows selecting the degree of expansion of the tree when tests are first loaded:</p>
+<ul>
+<li><strong>Auto</strong> - selects a setting based on the space available for the tree display.</li>
+<li><strong>Expand</strong> - expands all tests.</li>
+<li><strong>Collapse</strong> - collapses all tests.</li>
+<li><strong>Hide Tests</strong> - expands all suites except for the fixtures themselves.</li>
+</ul>
+<h3 id="tree-images">Tree Images</h3>
+<p>TestCentric provides four sets of <b>Tree Images</b>, which are used to mark tests in
+the gui as passing, failing, etc. Use the list box to select the preferred set.
+A preview of the selected set is displayed.</p>
+<h3 id="clear-results-when-reloading">Clear results when reloading</h3>
+<p>If this is checked, an automatic or manual reload will reinitialize all
+test nodes in the tree (grey display) - if it is not checked, result information for tests that do
+not seem to have changed will be retained.</p>
+<h3 id="save-visual-state-of-each-project">Save visual state of each project</h3>
+<p>If this is checked, TestCentric saves the state of the tree
+and restores it when the project is next opened. The information saved includes which
+branches of the tree are expanded, the selected node, any checked nodes and any
+category selection.</p>
+<h3 id="display-a-checkbox-next-to-each-tree-item">Display a checkbox next to each tree item</h3>
+<p>If this is checked, the tree includes checkboxes, which may
+be used to select multiple tests for running. This setting is also available
+in the <strong>View | Tree</strong> menu.</p>
+<!-- Gui Settings - Text Output -->
+<h1 id="gui-settings-text-output">Gui Settings - Text Output</h1>
+<p><img src="/testcentric-gui/img/textOutputSettings.png" class="img-fluid" alt="Text Output Settings"></p>
+<h2 id="test-case-labels">Test Case Labels</h2>
+<p>The selected setting controls the display of labels for each test in the output window.</p>
+<ul>
+<li><strong>On</strong> - All text in the output window is preceded with the name
+of the test that produced it. If tests running in parallel produce output, the label is
+redisplayed as often as necessary.</li>
+<li><strong>Before</strong> - Displays a label for every test case when it begins, irrespective of whether
+any output is produced. In case any output <strong>is</strong> produced, the label is repeated as
+necessary, just as for the <code>On</code> setting.</li>
+<li><strong>Off</strong> - No labels are displayed with the text output.</li>
+</ul>
+<!-- Gui Settings - Assembly Reload -->
+<h1 id="gui-settings-assembly-reload">Gui Settings - Assembly Reload</h1>
+<p><img src="/testcentric-gui/img/assemblyReloadSettings.png" class="img-fluid" alt="Reload Settings"></p>
+<h2 id="assembly-reload">Assembly Reload</h2>
+<h3 id="reload-before-each-test-run">Reload before each test run</h3>
+<p>If this is checked, a reload will occur whenever the run button is
+pressed whether the assemblies appear to have changed or not.</p>
+<h3 id="reload-when-test-assembly-changes">Reload when test assembly changes</h3>
+<p>If this is checked, assemblies are watched for any change and
+an automatic reload is initiated.</p>
+<h3 id="re-run-last-tests-run">Re-run last tests run</h3>
+<p>If this is checked, tests are re-run whenever a Reload takes place.</p>
+<h3 id="clear-results-when-reloading-1">Clear results when reloading</h3>
+<p>If this is checked, any test results are cleared from the tree whenever a Reload takes place.</p>
+<!-- Engine Settings - Advanced -->
+<h1 id="engine-settings-advanced">Engine Settings - Advanced</h1>
+<p><img src="/testcentric-gui/img/advancedSettings.png" class="img-fluid" alt="Advanced Settings"></p>
+<h2 id="agent-limit">Agent Limit</h2>
+<p>Normally, when running tests in separate processes, they are all run in parallel.
+If the checkbox is checked and the limit is set to a positive value, no more than
+the specified number of processes will be active at one time.</p>
+<h2 id="shadow-copy">Shadow Copy</h2>
+<p>NUnit normally uses .Net shadow-copying in order to allow you to edit
+and recompile assemblies while it is running. Uncheck this box to disable
+shadow-copy only if you have a particular problem that requires it.</p>
+<p><strong>Note:</strong> If you are tempted to disable shadow copy in order to access
+files in the same directory as your assembly, you should be aware that there
+are alternatives. Consider using the <code>TestContext.TestDirectory</code> to determine
+the directory that contains your test assembly.</p>
+<h2 id="principal-policy">Principal Policy</h2>
+<p>Because NUnit access current thread's <strong>Principal</strong> before running tests,
+it is not possible to effectively call <code>SetPrincipalPolicy()</code> in a test or
+in the system being tested.</p>
+<p>To remedy this problem, NUnit can call <code>SetPrincipalPolicy()</code> on your
+behalf. If <strong>Set Principal Policy...</strong> is checked, NUnit will call it
+using the <code>PrincipalPolicy</code> type selected in the list when it sets up
+each test <strong>AppDomain</strong>.</p>
+
+	</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

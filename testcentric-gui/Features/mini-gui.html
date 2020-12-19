@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>TestCentric - New Release</title>
+        <title>TestCentric - Mini-Gui</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
@@ -63,7 +63,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li class="active"><a href="/">Home</a></li>
-        <li><a href="/testcentric-gui">GUI Runner</a></li>
+        <li class="active"><a href="/testcentric-gui">GUI Runner</a></li>
         <li><a href="/tc-lite">TC-Lite</a></li>
  
                         </ul>       
@@ -88,14 +88,35 @@
                     <ul class="sidebar-menu">
                         
 
-        <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
-            <li><a href="/blog/Release">Release</a></li>
-    
-    <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
-        <li><a href="/blog/archive/2016/01">January, 2016</a></li>
-    
-        <li class="header"><i class="fa fa-user"></i> Authors</li>    
-            <li><a href="/blog/author/me">me</a></li>
+                <li><a href="/testcentric-gui/overview">Overview</a></li>
+                <li class="treeview">
+                    <a href="/testcentric-gui/GettingStarted">Getting Started</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/testcentric-gui/GettingStarted/installation">Installing the GUI</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/starting">Starting the GUI</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/running-tests">Running Tests</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/stopping-tests">Stopping a Test Run</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview active">
+                    <a href="/testcentric-gui/Features">GUI Elements</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/testcentric-gui/Features/main-window">Main Window</a></li>
+                <li><a href="/testcentric-gui/Features/main-menu">Main Menu</a></li>
+                <li><a href="/testcentric-gui/Features/context-menu">Context Menu</a></li>
+                <li class="selected"><a href="/testcentric-gui/Features/mini-gui">Mini-Gui</a></li>
+                <li><a href="/testcentric-gui/Features/settings-dialog">Settings Dialog</a></li>
+                <li><a href="/testcentric-gui/Features/extensions-dialog">Extensions Dialog</a></li>
+                <li><a href="/testcentric-gui/Features/test-properties">Test Properties</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/testcentric-gui/command-line">Command Line</a></li>
+                <li><a href="/testcentric-gui/release-notes">Release Notes</a></li>
+                <li><a href="/testcentric-gui/license">License</a></li>
 
                     </ul>
                             
@@ -109,25 +130,15 @@
 
 
 		<section class="content-header">
-			<h1>New Release</h1>
+			<h1>Mini-Gui</h1>
 		</section>
 	<section class="content">
-		
-
-
-
-<dl class="dl-horizontal" style="margin-bottom: 12px;">
-    <dt style="text-align: left;"><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Friday, January 1, 2016</dd>
-        <dt style="text-align: left;"><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release">Release</a></dd>
-            <dt style="text-align: left;"><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/me">me</a></dd>
-</dl>
-
-
-<p>There is a new release out, go get it now.</p>
-
+		<!-- Page-specific styles -->
+<style>
+    img {float: right; margin-left: 20px; margin-bottom: 20px}
+</style>
+<p><img src="/testcentric-gui/img/minigui.png" class="img-fluid" alt="Mini GUI" /></p>
+<p>The &quot;Mini-GUI&quot; display be selected from the View menu is a more compact display is desired. Only the Test Tree is shown in this view but information about each test is available by right-clicking on the test node.</p>
 
 	</section>
                 
