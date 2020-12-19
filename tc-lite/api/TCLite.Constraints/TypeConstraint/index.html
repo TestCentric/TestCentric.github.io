@@ -206,13 +206,13 @@
 				<li><a href="/tc-lite/api/TCLite.Constraints/TrueConstraint">TrueConstraint</a></li>
 				<li class="selected"><a href="/tc-lite/api/TCLite.Constraints/TypeConstraint">TypeConstraint</a></li>
 				<li><a href="/tc-lite/api/TCLite.Constraints/UniqueItemsConstraint">Unique<wbr>Items<wbr>Constraint</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/tc-lite/api/TCLite.Constraints/ConstraintStatus">ConstraintStatus</a></li>
-				<li><a href="/tc-lite/api/TCLite.Constraints/ToleranceMode">ToleranceMode</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/tc-lite/api/TCLite.Constraints/IConstraint">IConstraint</a></li>
 				<li><a href="/tc-lite/api/TCLite.Constraints/IConstraintResult">IConstraintResult</a></li>
 				<li><a href="/tc-lite/api/TCLite.Constraints/IResolveConstraint">IResolveConstraint</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/tc-lite/api/TCLite.Constraints/ConstraintStatus">ConstraintStatus</a></li>
+				<li><a href="/tc-lite/api/TCLite.Constraints/ToleranceMode">ToleranceMode</a></li>
 			<li class="header">Delegate Types</li>
 				<li><a href="/tc-lite/api/TCLite.Constraints/ActualValueDelegate_1">ActualValueDelegate<wbr>&lt;T&gt;<wbr></a></li>
 
@@ -269,8 +269,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/tc-lite/api/TCLite.Constraints/ExactTypeConstraint">ExactTypeConstraint</a></li>								
 											<li><a href="/tc-lite/api/TCLite.Constraints/InstanceOfTypeConstraint">Instance<wbr>Of<wbr>Type<wbr>Constraint</a></li>								
+											<li><a href="/tc-lite/api/TCLite.Constraints/ExactTypeConstraint">ExactTypeConstraint</a></li>								
 									</ul>
 								</dd>			
 							
@@ -289,10 +289,10 @@
 	click Interface1 "/tc-lite/api/TCLite.Constraints/IResolveConstraint"
 	Type["TypeConstraint"]
 class Type type-node
-	Derived0["ExactTypeConstraint"]--&gt;Type
-	click Derived0 "/tc-lite/api/TCLite.Constraints/ExactTypeConstraint"
-	Derived1["InstanceOfTypeConstraint"]--&gt;Type
-	click Derived1 "/tc-lite/api/TCLite.Constraints/InstanceOfTypeConstraint"
+	Derived0["InstanceOfTypeConstraint"]--&gt;Type
+	click Derived0 "/tc-lite/api/TCLite.Constraints/InstanceOfTypeConstraint"
+	Derived1["ExactTypeConstraint"]--&gt;Type
+	click Derived1 "/tc-lite/api/TCLite.Constraints/ExactTypeConstraint"
 
 						</div>
 					</div>
