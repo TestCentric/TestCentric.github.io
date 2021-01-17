@@ -133,13 +133,25 @@
 			<h1>Release Notes</h1>
 		</section>
 	<section class="content">
-		<h3 id="testcentric-runner-for-nunit-1.6.0-january-10-2021">TestCentric Runner for NUnit 1.6.0 - January 10, 2021</h3>
+		<h3 id="testcentric-runner-for-nunit-1.6.1-january-17-2021">TestCentric Runner for NUnit 1.6.1 - January 17, 2021</h3>
+<p>The main change in this release is that the <code>InProcess</code> option is disabled when the loaded tests
+cannot all run in the Gui process under the .NET Framework 4.x and would otherwise cause an error.</p>
+<p>This is intended to be the last release in the TestCentric 1.x series. The next release,
+version 2.0, will contain breaking changes including the elimination of the <code>InProcess</code> option
+as well as of all <code>DomainUsage</code> options. In future, the use of AppDomains in platforms that
+support them will be treated as an implementation detail outside the control of the user.</p>
+<h4 id="issues-resolved">Issues Resolved</h4>
+<ul>
+<li>658 Restructure or rewrite runtime framework detection code</li>
+<li>661 InProcess menu item should be disabled if any .net core tests are loaded.</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-1.6.0-january-10-2021">TestCentric Runner for NUnit 1.6.0 - January 10, 2021</h3>
 <p>The main feature of this release is the addition of an agent for running tests under .NET 5.0.
 Since the runner itself targets the .NET Framework, this feature is only available when tests
 are run out of process. By default, tests targeting .NET 5.0 will run under that agent, provided
 that .NET 5.0 is installed. The File menu also allows running tests built for earlier versions
 of .NET Core under .NET 5.0.</p>
-<h4 id="issues-resolved">Issues Resolved</h4>
+<h4 id="issues-resolved-1">Issues Resolved</h4>
 <ul>
 <li>593 GetExecutingAssembly() returns the path of appdata folder instead of actual location</li>
 <li>640 Review tests of Dialogs</li>
@@ -149,7 +161,7 @@ of .NET Core under .NET 5.0.</p>
 </ul>
 <h3 id="testcentric-runner-for-nunit-1.5.3-december-23-2020">TestCentric Runner for NUnit 1.5.3 - December 23, 2020</h3>
 <p>This release fixes a critical issue in 1.5.2</p>
-<h4 id="issues-resolved-1">Issues Resolved</h4>
+<h4 id="issues-resolved-2">Issues Resolved</h4>
 <ul>
 <li>631 Website not being rebuilt for production release</li>
 <li>632 Move website for gui into testcentric.github.io</li>
@@ -159,12 +171,12 @@ of .NET Core under .NET 5.0.</p>
 <li>642 Dashes rather than separators in menus</li>
 </ul>
 <h3 id="testcentric-runner-for-nunit-1.5.2-december-16-2020">TestCentric Runner for NUnit 1.5.2 - December 16, 2020</h3>
-<h4 id="issues-resolved-2">Issues Resolved</h4>
+<h4 id="issues-resolved-3">Issues Resolved</h4>
 <ul>
 <li>626  Tailor content of Release Note created by release build</li>
 </ul>
 <h3 id="testcentric-runner-for-nunit-1.5.1-december-14-2020">TestCentric Runner for NUnit 1.5.1 - December 14, 2020</h3>
-<h4 id="issues-resolved-3">Issues Resolved</h4>
+<h4 id="issues-resolved-4">Issues Resolved</h4>
 <ul>
 <li>324 Convert to use new VS project format</li>
 <li>603 Add Getting Started section to the documentation</li>
@@ -176,7 +188,7 @@ of .NET Core under .NET 5.0.</p>
 stop, running all teardowns. It then gives the user the option of a forced stop in case
 the run does not terminate. In addition, it incorporates major build improvements, which
 will make it easier to do more frequent releases in the future.</p>
-<h4 id="issues-resolved-4">Issues Resolved</h4>
+<h4 id="issues-resolved-5">Issues Resolved</h4>
 <ul>
 <li>374 Implement two stage Stop, first trying non-forced and then letting user select forced stop.</li>
 <li>599 Automatically update website</li>
@@ -195,7 +207,7 @@ assembly which is being published as a separate nuget package for use by others.
 <li>The Mono.Cecil package is no longer a dependency. A new assembly incorporates Mono
 source code and provides the specific introspection features needed by the engine.</li>
 </ul>
-<h4 id="issues-resolved-5">Issues Resolved</h4>
+<h4 id="issues-resolved-6">Issues Resolved</h4>
 <ul>
 <li>577 Carry CurrentDirectory over to agent processes</li>
 <li>579 1.4.0 Unhandled exception</li>
@@ -230,7 +242,7 @@ The GUI can simulataneously load .NET Framework and .NET Core test assemblies.</
 continue to use remoting.</p>
 </li>
 </ul>
-<h4 id="issues-resolved-6">Issues Resolved</h4>
+<h4 id="issues-resolved-7">Issues Resolved</h4>
 <ul>
 <li>218 Support editing projects through the project editor</li>
 <li>453 Execute tests under .NET Core</li>
@@ -247,7 +259,7 @@ continue to use remoting.</p>
 <p>This release corrects a critical issue whereby engine extensions were no longer
 being recognized by the GUI. Additional package testing, including use of
 extensions, has been added to prevent regressions.</p>
-<h4 id="issues-resolved-7">Issues Resolved</h4>
+<h4 id="issues-resolved-8">Issues Resolved</h4>
 <ul>
 <li>551 Automate Release Process</li>
 <li>558 ReportPortal addins to TestCentric</li>
@@ -257,7 +269,7 @@ extensions, has been added to prevent regressions.</p>
 <h3 id="testcentric-runner-for-nunit-1.3.2-march-15-2020">TestCentric Runner for NUnit 1.3.2 - March 15, 2020</h3>
 <p>This release corrects a new bug found in the 1.3.0 release and makes a
 number of improvements in the automation of the release process.</p>
-<h4 id="issues-resolved-8">Issues Resolved</h4>
+<h4 id="issues-resolved-9">Issues Resolved</h4>
 <ul>
 <li>428 Update assemblyinfo automatically</li>
 <li>525 Create a nuget organization for TestCentric</li>
@@ -269,7 +281,7 @@ number of improvements in the automation of the release process.</p>
 <p>This release corrects a critical problem in the 1.3.0 release. None of the
 1.3.0 packages included agents for use under .NET 4.0 and higher. This
 release adds those agents.</p>
-<h4 id="issues-resolved-9">Issues Resolved</h4>
+<h4 id="issues-resolved-10">Issues Resolved</h4>
 <ul>
 <li>535 FIXED: Cannot load test assembly after 1.3 update</li>
 <li>536 Restructuring the build.cake script</li>
@@ -307,7 +319,7 @@ parameters for executing them.</p>
 and agents use the appropriate version. The GUI itself uses the 4.0 engine.</p>
 </li>
 </ul>
-<h4 id="issues-resolved-10">Issues Resolved</h4>
+<h4 id="issues-resolved-11">Issues Resolved</h4>
 <ul>
 <li>457 Remove UserSettings from the engine</li>
 <li>466 Update Copyright headers in all files</li>
@@ -362,7 +374,7 @@ if the user attempts to open one.</p>
 <li><p>The RecentFilesService is no longer available.</p>
 </li>
 </ul>
-<h4 id="issues-resolved-11">Issues Resolved</h4>
+<h4 id="issues-resolved-12">Issues Resolved</h4>
 <ul>
 <li>215 Experimental GUI: Allow setting the gui font</li>
 <li>217 Experimental GUI: Add files to those already open</li>
@@ -390,7 +402,7 @@ if the user attempts to open one.</p>
 <li>The GUI uses a custom build of the latest version of the NUnit engine.</li>
 <li>Includes version 0.16 of the experimental GUI.</li>
 </ul>
-<h4 id="issues-resolved-12">Issues Resolved</h4>
+<h4 id="issues-resolved-13">Issues Resolved</h4>
 <ul>
 <li>4 Save test results in alternative formats</li>
 <li>77 Setting up test parameters from gui</li>
@@ -423,7 +435,7 @@ if the user attempts to open one.</p>
 <ul>
 <li>Includes version 0.15.1 of the experimental GUI</li>
 </ul>
-<h4 id="issues-resolved-13">Issues Resolved</h4>
+<h4 id="issues-resolved-14">Issues Resolved</h4>
 <ul>
 <li>325 Deploy development builds automatically</li>
 <li>380 Automate testing of packages</li>
@@ -484,7 +496,7 @@ For that reason, we recommend that you only use this release for NUnit 3 tests.
 This problem will be fixed when a new version of the V2 driver is available,
 which includes support for an id filter.</li>
 </ul>
-<h4 id="issues-resolved-14">Issues Resolved</h4>
+<h4 id="issues-resolved-15">Issues Resolved</h4>
 <ul>
 <li>7 Credit for all contributors</li>
 <li>8 Icon and Logo for TestCentric</li>
@@ -503,7 +515,7 @@ the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
 <ul>
 <li>Version 0.14 of the Experimental GUI is included.</li>
 </ul>
-<h4 id="issues-resolved-15">Issues Resolved</h4>
+<h4 id="issues-resolved-16">Issues Resolved</h4>
 <ul>
 <li>368 FIXED: Arguments to --process option for GUI don't match NUnit console.</li>
 <li>369 Merge Options classes for two GUIs and move to common assembly.</li>
@@ -521,7 +533,7 @@ the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
 <li>Version 0.13 of the Experimental GUI is included.</li>
 <li>Added command-line options --process, --domain, --inprocess, --x86 and --agents.</li>
 </ul>
-<h4 id="issues-resolved-16">Issues Resolved</h4>
+<h4 id="issues-resolved-17">Issues Resolved</h4>
 <ul>
 <li>139 FIXED: Stop Button to interrupt infinite loop</li>
 <li>287 Assembly or project full name not shown</li>
@@ -545,7 +557,7 @@ the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
 <li>Version 0.12 of the Experimental GUI is included with support for user-defined icons
 and immediate text output display.</li>
 </ul>
-<h4 id="issues-resolved-17">Issues Resolved</h4>
+<h4 id="issues-resolved-18">Issues Resolved</h4>
 <ul>
 <li>5 Add online docs for the GUI</li>
 <li>229 Experimental GUI: Multiple and user-defined tree icons</li>
@@ -569,7 +581,7 @@ the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
 <li>Version 0.11 of the Experimental GUI is included with support for saving test results,
 reload on change and reload on run.</li>
 </ul>
-<h4 id="issues-resolved-18">Issues Resolved</h4>
+<h4 id="issues-resolved-19">Issues Resolved</h4>
 <ul>
 <li>22 Create new signing key for TestCentric</li>
 <li>212 Experimental GUI: Need SaveResults menu item</li>
@@ -588,7 +600,7 @@ for use in production work.</p>
 <li>Entries now appear in the tree display for any projects loaded</li>
 <li>The GUI now uses a custom built version of the engine, based on the NUnit 3.10 engine.</li>
 </ul>
-<h4 id="issues-resolved-19">Issues Resolved</h4>
+<h4 id="issues-resolved-20">Issues Resolved</h4>
 <ul>
 <li>164 Update NSubstitute to version 4.0</li>
 <li>241 Terminate nunit-agent.exe / nunit-agent-x86.exe once they are no longer in use</li>
@@ -614,7 +626,7 @@ for use in production work.</p>
 <li>A custom engine build is included while waiting for the next NUnit engine release.</li>
 <li>The zip and chocolatey packagegs now include pdb files.</li>
 </ul>
-<h4 id="issues-resolved-20">Issues Resolved</h4>
+<h4 id="issues-resolved-21">Issues Resolved</h4>
 <ul>
 <li>18 FIXED: Reload on Change not working</li>
 <li>138 Double click test to start it</li>
@@ -656,7 +668,7 @@ for use in production work.</p>
 <li>Alternate images for the tree are now implemented.</li>
 <li>Saving and Restoring the visual state is now implemented.</li>
 </ul>
-<h4 id="issues-resolved-21">Issues Resolved</h4>
+<h4 id="issues-resolved-22">Issues Resolved</h4>
 <ul>
 <li>12 Use UpDown counter for number of recent files to display</li>
 <li>15 FIXED: Alternate Tree Images not working</li>
@@ -690,7 +702,7 @@ are no longer present.</li>
 <li>The ability to open project files, including NUnit and VS projects, is dependent on the presence
 of the approprate engine extensions, which are not bundled with the GUI.</li>
 </ul>
-<h4 id="issues-resolved-22">Issues Resolved</h4>
+<h4 id="issues-resolved-23">Issues Resolved</h4>
 <ul>
 <li>1 Select Target Framework for the GUI</li>
 <li>2 Review of Initial Upload</li>
