@@ -133,7 +133,208 @@
 			<h1>Release Notes</h1>
 		</section>
 	<section class="content">
-		<h3 id="testcentric-runner-for-nunit-1.6.2-march-24-2021">TestCentric Runner for NUnit 1.6.2 - March 24, 2021</h3>
+		<h3 id="testcentric-runner-for-nunit-2.0.0-alpha5-may-14-2022">TestCentric Runner for NUnit 2.0.0-alpha5 - May 14, 2022</h3>
+<p>This release includes major revisions to the UI. There is no longer a <code>Test</code> menu. Rather, all test execution is performed through the toolbar or the context menu. The toolbar now contains buttons for running all or selected tests, repeating the last run and running only failed tests.</p>
+<p><strong>Note:</strong> The selected (highlighted) test item in the tree is now referred to as the &quot;Active&quot; item. This is the item for which any detailed information is displayed, as in the properties tab, for example. If <code>Checkboxes</code> are enabled, the checked items are referred to as &quot;Selected&quot; for running. If they are disabled, or if no items are checked, the &quot;Active&quot; item is also considered as &quot;Selected&quot;.</p>
+<p>Reflecting changes in the TestCentric engine, there are no longer built-in agents for .NET 2.0 and .NET Core 2.1. These will be provided by separately installed extensions. The .NET 2.0 Pluggable Agent extension is already available and used in our tests. The .NET Core 2.1 agent is being developed.</p>
+<h4 id="breaking-changes">Breaking Changes</h4>
+<ul>
+<li>842 Eliminate built-in .NET Core 2.1 agent</li>
+<li>841 Eliminate built-in net20 agent</li>
+</ul>
+<h4 id="features">Features</h4>
+<ul>
+<li>881 Specify full- vs mini-gui on command line</li>
+<li>877 Re-Implement Debugging of tests</li>
+<li>870 Run Failed tests from previous runs</li>
+<li>869 Rerun Last Test</li>
+<li>245 Make XML display of tests and test results a popup window</li>
+</ul>
+<h4 id="enhancements">Enhancements</h4>
+<ul>
+<li>872 Move RunSummary button next to progress bar</li>
+<li>871 Reorganize &quot;Group By&quot; functionality in the UI</li>
+<li>861 Disallow both ReloadOnChange and ReloadOnRun</li>
+<li>836 Convert command-line processing to latest version of Mono.Options</li>
+</ul>
+<h4 id="bugs">Bugs</h4>
+<ul>
+<li>866 TestProperties tab panels not expanding to full width available</li>
+<li>854 Need a better way to run a subset of the tests</li>
+<li>853 test duration time is changing</li>
+<li>852 Assembly Reload: &quot;Reload before each test run&quot; does not work</li>
+<li>851 Double click test to start</li>
+<li>848 Incorrect display when opening a project file without the proper extension installed.</li>
+<li>846 Error when attempting to open an assembly targeting .NET Standard</li>
+<li>827 Mono,Win10 Error</li>
+</ul>
+<h4 id="build">Build</h4>
+<ul>
+<li>844 Remove unused copies of engine files from the repository</li>
+<li>829 Eliminate TestCentric.Common project</li>
+<li>828 Make TestCentric Engine a separate project</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha4-october-2-2021">TestCentric Runner for NUnit 2.0.0-alpha4 - October 2, 2021</h3>
+<p>This release incorporates a critical fix to a bug, which caused the program to crash when run on a machine with .NET 6.0 installed.</p>
+<h4 id="bug">Bug</h4>
+<ul>
+<li>821 System.ArgumentException: 'Unknown .NET Core version: 6.0 Parameter name: version'</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha3-september-30-2021">TestCentric Runner for NUnit 2.0.0-alpha3 - September 30, 2021</h3>
+<p>The primary purpose of this release is to get a few more breaking changes into the repository. With this release, we switch to the dev-4.0 build of the NUnit Engine API, and stop building for .NET Standard 1.6 and .NET Core 1.1.</p>
+<h4 id="breaking-changes-1">Breaking Changes</h4>
+<ul>
+<li>809 Stop building for .NET Standard 1.6 and .NET Core 1.1</li>
+<li>808 Switch to the dev-40 build of the NUnit Engine API</li>
+</ul>
+<h4 id="feature">Feature</h4>
+<ul>
+<li>804 Remove references to the engine from the GUI proper</li>
+</ul>
+<h4 id="enhancement">Enhancement</h4>
+<ul>
+<li>705 Modify Arguments to Agent Process</li>
+</ul>
+<h4 id="build-1">Build</h4>
+<ul>
+<li>813 Upgrade to the latest Cake version</li>
+<li>812 Use VS Project properties to generate the assemblyinfo files</li>
+<li>805 Stop use of Image Directory where not needed</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha2-august-15-2021">TestCentric Runner for NUnit 2.0.0-alpha2 - August 15, 2021</h3>
+<p>The 2.0.0 release will be the first major upgrade of the TestCentric Gui
+with a number of breaking changes as well as new features.</p>
+<p>The primary change in this second alpha release is that the old Standard
+GUI is no longer used. The former Experimental GUI is now the only version
+of the GUI in use. The GUI also has a few new features in this release:</p>
+<ul>
+<li>When using the full GUI  layout, the progress bar now appears in the right-hand panel.</li>
+<li>The Run Summary report is now displayed directly beneath the progress bar.</li>
+<li>The toolbar now includes icons for normal and forced stop (kill) and for displaying a summary of the last run.</li>
+</ul>
+<h4 id="features-1">Features</h4>
+<ul>
+<li>780 Restore TestPropertiesDialog for use with the mini-GUI</li>
+<li>762 Variable positioning of progress bar</li>
+<li>761 Make Menu Bar full width of main window</li>
+<li>758 Make &quot;Stop Run&quot; a separate button on menu bar&quot;</li>
+<li>757 Remove &quot;Run Failed&quot; from split button choices in menu bar</li>
+<li>745 Port XmlView from experimental GUI</li>
+<li>744 Port PropertyView from experimental GUI</li>
+<li>742 Remove Not Run tab</li>
+<li>741 Move Progress Bar to left-hand panel</li>
+<li>740 Remove right-hand panel Run and Cancel buttons</li>
+<li>735 Remove Categories Tab from left-hand GUI panel</li>
+<li>732 Merge features of the experimental GUI into the 2.0 standard GUI</li>
+<li>609 Allow selecting normal versus forced stop</li>
+<li>230 Save and restore Visual state</li>
+</ul>
+<h4 id="enhancements-1">Enhancements</h4>
+<ul>
+<li>798 Improve Test Run Report Presentation</li>
+<li>794 Adjust PropertiesDialog Layout to be closer to that of TestPropertiesView</li>
+<li>790 Hide result box in TestPropertiesDialog when there is no result</li>
+<li>789 Display package settings in TestPropertiesView</li>
+<li>786 Show package settings at top of PropertiesDialog and only show for tests representing packages</li>
+<li>755 Display last run summary on demand</li>
+<li>737 Remove checkbox-related buttons from below tree display</li>
+</ul>
+<h4 id="bugs-1">Bugs</h4>
+<ul>
+<li>791 TestPropertiesDialog does not update after test run</li>
+<li>788 Location of form should be saved before changing GUI layout</li>
+<li>783 NRE when File Menu pops up without an open project</li>
+<li>778 Visibility of StatusBar is not saved</li>
+<li>770 Need icon for display format button</li>
+<li>769 Groupings, which do not apply to the current display format, should be disabled</li>
+<li>767 GroupBy dropdown has no effect when changing</li>
+</ul>
+<h4 id="build-2">Build</h4>
+<ul>
+<li>800 Retry failed publishing steps in build</li>
+<li>753 Move &quot;common&quot; gui components to the  Gui project</li>
+<li>733 Remove unneeded conditionals from the engine</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha1-june-30-2021">TestCentric Runner for NUnit 2.0.0-alpha1 - June 30, 2021</h3>
+<p>The 2.0.0 release is the first major upgrade of the TestCentric Gui.
+It includes a number of breaking changes as well as new features.</p>
+<h4 id="significant-gui-changes">Significant Gui Changes</h4>
+<ul>
+<li><p>The ProcessModel and DomainUsage menus have been eliminated.</p>
+</li>
+<li><p>A new Select Agents menu allows the user to choose a non-default
+agent when more than one is available for a particular assembly.</p>
+</li>
+</ul>
+<h4 id="significant-engine-changes">Significant Engine Changes</h4>
+<ul>
+<li><p>In-process execution of tests and the ProcessModel package setting
+are no longer supported. Each test assembly is now run in its own
+separate process.</p>
+</li>
+<li><p>The DomainUsage package setting is no longer supported. The runner
+itself decides whether an AppDomain should  be used when running
+on a particular platform.</p>
+</li>
+<li><p>All test execution is now performed by agents, which are usually
+separate local processes. Agent selection may be automatic or
+user-specified using a package setting.</p>
+</li>
+<li><p>It is now possible to create &quot;pluggable agents&quot; by use of a new
+engine extension point. Currently, this capability is limited to
+local process agents, but it is intended to be extended to other
+agent types in the future.</p>
+</li>
+<li><p>Services are now initialized when they are first accessed through
+the service context rather than at startup.</p>
+</li>
+<li><p>There is no longer a .NET Standard build of the engine.</p>
+</li>
+<li><p>The metadata assembly is now a separate package, which is used
+by the engine.</p>
+</li>
+<li><p>X86 builds of .Net Core agents are no longer provided, since
+they are not needed.</p>
+</li>
+</ul>
+<h4 id="breaking-changes-2">Breaking Changes</h4>
+<ul>
+<li>664 Replace AppDomain and Process with &quot;Agent&quot; from user perspective</li>
+<li>656 Pluggable Agents</li>
+<li>665 Eliminate ProcessModel setting</li>
+<li>657 Eliminate DomainUsage option</li>
+<li>444 Eliminate in-process execution</li>
+</ul>
+<h4 id="features-2">Features</h4>
+<ul>
+<li>697 Agent Redesign</li>
+<li>694 Remove x86 build of agent for .NET Core</li>
+<li>693 Stop building engine for .NET Standard</li>
+<li>689 Remove DomainManager as a service</li>
+<li>684 Make metadata assembly a fully independent package</li>
+<li>678 Create package for use by pluggable agents</li>
+</ul>
+<h4 id="enhancements-2">Enhancements</h4>
+<ul>
+<li>715 Make dependencies of one service on another explicit</li>
+<li>677 Update AboutBox for 2.0 release</li>
+<li>666 Issue an error message when user provides an obsolete project setting. Ignore in project files.</li>
+</ul>
+<h4 id="bugs-2">Bugs</h4>
+<ul>
+<li>719 Crashing Testcentric on trying to change Process Model to X86</li>
+<li>707 ResultHelper.Aggregate doesn't count warnings</li>
+</ul>
+<h4 id="build-3">Build</h4>
+<ul>
+<li>729 Allow creation of draft and production GitHub releases for pre-release versions</li>
+<li>725 Upgrade NUnit framework to 3.12</li>
+<li>716 Provide test doubles for all services needed for testing.</li>
+<li>700 Use the GUI to run its own tests</li>
+<li>699 Create separate test assembly for nunit.agent.core</li>
+<li>682 Build script should check files for valid headers</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-1.6.2-march-24-2021">TestCentric Runner for NUnit 1.6.2 - March 24, 2021</h3>
 <p>This release was made to fix a critical bug.</p>
 <h4 id="issues-resolved">Issues Resolved</h4>
 <ul>
@@ -399,7 +600,7 @@ if the user attempts to open one.</p>
 <h3 id="testcentric-runner-for-nunit-1.1.0-november-9-2019">TestCentric Runner for NUnit 1.1.0 - November 9, 2019</h3>
 <h4 id="general-1">General</h4>
 <p>This release includes new features beyond the 1.0 release, together with some bug fixes.</p>
-<h4 id="features">Features</h4>
+<h4 id="features-3">Features</h4>
 <ul>
 <li>The configuration to be loaded may be specified in the GUI.</li>
 <li>A new dialog allows setting parameters for the test run.</li>
@@ -437,7 +638,7 @@ if the user attempts to open one.</p>
 <h3 id="testcentric-runner-for-nunit-1.0.1-august-15-2019">TestCentric Runner for NUnit 1.0.1 - August 15, 2019</h3>
 <h4 id="general-2">General</h4>
 <p>This release fixes a critical error discovered after the release of 1.0.0.</p>
-<h4 id="features-1">Features</h4>
+<h4 id="features-4">Features</h4>
 <ul>
 <li>Includes version 0.15.1 of the experimental GUI</li>
 </ul>
@@ -457,7 +658,7 @@ differences in how NUnit3 works and are described below under Features.</p>
 Manfred Lange, Stefano Nuzzo and Robert Snyder. Community members who contributed code to
 this release include Jeff Kryzer, zBrianW, Joseph Musser and Mattias Karlsson. Countless
 other folks contributed by filing issues, asking questions and making suggestions.</p>
-<h4 id="features-2">Features</h4>
+<h4 id="features-5">Features</h4>
 <ul>
 <li><p>TestCentric relies on the NUnit engine to load and run tests. Features that require
 an engine extension are only available if the appropriate extension is installed. In
@@ -517,7 +718,7 @@ it is feature-complete. Since the actual execution of tests is done by the NUnit
 rather than the GUI itself, it's probably reasonable for developers to use this on the
 desktop, provided their CI is based on a stable production-level NUnit runner, such as
 the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
-<h4 id="features-3">Features</h4>
+<h4 id="features-6">Features</h4>
 <ul>
 <li>Version 0.14 of the Experimental GUI is included.</li>
 </ul>
@@ -534,7 +735,7 @@ it is feature-complete. Since the actual execution of tests is done by the NUnit
 rather than the GUI itself, it's probably reasonable for developers to use this on the
 desktop, provided their CI is based on a stable production-level NUnit runner, such as
 the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
-<h4 id="features-4">Features</h4>
+<h4 id="features-7">Features</h4>
 <ul>
 <li>Version 0.13 of the Experimental GUI is included.</li>
 <li>Added command-line options --process, --domain, --inprocess, --x86 and --agents.</li>
@@ -558,7 +759,7 @@ it is feature-complete. Since the actual execution of tests is done by the NUnit
 rather than the GUI itself, it's probably reasonable for developers to use this on the
 desktop, provided their CI is based on a stable production-level NUnit runner, such as
 the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
-<h4 id="features-5">Features</h4>
+<h4 id="features-8">Features</h4>
 <ul>
 <li>Version 0.12 of the Experimental GUI is included with support for user-defined icons
 and immediate text output display.</li>
@@ -582,7 +783,7 @@ it is feature-complete. Since the actual execution of tests is done by the NUnit
 rather than the GUI itself, it's probably reasonable for developers to use this on the
 desktop, provided their CI is based on a stable production-level NUnit runner, such as
 the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
-<h4 id="features-6">Features</h4>
+<h4 id="features-9">Features</h4>
 <ul>
 <li>Version 0.11 of the Experimental GUI is included with support for saving test results,
 reload on change and reload on run.</li>
@@ -601,7 +802,7 @@ reload on change and reload on run.</li>
 <h4 id="general-8">General</h4>
 <p>This is the fourth alpha release of the TestCentric Runner for NUnit. It is not yet recommended
 for use in production work.</p>
-<h4 id="features-7">Features</h4>
+<h4 id="features-10">Features</h4>
 <ul>
 <li>Entries now appear in the tree display for any projects loaded</li>
 <li>The GUI now uses a custom built version of the engine, based on the NUnit 3.10 engine.</li>
@@ -624,7 +825,7 @@ for use in production work.</p>
 <h4 id="general-9">General</h4>
 <p>This is the third alpha release of the TestCentric Runner for NUnit. It is not yet recommended
 for use in production work.</p>
-<h4 id="features-8">Features</h4>
+<h4 id="features-11">Features</h4>
 <ul>
 <li>The Experimental GUI, which was previously a separate project, is now included along with the standard TestCentric GUI.</li>
 <li>Assemblies and projects are now loadable using all process and domain settings.</li>
@@ -667,7 +868,7 @@ for use in production work.</p>
 <h4 id="general-10">General</h4>
 <p>This is the second alpha release of the TestCentric Runner for NUnit. It is not yet recommended
 for use in production work.</p>
-<h4 id="features-9">Features</h4>
+<h4 id="features-12">Features</h4>
 <ul>
 <li>The GUI now uses the NUnit 3.9 engine</li>
 <li>Reloading on each Run is now functional.</li>
@@ -692,7 +893,7 @@ for use in production work.</p>
 <h4 id="general-11">General</h4>
 <p>This is the initial alpha release of the TestCentric Runner for NUnit. It is not yet recommended
 for use in production work.</p>
-<h4 id="features-10">Features</h4>
+<h4 id="features-13">Features</h4>
 <p>This GUI runner resembles the NUnit V2 GUI, but since it runs NUnit 3 tests the internal implementation
 is entirely new. In addition, features not available or not easily supported in NUnit 3 have been
 removed. Some key differences from the V2 GUI are...</p>

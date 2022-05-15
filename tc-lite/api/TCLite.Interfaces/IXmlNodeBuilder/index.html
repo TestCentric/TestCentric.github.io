@@ -211,9 +211,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/tc-lite/api/TCLite.Interfaces/ITest">ITest</a></li>								
-											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestResult">ITestResult</a></li>								
 											<li><a href="/tc-lite/api/TCLite.Interfaces/IPropertyBag">IPropertyBag</a></li>								
+											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestResult">ITestResult</a></li>								
+											<li><a href="/tc-lite/api/TCLite.Interfaces/ITest">ITest</a></li>								
 											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestFilter">ITestFilter</a></li>								
 									</ul>
 								</dd>				
@@ -224,12 +224,12 @@
 							graph BT
 	Type["IXmlNodeBuilder"]
 class Type type-node
-	Implementing0["ITest"]-.-&gt;Type
-	click Implementing0 "/tc-lite/api/TCLite.Interfaces/ITest"
+	Implementing0["IPropertyBag"]-.-&gt;Type
+	click Implementing0 "/tc-lite/api/TCLite.Interfaces/IPropertyBag"
 	Implementing1["ITestResult"]-.-&gt;Type
 	click Implementing1 "/tc-lite/api/TCLite.Interfaces/ITestResult"
-	Implementing2["IPropertyBag"]-.-&gt;Type
-	click Implementing2 "/tc-lite/api/TCLite.Interfaces/IPropertyBag"
+	Implementing2["ITest"]-.-&gt;Type
+	click Implementing2 "/tc-lite/api/TCLite.Interfaces/ITest"
 	Implementing3["ITestFilter"]-.-&gt;Type
 	click Implementing3 "/tc-lite/api/TCLite.Interfaces/ITestFilter"
 
