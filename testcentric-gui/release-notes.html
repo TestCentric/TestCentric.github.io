@@ -133,7 +133,84 @@
 			<h1>Release Notes</h1>
 		</section>
 	<section class="content">
-		<h3 id="testcentric-runner-for-nunit-2.0.0-alpha5-may-14-2022">TestCentric Runner for NUnit 2.0.0-alpha5 - May 14, 2022</h3>
+		<h3 id="testcentric-runner-for-nunit-2.0.0-alpha7-february-6-2023">TestCentric Runner for NUnit 2.0.0-alpha7- February 6, 2023</h3>
+<p>The primary feature added in this release comes from use of version 2.0.0-alpha7 of the test engine. The GUI is now able to run tests, which target .NET 6.0 and .NET 7.0.</p>
+<h4 id="features">Features</h4>
+<ul>
+<li>706 Specify test run parameters on command-line</li>
+<li>890 Support use of VisualState when test assembly has changed.</li>
+<li>914 Update to use alpha7 version of engine</li>
+<li>933 Update Gui to use .NET 4.6.2 rather than 4.5</li>
+</ul>
+<h4 id="enhancements">Enhancements</h4>
+<ul>
+<li>774 Save and Restore Visual State for fixture and test list display formats</li>
+<li>906 Better handling of &quot;dynamic&quot; test groups</li>
+</ul>
+<h4 id="bugs">Bugs</h4>
+<ul>
+<li>201 VisualState.xml should be saved <em>before</em> running tests</li>
+<li>901 Shown tooltip is hard to hide for failed test</li>
+<li>907 Missing output with failed test stack traces for Assert.Multiple</li>
+<li>911 Run Summary should close automatically when new run is starting</li>
+<li>941 Unhandled exception starting GUI if settings file is corrupted</li>
+</ul>
+<h4 id="build">Build</h4>
+<ul>
+<li>934 Get build working again!</li>
+<li>939 Use TestCentric-specific environment variable names for API keys</li>
+<li>943 Make CHANGES file a pointer to the Release Notes</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-1.6.4-december-2-2022">TestCentric Runner for NUnit 1.6.4- December 2, 2022</h3>
+<p>This release fixes a critical bug in version 1.6.3. In addition, due to changes in the environment and in Microsoft tool and runtime support, further changes were made to allow the build scripts to function.</p>
+<h4 id="bug">Bug</h4>
+<ul>
+<li>925 TestCentric-Gui 1.6.3 + NUnit IDriverFactory extension</li>
+</ul>
+<h4 id="build-1">Build</h4>
+<ul>
+<li>929 Update cake scripts</li>
+<li>926 Update Version 1 GUI to build with current tools</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-1.6.3-july-31-2022">TestCentric Runner for NUnit 1.6.3- July 31, 2022</h3>
+<h4 id="feature">Feature</h4>
+<ul>
+<li>921 Remove Experimental GUI</li>
+</ul>
+<h4 id="enhancement">Enhancement</h4>
+<ul>
+<li>919 Eliminate dependency on CLR version when initializing TestCentric</li>
+</ul>
+<h4 id="bug-1">Bug</h4>
+<ul>
+<li>916 Testcentric 1.6.2 does not start when .Net 6.0 is installed</li>
+</ul>
+<h4 id="build-2">Build</h4>
+<ul>
+<li>917 Set up branch for V1 releases</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha6-june-18-2022">TestCentric Runner for NUnit 2.0.0-alpha6- June 18, 2022</h3>
+<h4 id="features-1">Features</h4>
+<ul>
+<li>903 Update GUI to use engine version 2.0.0-alpha6</li>
+<li>895 VisualState should handle adding new tests while maintaining the display correctly</li>
+</ul>
+<h4 id="enhancement-1">Enhancement</h4>
+<ul>
+<li>892 Visual state at reloading assembly</li>
+</ul>
+<h4 id="bugs-1">Bugs</h4>
+<ul>
+<li>902 Get cancellation working using engine version 2.0.0-dev00050</li>
+<li>898 UI for stopping/killing test run is a bit confusing</li>
+<li>891 VisualState- When a single test is deleted other tests are mis-identified</li>
+<li>887 Tree view reload after assembly is reloaded</li>
+</ul>
+<h4 id="documentation">Documentation</h4>
+<ul>
+<li>885 Document GUI Alpha releases</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha5-may-14-2022">TestCentric Runner for NUnit 2.0.0-alpha5- May 14, 2022</h3>
 <p>This release includes major revisions to the UI. There is no longer a <code>Test</code> menu. Rather, all test execution is performed through the toolbar or the context menu. The toolbar now contains buttons for running all or selected tests, repeating the last run and running only failed tests.</p>
 <p><strong>Note:</strong> The selected (highlighted) test item in the tree is now referred to as the &quot;Active&quot; item. This is the item for which any detailed information is displayed, as in the properties tab, for example. If <code>Checkboxes</code> are enabled, the checked items are referred to as &quot;Selected&quot; for running. If they are disabled, or if no items are checked, the &quot;Active&quot; item is also considered as &quot;Selected&quot;.</p>
 <p>Reflecting changes in the TestCentric engine, there are no longer built-in agents for .NET 2.0 and .NET Core 2.1. These will be provided by separately installed extensions. The .NET 2.0 Pluggable Agent extension is already available and used in our tests. The .NET Core 2.1 agent is being developed.</p>
@@ -142,22 +219,22 @@
 <li>842 Eliminate built-in .NET Core 2.1 agent</li>
 <li>841 Eliminate built-in net20 agent</li>
 </ul>
-<h4 id="features">Features</h4>
+<h4 id="features-2">Features</h4>
 <ul>
 <li>881 Specify full- vs mini-gui on command line</li>
-<li>877 Re-Implement Debugging of tests</li>
+<li>877 Re-Implement Debugging of tests__](<a href="https://github.com/TestCentric/testcentric-gui/issues/921">https://github.com/TestCentric/testcentric-gui/issues/921</a>)</li>
 <li>870 Run Failed tests from previous runs</li>
 <li>869 Rerun Last Test</li>
 <li>245 Make XML display of tests and test results a popup window</li>
 </ul>
-<h4 id="enhancements">Enhancements</h4>
+<h4 id="enhancements-1">Enhancements</h4>
 <ul>
 <li>872 Move RunSummary button next to progress bar</li>
 <li>871 Reorganize &quot;Group By&quot; functionality in the UI</li>
 <li>861 Disallow both ReloadOnChange and ReloadOnRun</li>
 <li>836 Convert command-line processing to latest version of Mono.Options</li>
 </ul>
-<h4 id="bugs">Bugs</h4>
+<h4 id="bugs-2">Bugs</h4>
 <ul>
 <li>866 TestProperties tab panels not expanding to full width available</li>
 <li>854 Need a better way to run a subset of the tests</li>
@@ -168,40 +245,40 @@
 <li>846 Error when attempting to open an assembly targeting .NET Standard</li>
 <li>827 Mono,Win10 Error</li>
 </ul>
-<h4 id="build">Build</h4>
+<h4 id="build-3">Build</h4>
 <ul>
 <li>844 Remove unused copies of engine files from the repository</li>
 <li>829 Eliminate TestCentric.Common project</li>
 <li>828 Make TestCentric Engine a separate project</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-2.0.0-alpha4-october-2-2021">TestCentric Runner for NUnit 2.0.0-alpha4 - October 2, 2021</h3>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha4-october-2-2021">TestCentric Runner for NUnit 2.0.0-alpha4- October 2, 2021</h3>
 <p>This release incorporates a critical fix to a bug, which caused the program to crash when run on a machine with .NET 6.0 installed.</p>
-<h4 id="bug">Bug</h4>
+<h4 id="bug-2">Bug</h4>
 <ul>
 <li>821 System.ArgumentException: 'Unknown .NET Core version: 6.0 Parameter name: version'</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-2.0.0-alpha3-september-30-2021">TestCentric Runner for NUnit 2.0.0-alpha3 - September 30, 2021</h3>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha3-september-30-2021">TestCentric Runner for NUnit 2.0.0-alpha3- September 30, 2021</h3>
 <p>The primary purpose of this release is to get a few more breaking changes into the repository. With this release, we switch to the dev-4.0 build of the NUnit Engine API, and stop building for .NET Standard 1.6 and .NET Core 1.1.</p>
 <h4 id="breaking-changes-1">Breaking Changes</h4>
 <ul>
 <li>809 Stop building for .NET Standard 1.6 and .NET Core 1.1</li>
 <li>808 Switch to the dev-40 build of the NUnit Engine API</li>
 </ul>
-<h4 id="feature">Feature</h4>
+<h4 id="feature-1">Feature</h4>
 <ul>
 <li>804 Remove references to the engine from the GUI proper</li>
 </ul>
-<h4 id="enhancement">Enhancement</h4>
+<h4 id="enhancement-2">Enhancement</h4>
 <ul>
 <li>705 Modify Arguments to Agent Process</li>
 </ul>
-<h4 id="build-1">Build</h4>
+<h4 id="build-4">Build</h4>
 <ul>
 <li>813 Upgrade to the latest Cake version</li>
 <li>812 Use VS Project properties to generate the assemblyinfo files</li>
 <li>805 Stop use of Image Directory where not needed</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-2.0.0-alpha2-august-15-2021">TestCentric Runner for NUnit 2.0.0-alpha2 - August 15, 2021</h3>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha2-august-15-2021">TestCentric Runner for NUnit 2.0.0-alpha2- August 15, 2021</h3>
 <p>The 2.0.0 release will be the first major upgrade of the TestCentric Gui
 with a number of breaking changes as well as new features.</p>
 <p>The primary change in this second alpha release is that the old Standard
@@ -212,7 +289,7 @@ of the GUI in use. The GUI also has a few new features in this release:</p>
 <li>The Run Summary report is now displayed directly beneath the progress bar.</li>
 <li>The toolbar now includes icons for normal and forced stop (kill) and for displaying a summary of the last run.</li>
 </ul>
-<h4 id="features-1">Features</h4>
+<h4 id="features-3">Features</h4>
 <ul>
 <li>780 Restore TestPropertiesDialog for use with the mini-GUI</li>
 <li>762 Variable positioning of progress bar</li>
@@ -229,7 +306,7 @@ of the GUI in use. The GUI also has a few new features in this release:</p>
 <li>609 Allow selecting normal versus forced stop</li>
 <li>230 Save and restore Visual state</li>
 </ul>
-<h4 id="enhancements-1">Enhancements</h4>
+<h4 id="enhancements-2">Enhancements</h4>
 <ul>
 <li>798 Improve Test Run Report Presentation</li>
 <li>794 Adjust PropertiesDialog Layout to be closer to that of TestPropertiesView</li>
@@ -239,7 +316,7 @@ of the GUI in use. The GUI also has a few new features in this release:</p>
 <li>755 Display last run summary on demand</li>
 <li>737 Remove checkbox-related buttons from below tree display</li>
 </ul>
-<h4 id="bugs-1">Bugs</h4>
+<h4 id="bugs-3">Bugs</h4>
 <ul>
 <li>791 TestPropertiesDialog does not update after test run</li>
 <li>788 Location of form should be saved before changing GUI layout</li>
@@ -249,13 +326,13 @@ of the GUI in use. The GUI also has a few new features in this release:</p>
 <li>769 Groupings, which do not apply to the current display format, should be disabled</li>
 <li>767 GroupBy dropdown has no effect when changing</li>
 </ul>
-<h4 id="build-2">Build</h4>
+<h4 id="build-5">Build</h4>
 <ul>
 <li>800 Retry failed publishing steps in build</li>
 <li>753 Move &quot;common&quot; gui components to the  Gui project</li>
 <li>733 Remove unneeded conditionals from the engine</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-2.0.0-alpha1-june-30-2021">TestCentric Runner for NUnit 2.0.0-alpha1 - June 30, 2021</h3>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha1-june-30-2021">TestCentric Runner for NUnit 2.0.0-alpha1- June 30, 2021</h3>
 <p>The 2.0.0 release is the first major upgrade of the TestCentric Gui.
 It includes a number of breaking changes as well as new features.</p>
 <h4 id="significant-gui-changes">Significant Gui Changes</h4>
@@ -305,7 +382,7 @@ they are not needed.</p>
 <li>657 Eliminate DomainUsage option</li>
 <li>444 Eliminate in-process execution</li>
 </ul>
-<h4 id="features-2">Features</h4>
+<h4 id="features-4">Features</h4>
 <ul>
 <li>697 Agent Redesign</li>
 <li>694 Remove x86 build of agent for .NET Core</li>
@@ -314,18 +391,18 @@ they are not needed.</p>
 <li>684 Make metadata assembly a fully independent package</li>
 <li>678 Create package for use by pluggable agents</li>
 </ul>
-<h4 id="enhancements-2">Enhancements</h4>
+<h4 id="enhancements-3">Enhancements</h4>
 <ul>
 <li>715 Make dependencies of one service on another explicit</li>
 <li>677 Update AboutBox for 2.0 release</li>
 <li>666 Issue an error message when user provides an obsolete project setting. Ignore in project files.</li>
 </ul>
-<h4 id="bugs-2">Bugs</h4>
+<h4 id="bugs-4">Bugs</h4>
 <ul>
 <li>719 Crashing Testcentric on trying to change Process Model to X86</li>
 <li>707 ResultHelper.Aggregate doesn't count warnings</li>
 </ul>
-<h4 id="build-3">Build</h4>
+<h4 id="build-6">Build</h4>
 <ul>
 <li>729 Allow creation of draft and production GitHub releases for pre-release versions</li>
 <li>725 Upgrade NUnit framework to 3.12</li>
@@ -334,13 +411,13 @@ they are not needed.</p>
 <li>699 Create separate test assembly for nunit.agent.core</li>
 <li>682 Build script should check files for valid headers</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.6.2-march-24-2021">TestCentric Runner for NUnit 1.6.2 - March 24, 2021</h3>
+<h3 id="testcentric-runner-for-nunit-1.6.2-march-24-2021">TestCentric Runner for NUnit 1.6.2- March 24, 2021</h3>
 <p>This release was made to fix a critical bug.</p>
 <h4 id="issues-resolved">Issues Resolved</h4>
 <ul>
 <li>673 Show CheckBoxes does not work</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.6.1-january-17-2021">TestCentric Runner for NUnit 1.6.1 - January 17, 2021</h3>
+<h3 id="testcentric-runner-for-nunit-1.6.1-january-17-2021">TestCentric Runner for NUnit 1.6.1- January 17, 2021</h3>
 <p>The main change in this release is that the <code>InProcess</code> option is disabled when the loaded tests
 cannot all run in the Gui process under the .NET Framework 4.x and would otherwise cause an error.</p>
 <p>This is intended to be the last release in the TestCentric 1.x series. The next release,
@@ -352,7 +429,7 @@ support them will be treated as an implementation detail outside the control of 
 <li>658 Restructure or rewrite runtime framework detection code</li>
 <li>661 InProcess menu item should be disabled if any .net core tests are loaded.</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.6.0-january-10-2021">TestCentric Runner for NUnit 1.6.0 - January 10, 2021</h3>
+<h3 id="testcentric-runner-for-nunit-1.6.0-january-10-2021">TestCentric Runner for NUnit 1.6.0- January 10, 2021</h3>
 <p>The main feature of this release is the addition of an agent for running tests under .NET 5.0.
 Since the runner itself targets the .NET Framework, this feature is only available when tests
 are run out of process. By default, tests targeting .NET 5.0 will run under that agent, provided
@@ -366,7 +443,7 @@ of .NET Core under .NET 5.0.</p>
 <li>651 Add a .NET 5.0 agent to the build</li>
 <li>653 Export Draft Release for use in CHANGES file and on website</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.5.3-december-23-2020">TestCentric Runner for NUnit 1.5.3 - December 23, 2020</h3>
+<h3 id="testcentric-runner-for-nunit-1.5.3-december-23-2020">TestCentric Runner for NUnit 1.5.3- December 23, 2020</h3>
 <p>This release fixes a critical issue in 1.5.2</p>
 <h4 id="issues-resolved-3">Issues Resolved</h4>
 <ul>
@@ -377,12 +454,12 @@ of .NET Core under .NET 5.0.</p>
 <li>641 Update AboutBox text and ensure it all fits</li>
 <li>642 Dashes rather than separators in menus</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.5.2-december-16-2020">TestCentric Runner for NUnit 1.5.2 - December 16, 2020</h3>
+<h3 id="testcentric-runner-for-nunit-1.5.2-december-16-2020">TestCentric Runner for NUnit 1.5.2- December 16, 2020</h3>
 <h4 id="issues-resolved-4">Issues Resolved</h4>
 <ul>
 <li>626  Tailor content of Release Note created by release build</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.5.1-december-14-2020">TestCentric Runner for NUnit 1.5.1 - December 14, 2020</h3>
+<h3 id="testcentric-runner-for-nunit-1.5.1-december-14-2020">TestCentric Runner for NUnit 1.5.1- December 14, 2020</h3>
 <h4 id="issues-resolved-5">Issues Resolved</h4>
 <ul>
 <li>324 Convert to use new VS project format</li>
@@ -390,7 +467,7 @@ of .NET Core under .NET 5.0.</p>
 <li>616 Improvements to the Release Process</li>
 <li>617 Migrate &quot;master&quot; branch to &quot;main&quot;</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.5.0-december-8-2020">TestCentric Runner for NUnit 1.5.0 - December 8, 2020</h3>
+<h3 id="testcentric-runner-for-nunit-1.5.0-december-8-2020">TestCentric Runner for NUnit 1.5.0- December 8, 2020</h3>
 <p>This release includes one major new feature. The Stop button now triggers a non-forced
 stop, running all teardowns. It then gives the user the option of a forced stop in case
 the run does not terminate. In addition, it incorporates major build improvements, which
@@ -406,7 +483,7 @@ will make it easier to do more frequent releases in the future.</p>
 <li>612 Automate final release process</li>
 <li>613 Version 1.4.1 release zip file is missing</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.4.1-september-3-2020">TestCentric Runner for NUnit 1.4.1 - September 3, 2020</h3>
+<h3 id="testcentric-runner-for-nunit-1.4.1-september-3-2020">TestCentric Runner for NUnit 1.4.1- September 3, 2020</h3>
 <p>This is primarily a bug fix release, the exception being the use of our own metadata
 assembly which is being published as a separate nuget package for use by others.</p>
 <h4 id="engine">Engine</h4>
@@ -421,7 +498,7 @@ source code and provides the specific introspection features needed by the engin
 <li>585 Metadata Assembly</li>
 <li>595 InvalidCastException, &quot;Properties&quot; context menu entry</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.4.0-april-30-2020">TestCentric Runner for NUnit 1.4.0 - April 30, 2020</h3>
+<h3 id="testcentric-runner-for-nunit-1.4.0-april-30-2020">TestCentric Runner for NUnit 1.4.0- April 30, 2020</h3>
 <p>This release introduces execution of .NET Core tests along with .NET Framework and
 adds several other smaller features.</p>
 <h4 id="gui">GUI</h4>
@@ -462,7 +539,7 @@ continue to use remoting.</p>
 <li>570 Support project configs</li>
 <li>572 Display Package Settings in TestPropertiesDialog</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.3.3-april-17-2020">TestCentric Runner for NUnit 1.3.3 - April 17, 2020</h3>
+<h3 id="testcentric-runner-for-nunit-1.3.3-april-17-2020">TestCentric Runner for NUnit 1.3.3- April 17, 2020</h3>
 <p>This release corrects a critical issue whereby engine extensions were no longer
 being recognized by the GUI. Additional package testing, including use of
 extensions, has been added to prevent regressions.</p>
@@ -473,7 +550,7 @@ extensions, has been added to prevent regressions.</p>
 <li>560 Support the NUnit engine API</li>
 <li>562 Expanded package testing prior to release</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.3.2-march-15-2020">TestCentric Runner for NUnit 1.3.2 - March 15, 2020</h3>
+<h3 id="testcentric-runner-for-nunit-1.3.2-march-15-2020">TestCentric Runner for NUnit 1.3.2- March 15, 2020</h3>
 <p>This release corrects a new bug found in the 1.3.0 release and makes a
 number of improvements in the automation of the release process.</p>
 <h4 id="issues-resolved-10">Issues Resolved</h4>
@@ -484,7 +561,7 @@ number of improvements in the automation of the release process.</p>
 <li>540 Support for unattended execution of the GUI</li>
 <li>542 FIXED: Default process model for 32 bit v1.3.1</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.3.1-march-6-2020">TestCentric Runner for NUnit 1.3.1 - March 6, 2020</h3>
+<h3 id="testcentric-runner-for-nunit-1.3.1-march-6-2020">TestCentric Runner for NUnit 1.3.1- March 6, 2020</h3>
 <p>This release corrects a critical problem in the 1.3.0 release. None of the
 1.3.0 packages included agents for use under .NET 4.0 and higher. This
 release adds those agents.</p>
@@ -495,7 +572,7 @@ release adds those agents.</p>
 <li>537 FIXED: Missing files in Release 1.3.0</li>
 <li>538 Add package checking tasks to build</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.3.0-february-23-2019">TestCentric Runner for NUnit 1.3.0 - February 23, 2019</h3>
+<h3 id="testcentric-runner-for-nunit-1.3.0-february-23-2019">TestCentric Runner for NUnit 1.3.0- February 23, 2019</h3>
 <h4 id="general">General</h4>
 <ul>
 <li><p>A NuGet package is now available on nuget.org. While we continue to
@@ -551,7 +628,7 @@ and agents use the appropriate version. The GUI itself uses the 4.0 engine.</p>
 <li>526 Update nuget package</li>
 <li>531 Create tasks in build script for publishing packages</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.2.0-december-17-2019">TestCentric Runner for NUnit 1.2.0 - December 17, 2019</h3>
+<h3 id="testcentric-runner-for-nunit-1.2.0-december-17-2019">TestCentric Runner for NUnit 1.2.0- December 17, 2019</h3>
 <p>This release is primarily marked by the elimination of our
 dependency on the NUnit Engine in preparation for moving
 forward with features that require engine changes.</p>
@@ -597,10 +674,10 @@ if the user attempts to open one.</p>
 <li>470 Remove deprecated &quot;Single&quot; option for ProcessModel</li>
 <li>473 Establish Initial Version for TestCentric engine</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.1.0-november-9-2019">TestCentric Runner for NUnit 1.1.0 - November 9, 2019</h3>
+<h3 id="testcentric-runner-for-nunit-1.1.0-november-9-2019">TestCentric Runner for NUnit 1.1.0- November 9, 2019</h3>
 <h4 id="general-1">General</h4>
 <p>This release includes new features beyond the 1.0 release, together with some bug fixes.</p>
-<h4 id="features-3">Features</h4>
+<h4 id="features-5">Features</h4>
 <ul>
 <li>The configuration to be loaded may be specified in the GUI.</li>
 <li>A new dialog allows setting parameters for the test run.</li>
@@ -635,10 +712,10 @@ if the user attempts to open one.</p>
 <li>430 FIXED: Index out of range exception when adding a test file</li>
 <li>432 FIXED: TestParametersDialog enables Remove and Edit on startup</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.0.1-august-15-2019">TestCentric Runner for NUnit 1.0.1 - August 15, 2019</h3>
+<h3 id="testcentric-runner-for-nunit-1.0.1-august-15-2019">TestCentric Runner for NUnit 1.0.1- August 15, 2019</h3>
 <h4 id="general-2">General</h4>
 <p>This release fixes a critical error discovered after the release of 1.0.0.</p>
-<h4 id="features-4">Features</h4>
+<h4 id="features-6">Features</h4>
 <ul>
 <li>Includes version 0.15.1 of the experimental GUI</li>
 </ul>
@@ -648,7 +725,7 @@ if the user attempts to open one.</p>
 <li>380 Automate testing of packages</li>
 <li>388 FIXED: NUnit process with multiple assemblies will not load</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.0.0-july-27-2019">TestCentric Runner for NUnit 1.0.0 - July 27, 2019</h3>
+<h3 id="testcentric-runner-for-nunit-1.0.0-july-27-2019">TestCentric Runner for NUnit 1.0.0- July 27, 2019</h3>
 <h4 id="general-3">General</h4>
 <p>This is the final release of version 1.0 of the TestCentric Runner for NUnit, which is
 primarily based on the layout and feature set of the original NUnit V2 GUI runner with
@@ -658,7 +735,7 @@ differences in how NUnit3 works and are described below under Features.</p>
 Manfred Lange, Stefano Nuzzo and Robert Snyder. Community members who contributed code to
 this release include Jeff Kryzer, zBrianW, Joseph Musser and Mattias Karlsson. Countless
 other folks contributed by filing issues, asking questions and making suggestions.</p>
-<h4 id="features-5">Features</h4>
+<h4 id="features-7">Features</h4>
 <ul>
 <li><p>TestCentric relies on the NUnit engine to load and run tests. Features that require
 an engine extension are only available if the appropriate extension is installed. In
@@ -711,14 +788,14 @@ which includes support for an id filter.</li>
 <li>375 Clean up GUI About box</li>
 <li>378 Ensure that error message displays when exception is thrown in engine</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.0.0-beta4-july-17-2019">TestCentric Runner for NUnit 1.0.0-Beta4 - July 17, 2019</h3>
+<h3 id="testcentric-runner-for-nunit-1.0.0-beta4-july-17-2019">TestCentric Runner for NUnit 1.0.0-Beta4- July 17, 2019</h3>
 <h4 id="general-4">General</h4>
 <p>This is the fourth beta release of the TestCentric Runner for NUnit. While it is still beta,
 it is feature-complete. Since the actual execution of tests is done by the NUnit engine
 rather than the GUI itself, it's probably reasonable for developers to use this on the
 desktop, provided their CI is based on a stable production-level NUnit runner, such as
 the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
-<h4 id="features-6">Features</h4>
+<h4 id="features-8">Features</h4>
 <ul>
 <li>Version 0.14 of the Experimental GUI is included.</li>
 </ul>
@@ -728,14 +805,14 @@ the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
 <li>369 Merge Options classes for two GUIs and move to common assembly.</li>
 <li>370 FIXED: Beta3: unhandled .net exception</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.0.0-beta3-july-14-2019">TestCentric Runner for NUnit 1.0.0-Beta3 - July 14, 2019</h3>
+<h3 id="testcentric-runner-for-nunit-1.0.0-beta3-july-14-2019">TestCentric Runner for NUnit 1.0.0-Beta3- July 14, 2019</h3>
 <h4 id="general-5">General</h4>
 <p>This is the third beta release of the TestCentric Runner for NUnit. While it is still beta,
 it is feature-complete. Since the actual execution of tests is done by the NUnit engine
 rather than the GUI itself, it's probably reasonable for developers to use this on the
 desktop, provided their CI is based on a stable production-level NUnit runner, such as
 the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
-<h4 id="features-7">Features</h4>
+<h4 id="features-9">Features</h4>
 <ul>
 <li>Version 0.13 of the Experimental GUI is included.</li>
 <li>Added command-line options --process, --domain, --inprocess, --x86 and --agents.</li>
@@ -752,14 +829,14 @@ the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
 <li>361 FIXED: Process Model setting includes Single rather than Separate</li>
 <li>364 FIXED: Experimental GUI: Proper icons are not displayed for warnings and failures</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.0.0-beta2-may-30-2019">TestCentric Runner for NUnit 1.0.0-Beta2 - May 30, 2019</h3>
+<h3 id="testcentric-runner-for-nunit-1.0.0-beta2-may-30-2019">TestCentric Runner for NUnit 1.0.0-Beta2- May 30, 2019</h3>
 <h4 id="general-6">General</h4>
 <p>This is the second beta release of the TestCentric Runner for NUnit. While it is still beta,
 it is feature-complete. Since the actual execution of tests is done by the NUnit engine
 rather than the GUI itself, it's probably reasonable for developers to use this on the
 desktop, provided their CI is based on a stable production-level NUnit runner, such as
 the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
-<h4 id="features-8">Features</h4>
+<h4 id="features-10">Features</h4>
 <ul>
 <li>Version 0.12 of the Experimental GUI is included with support for user-defined icons
 and immediate text output display.</li>
@@ -776,14 +853,14 @@ and immediate text output display.</li>
 <li>336 FIXED: In TestCentric gui, Selected Categories are cleared on Reload</li>
 <li>345 Show names of settings in Text Output settings dialog</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.0.0-beta-april-13-2019">TestCentric Runner for NUnit 1.0.0-Beta - April 13, 2019</h3>
+<h3 id="testcentric-runner-for-nunit-1.0.0-beta-april-13-2019">TestCentric Runner for NUnit 1.0.0-Beta- April 13, 2019</h3>
 <h4 id="general-7">General</h4>
 <p>This is the beta release of the TestCentric Runner for NUnit. While it is still beta,
 it is feature-complete. Since the actual execution of tests is done by the NUnit engine
 rather than the GUI itself, it's probably reasonable for developers to use this on the
 desktop, provided their CI is based on a stable production-level NUnit runner, such as
 the NUnit 3 Console Runner or the NUnit 3 VS adapter.</p>
-<h4 id="features-9">Features</h4>
+<h4 id="features-11">Features</h4>
 <ul>
 <li>Version 0.11 of the Experimental GUI is included with support for saving test results,
 reload on change and reload on run.</li>
@@ -798,11 +875,11 @@ reload on change and reload on run.</li>
 <li>306 FIXED: Save TestResult Dialog not initialized correctly</li>
 <li>318 Disable ReRun on Change setting</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.0.0-alpha4-april-5-2019">TestCentric Runner for NUnit 1.0.0-Alpha4 - April 5, 2019</h3>
+<h3 id="testcentric-runner-for-nunit-1.0.0-alpha4-april-5-2019">TestCentric Runner for NUnit 1.0.0-Alpha4- April 5, 2019</h3>
 <h4 id="general-8">General</h4>
 <p>This is the fourth alpha release of the TestCentric Runner for NUnit. It is not yet recommended
 for use in production work.</p>
-<h4 id="features-10">Features</h4>
+<h4 id="features-12">Features</h4>
 <ul>
 <li>Entries now appear in the tree display for any projects loaded</li>
 <li>The GUI now uses a custom built version of the engine, based on the NUnit 3.10 engine.</li>
@@ -821,11 +898,11 @@ for use in production work.</p>
 <li>301 FIXED Tree icons of previous run do not clear when starting second run</li>
 <li>304 FIXED Use new 3.10 release of NUnit engine</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.0.0-alpha3-february-27-2019">TestCentric Runner for NUnit 1.0.0-Alpha3 - February 27, 2019</h3>
+<h3 id="testcentric-runner-for-nunit-1.0.0-alpha3-february-27-2019">TestCentric Runner for NUnit 1.0.0-Alpha3- February 27, 2019</h3>
 <h4 id="general-9">General</h4>
 <p>This is the third alpha release of the TestCentric Runner for NUnit. It is not yet recommended
 for use in production work.</p>
-<h4 id="features-11">Features</h4>
+<h4 id="features-13">Features</h4>
 <ul>
 <li>The Experimental GUI, which was previously a separate project, is now included along with the standard TestCentric GUI.</li>
 <li>Assemblies and projects are now loadable using all process and domain settings.</li>
@@ -864,11 +941,11 @@ for use in production work.</p>
 <li>278 Include pdb files in packages</li>
 <li>279 Remove engine version hack in build script</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.0.0-alpha2-november-11-2018">TestCentric Runner for NUnit 1.0.0-Alpha2 - November 11, 2018</h3>
+<h3 id="testcentric-runner-for-nunit-1.0.0-alpha2-november-11-2018">TestCentric Runner for NUnit 1.0.0-Alpha2- November 11, 2018</h3>
 <h4 id="general-10">General</h4>
 <p>This is the second alpha release of the TestCentric Runner for NUnit. It is not yet recommended
 for use in production work.</p>
-<h4 id="features-12">Features</h4>
+<h4 id="features-14">Features</h4>
 <ul>
 <li>The GUI now uses the NUnit 3.9 engine</li>
 <li>Reloading on each Run is now functional.</li>
@@ -889,11 +966,11 @@ for use in production work.</p>
 <li>132 Create TestCentric.Common assembly</li>
 <li>144 Update NUnit Engine to 3.9</li>
 </ul>
-<h3 id="testcentric-runner-for-nunit-1.0.0-alpha1-august-3-2018">TestCentric Runner for NUnit 1.0.0-Alpha1 - August 3, 2018</h3>
+<h3 id="testcentric-runner-for-nunit-1.0.0-alpha1-august-3-2018">TestCentric Runner for NUnit 1.0.0-Alpha1- August 3, 2018</h3>
 <h4 id="general-11">General</h4>
 <p>This is the initial alpha release of the TestCentric Runner for NUnit. It is not yet recommended
 for use in production work.</p>
-<h4 id="features-13">Features</h4>
+<h4 id="features-15">Features</h4>
 <p>This GUI runner resembles the NUnit V2 GUI, but since it runs NUnit 3 tests the internal implementation
 is entirely new. In addition, features not available or not easily supported in NUnit 3 have been
 removed. Some key differences from the V2 GUI are...</p>
@@ -911,38 +988,71 @@ of the approprate engine extensions, which are not bundled with the GUI.</li>
 </ul>
 <h4 id="issues-resolved-24">Issues Resolved</h4>
 <ul>
-<li>1 Select Target Framework for the GUI</li>
-<li>2 Review of Initial Upload</li>
-<li>9 Update the About box</li>
-<li>10 Correct name for program in --help option</li>
-<li>13 FIXED: Number of Recent Files has no effect</li>
-<li>14 FIXED: Tree always cleared of results on reload</li>
-<li>16 FIXED: Flat list of TestFixtures not working</li>
-<li>17 FIXED: Reload on Run not working</li>
-<li>19 FIXED: Principal Policy not working</li>
-<li>20 FIXED: InternalTrace level not honored</li>
-<li>24 FIXED: Setting number of agents has no effect</li>
-<li>26 FIXED: Clear Results Setting is on wrong page</li>
-<li>27 Create CI Build Script</li>
-<li>28 FIXED: &quot;Clear All&quot; and &quot;Check Failed&quot; has no effect</li>
-<li>29 FIXED: &quot;Run&quot; context menu is never enabled</li>
-<li>32 Renaming test-centric to testcentric</li>
-<li>33 Restore Tree-based Setting Dialog</li>
-<li>39 FIXED: Cannot run the tests in TestCentric.Gui.Model.Tests.dll more than once</li>
-<li>42 FIXED: Not possible to run explicit tests using the GUI</li>
-<li>50 Review and reorganize Settings for NUnit 3</li>
-<li>52 FIXED: Show CheckBoxes throws NRE</li>
-<li>61 Disable or remove non-functional elements on Settings pages</li>
-<li>62 FIXED: Switching between full and mini gui display doesn't happen immediately</li>
-<li>63 FIXED: Check files exist setting has no effect</li>
-<li>64 Better error message when an assembly is not found</li>
-<li>66 FIXED: Project editor menu item not working.</li>
-<li>67 FIXED: Show Checkboxes menu and settings elements are inconsistent</li>
-<li>68 Save results menu should be disabled when no test has been run</li>
-<li>71 FIXED: Multiple files on command-line or in file open dialog not opened</li>
-<li>73 Multiple loaded files have no root in tree</li>
-<li>80 Standardize naming of TestCentric packages and executables</li>
-<li>83 Update tests to use NUnit 3.10.1</li>
+<li></li>
+<li><p>1 Select Target Framework for the GUI</p>
+</li>
+<li><p>2 Review of Initial Upload</p>
+</li>
+<li><p>9 Update the About box</p>
+</li>
+<li><p>10 Correct name for program in --help option</p>
+</li>
+<li><p>13 FIXED: Number of Recent Files has no effect</p>
+</li>
+<li><p>14 FIXED: Tree always cleared of results on reload</p>
+</li>
+<li><p>16 FIXED: Flat list of TestFixtures not working</p>
+</li>
+<li><p>17 FIXED: Reload on Run not working</p>
+</li>
+<li><p>19 FIXED: Principal Policy not working</p>
+</li>
+<li><p>20 FIXED: InternalTrace level not honored</p>
+</li>
+<li><p>24 FIXED: Setting number of agents has no effect</p>
+</li>
+<li><p>26 FIXED: Clear Results Setting is on wrong page</p>
+</li>
+<li><p>27 Create CI Build Script</p>
+</li>
+<li><p>28 FIXED: &quot;Clear All&quot; and &quot;Check Failed&quot; has no effect</p>
+</li>
+<li><p>29 FIXED: &quot;Run&quot; context menu is never enabled</p>
+</li>
+<li><p>32 Renaming test-centric to testcentric</p>
+</li>
+<li><p>33 Restore Tree-based Setting Dialog</p>
+</li>
+<li><p>39 FIXED: Cannot run the tests in TestCentric.Gui.Model.Tests.dll more than once</p>
+</li>
+<li><p>42 FIXED: Not possible to run explicit tests using the GUI</p>
+</li>
+<li><p>50 Review and reorganize Settings for NUnit 3</p>
+</li>
+<li><p>52 FIXED: Show CheckBoxes throws NRE</p>
+</li>
+<li><p>61 Disable or remove non-functional elements on Settings pages</p>
+</li>
+<li><p>62 FIXED: Switching between full and mini gui display doesn't happen immediately</p>
+</li>
+<li><p>63 FIXED: Check files exist setting has no effect</p>
+</li>
+<li><p>64 Better error message when an assembly is not found</p>
+</li>
+<li><p>66 FIXED: Project editor menu item not working.</p>
+</li>
+<li><p>67 FIXED: Show Checkboxes menu and settings elements are inconsistent</p>
+</li>
+<li><p>68 Save results menu should be disabled when no test has been run</p>
+</li>
+<li><p>71 FIXED: Multiple files on command-line or in file open dialog not opened</p>
+</li>
+<li><p>73 Multiple loaded files have no root in tree</p>
+</li>
+<li><p>80 Standardize naming of TestCentric packages and executables</p>
+</li>
+<li><p>83 Update tests to use NUnit 3.10.1</p>
+</li>
 </ul>
 
 	</section>
