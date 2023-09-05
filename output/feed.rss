@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+	<channel>
+		<title>TestCentric</title>
+		<link>http://test-centric.org/</link>
+		<description />
+		<copyright>2023</copyright>
+		<pubDate>Tue, 05 Sep 2023 15:36:32 GMT</pubDate>
+		<lastBuildDate>Tue, 05 Sep 2023 15:36:32 GMT</lastBuildDate>
+		<item>
+			<title>New Release</title>
+			<link>http://test-centric.org/blog/new-release</link>
+			<description>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;</description>
+			<author>me</author>
+			<guid>http://test-centric.org/blog/new-release</guid>
+			<pubDate>Fri, 01 Jan 2016 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;
+</content:encoded>
+		</item>
+	</channel>
+</rss>

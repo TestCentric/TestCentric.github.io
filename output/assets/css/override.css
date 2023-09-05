@@ -1,0 +1,28 @@
+/*.main-header > .navbar {
+  /* make space for logo, even when no sidebar, plus a bit more for visual separation
+  margin-left: 300px;
+}*/
+
+.content h1 {
+  color: black;
+  font-style: normal;
+}
+body.layout-top-nav .main-header .navbar,
+.main-header .navbar {
+  min-height: 60px;
+  margin-left: 300px;
+}
+.main-header .logo {
+  text-align: left;
+  margin: 5px 0;
+}
+div.notice {
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+  border: 1px solid goldenrod;
+  margin: 1em 10%;
+  padding: 12px;
+  background-color: #FEEFB3;
+  color: #9F6000;
+}

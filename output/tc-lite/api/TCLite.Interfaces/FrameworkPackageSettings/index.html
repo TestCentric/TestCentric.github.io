@@ -1,0 +1,501 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>TestCentric - API - FrameworkPackageSettings Class</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/testcentriclogo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/testcentriclogo.png"></span>
+                                            </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                        <li><a href="/">Home</a></li>
+            <li><a href="/testcentric-gui">TestCentric Runner</a></li>
+            <li class="active"><a href="/tc-lite">TC-Lite Framework</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#fields">Fields</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Namespace</li>
+		<li><a href="/tc-lite/api/TCLite.Interfaces">TCLite<wbr>.Interfaces</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/IApplyToContext">IApplyToContext</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/IApplyToTest">IApplyToTest</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ICombiningStrategy">ICombiningStrategy</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/IImplyFixture">IImplyFixture</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/IParameterDataProvider">I<wbr>Parameter<wbr>Data<wbr>Provider</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/IParameterDataSource">IParameterDataSource</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/IPropertyBag">IPropertyBag</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/IRandomGenerator">IRandomGenerator</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ITest">ITest</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestCaseData">ITestCaseData</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestCaseFactory">ITestCaseFactory</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestCaseProvider">ITestCaseProvider</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestData">ITestData</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestExecutionContext">I<wbr>Test<wbr>Execution<wbr>Context</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestFilter">ITestFilter</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestFixtureData">ITestFixtureData</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestListener">ITestListener</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestResult">ITestResult</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/IXmlNodeBuilder">IXmlNodeBuilder</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/RunState">RunState</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutputType">TestOutputType</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/TestStatus">TestStatus</a></li>
+			<li class="header">Class Types</li>
+				<li class="selected"><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings">Framework<wbr>Package<wbr>Settings</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/PropertyEntry">PropertyEntry</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ResultState">ResultState</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutput">TestOutput</a></li>
+
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+	<h1>Framework<wbr>Package<wbr>Settings <small>Class</small></h1>
+</section>
+<section class="content">
+	
+	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+    FrameworkPackageSettings is a static class containing constant values that
+    are used as keys in setting up a TestPackage. These values are used in
+    the framework, and set in the runner. Setting values may be a string, int or bool.
+    </div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+
+								<dt>Namespace</dt>
+								<dd><a href="/tc-lite/api/TCLite.Interfaces">TCLite<wbr>.Interfaces</a></dd>
+											
+							
+								<dt>Base Types</dt>
+								<dd>
+									<ul class="list-unstyled">										
+											<li>object</li>								
+									</ul>
+								</dd>				
+							
+							
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph BT
+	Type--&gt;Base0["object"]
+	Type["FrameworkPackageSettings"]
+class Type type-node
+
+						</div>
+					</div>
+				</div>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public static class FrameworkPackageSettings</code></pre>
+
+
+
+
+
+
+
+
+
+			<h1 id="fields">Fields</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Constant Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/A0133F52">DebugTests</a></td>
+								<td>DebugTests</td>
+								<td>
+									<div>
+    Flag (bool) indicating whether tests are being debugged.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/36181248">Default<wbr>Test<wbr>Name<wbr>Pattern</a></td>
+								<td>DefaultTestNamePattern</td>
+								<td>
+									<div>
+    The default naming pattern used in generating test names
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/46C3AF94">DefaultTimeout</a></td>
+								<td>DefaultTimeout</td>
+								<td>
+									<div>
+    Integer value in milliseconds for the default timeout value
+    for test cases. If not specified, there is no timeout except
+    as specified by attributes on the tests themselves.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/F63D6543">InternalTraceLevel</a></td>
+								<td>InternalTraceLevel</td>
+								<td>
+									<div>
+    The InternalTraceLevel for this run. Values are: "Default",
+    "Off", "Error", "Warning", "Info", "Debug", "Verbose".
+    Default is "Off". "Debug" and "Verbose" are synonyms.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/84411947">InternalTraceWriter</a></td>
+								<td>InternalTraceWriter</td>
+								<td>
+									<div>
+    A TextWriter to which the internal trace will be sent.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/7FDE4046">NumberOfTestWorkers</a></td>
+								<td>NumberOfTestWorkers</td>
+								<td>
+									<div>
+    The number of test threads to run for the assembly. If set to
+    1, a single queue is used. If set to 0, tests are executed
+    directly, without queuing.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/41695CA1">PauseBeforeRun</a></td>
+								<td>PauseBeforeRun</td>
+								<td>
+									<div>
+    Flag (bool) indicating whether to pause execution of tests to allow
+    the user to attach a debugger.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/C4B7E6EE">RandomSeed</a></td>
+								<td>RandomSeed</td>
+								<td>
+									<div>
+    The random seed to be used for this assembly. If specified
+    as the value reported from a prior run, the framework should
+    generate identical random values for tests as were used for
+    that run, provided that no change has been made to the test
+    assembly. Default is a random value itself.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/7FA1AAEE">RunOnMainThread</a></td>
+								<td>RunOnMainThread</td>
+								<td>
+									<div>
+    If true, the tests will run on the same thread as the NUnit runner itself
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/758BB78E">StopOnError</a></td>
+								<td>StopOnError</td>
+								<td>
+									<div>
+    If true, execution stops after the first error or failure.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/B657A380">SynchronousEvents</a></td>
+								<td>SynchronousEvents</td>
+								<td>
+									<div>
+    If true, use of the event queue is suppressed and test events are synchronous.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/611EFE42">TestParameters</a></td>
+								<td>TestParameters</td>
+								<td>
+									<div>
+    Parameters to be passed on to the tests, serialized to a single string which needs parsing. Obsoleted by <code class="cs"><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/7372AF33">TestParametersDictionary</a></code>; kept for backward compatibility.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/7372AF33">Test<wbr>Parameters<wbr>Dictionary</a></td>
+								<td>TestParametersDictionary</td>
+								<td>
+									<div>
+    Parameters to be passed on to the tests, already parsed into an IDictionary&lt;string, string&gt;. Replaces <code class="cs"><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/611EFE42">TestParameters</a></code>.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings/BC29D56F">WorkDirectory</a></td>
+								<td>WorkDirectory</td>
+								<td>
+									<div>
+    Full path of the directory to be used for work and result files.
+    This path is provided to tests by the framework TestContext.
+    </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+
+
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

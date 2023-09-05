@@ -1,0 +1,501 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="description" />
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>TestCentric - Release Notes</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
+        <link href="/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet" />
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/testcentriclogo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/testcentriclogo.png"></span>
+                                            </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                        <li><a href="/">Home</a></li>
+            <li class="active"><a href="/testcentric-gui">TestCentric Runner</a></li>
+            <li><a href="/tc-lite">TC-Lite Framework</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+    <div id="infobar-headings"></div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+                <li><a href="/testcentric-gui/overview">Overview</a></li>
+                <li class="treeview">
+                    <a href="/testcentric-gui/GettingStarted">Getting Started</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/testcentric-gui/GettingStarted/installation">Installing the GUI</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/starting">Starting the GUI</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/running-tests">Running Tests</a></li>
+                <li><a href="/testcentric-gui/GettingStarted/stopping-tests">Stopping a Test Run</a></li>
+
+                    </ul>
+                </li>
+                <li class="treeview">
+                    <a href="/testcentric-gui/Features">GUI Elements</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+                <li><a href="/testcentric-gui/Features/main-window">Main Window</a></li>
+                <li><a href="/testcentric-gui/Features/main-menu">Main Menu</a></li>
+                <li><a href="/testcentric-gui/Features/context-menu">Context Menu</a></li>
+                <li><a href="/testcentric-gui/Features/mini-gui">Mini-Gui</a></li>
+                <li><a href="/testcentric-gui/Features/settings-dialog">Settings Dialog</a></li>
+                <li><a href="/testcentric-gui/Features/extensions-dialog">Extensions Dialog</a></li>
+                <li><a href="/testcentric-gui/Features/test-properties">Test Properties</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="/testcentric-gui/command-line">Command Line</a></li>
+                <li class="selected"><a href="/testcentric-gui/release-notes">Release Notes</a></li>
+                <li><a href="/testcentric-gui/license">License</a></li>
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+		<section class="content-header">
+			<h1>Release Notes</h1>
+		</section>
+	<section class="content">
+		<h3 id="testcentric-runner-for-nunit-2.0.0-alpha7-february-6-2023">TestCentric Runner for NUnit 2.0.0-alpha7- February 6, 2023</h3>
+<p>The primary feature added in this release comes from use of version 2.0.0-alpha7 of the test engine. The GUI is now able to run tests, which target .NET 6.0 and .NET 7.0.</p>
+<h4 id="features">Features</h4>
+<ul>
+<li>706 Specify test run parameters on command-line</li>
+<li>890 Support use of VisualState when test assembly has changed.</li>
+<li>914 Update to use alpha7 version of engine</li>
+<li>933 Update Gui to use .NET 4.6.2 rather than 4.5</li>
+</ul>
+<h4 id="enhancements">Enhancements</h4>
+<ul>
+<li>774 Save and Restore Visual State for fixture and test list display formats</li>
+<li>906 Better handling of &quot;dynamic&quot; test groups</li>
+</ul>
+<h4 id="bugs">Bugs</h4>
+<ul>
+<li>201 VisualState.xml should be saved <em>before</em> running tests</li>
+<li>901 Shown tooltip is hard to hide for failed test</li>
+<li>907 Missing output with failed test stack traces for Assert.Multiple</li>
+<li>911 Run Summary should close automatically when new run is starting</li>
+<li>941 Unhandled exception starting GUI if settings file is corrupted</li>
+</ul>
+<h4 id="build">Build</h4>
+<ul>
+<li>934 Get build working again!</li>
+<li>939 Use TestCentric-specific environment variable names for API keys</li>
+<li>943 Make CHANGES file a pointer to the Release Notes</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-1.6.4-december-2-2022">TestCentric Runner for NUnit 1.6.4- December 2, 2022</h3>
+<p>This release fixes a critical bug in version 1.6.3. In addition, due to changes in the environment and in Microsoft tool and runtime support, further changes were made to allow the build scripts to function.</p>
+<h4 id="bug">Bug</h4>
+<ul>
+<li>925 TestCentric-Gui 1.6.3 + NUnit IDriverFactory extension</li>
+</ul>
+<h4 id="build-1">Build</h4>
+<ul>
+<li>929 Update cake scripts</li>
+<li>926 Update Version 1 GUI to build with current tools</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-1.6.3-july-31-2022">TestCentric Runner for NUnit 1.6.3- July 31, 2022</h3>
+<h4 id="feature">Feature</h4>
+<ul>
+<li>921 Remove Experimental GUI</li>
+</ul>
+<h4 id="enhancement">Enhancement</h4>
+<ul>
+<li>919 Eliminate dependency on CLR version when initializing TestCentric</li>
+</ul>
+<h4 id="bug-1">Bug</h4>
+<ul>
+<li>916 Testcentric 1.6.2 does not start when .Net 6.0 is installed</li>
+</ul>
+<h4 id="build-2">Build</h4>
+<ul>
+<li>917 Set up branch for V1 releases</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha6-june-18-2022">TestCentric Runner for NUnit 2.0.0-alpha6- June 18, 2022</h3>
+<h4 id="features-1">Features</h4>
+<ul>
+<li>903 Update GUI to use engine version 2.0.0-alpha6</li>
+<li>895 VisualState should handle adding new tests while maintaining the display correctly</li>
+</ul>
+<h4 id="enhancement-1">Enhancement</h4>
+<ul>
+<li>892 Visual state at reloading assembly</li>
+</ul>
+<h4 id="bugs-1">Bugs</h4>
+<ul>
+<li>902 Get cancellation working using engine version 2.0.0-dev00050</li>
+<li>898 UI for stopping/killing test run is a bit confusing</li>
+<li>891 VisualState- When a single test is deleted other tests are mis-identified</li>
+<li>887 Tree view reload after assembly is reloaded</li>
+</ul>
+<h4 id="documentation">Documentation</h4>
+<ul>
+<li>885 Document GUI Alpha releases</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha5-may-14-2022">TestCentric Runner for NUnit 2.0.0-alpha5- May 14, 2022</h3>
+<p>This release includes major revisions to the UI. There is no longer a <code>Test</code> menu. Rather, all test execution is performed through the toolbar or the context menu. The toolbar now contains buttons for running all or selected tests, repeating the last run and running only failed tests.</p>
+<p><strong>Note:</strong> The selected (highlighted) test item in the tree is now referred to as the &quot;Active&quot; item. This is the item for which any detailed information is displayed, as in the properties tab, for example. If <code>Checkboxes</code> are enabled, the checked items are referred to as &quot;Selected&quot; for running. If they are disabled, or if no items are checked, the &quot;Active&quot; item is also considered as &quot;Selected&quot;.</p>
+<p>Reflecting changes in the TestCentric engine, there are no longer built-in agents for .NET 2.0 and .NET Core 2.1. These will be provided by separately installed extensions. The .NET 2.0 Pluggable Agent extension is already available and used in our tests. The .NET Core 2.1 agent is being developed.</p>
+<h4 id="breaking-changes">Breaking Changes</h4>
+<ul>
+<li>842 Eliminate built-in .NET Core 2.1 agent</li>
+<li>841 Eliminate built-in net20 agent</li>
+</ul>
+<h4 id="features-2">Features</h4>
+<ul>
+<li>881 Specify full- vs mini-gui on command line</li>
+<li>877 Re-Implement Debugging of tests__](<a href="https://github.com/TestCentric/testcentric-gui/issues/921">https://github.com/TestCentric/testcentric-gui/issues/921</a>)</li>
+<li>870 Run Failed tests from previous runs</li>
+<li>869 Rerun Last Test</li>
+<li>245 Make XML display of tests and test results a popup window</li>
+</ul>
+<h4 id="enhancements-1">Enhancements</h4>
+<ul>
+<li>872 Move RunSummary button next to progress bar</li>
+<li>871 Reorganize &quot;Group By&quot; functionality in the UI</li>
+<li>861 Disallow both ReloadOnChange and ReloadOnRun</li>
+<li>836 Convert command-line processing to latest version of Mono.Options</li>
+</ul>
+<h4 id="bugs-2">Bugs</h4>
+<ul>
+<li>866 TestProperties tab panels not expanding to full width available</li>
+<li>854 Need a better way to run a subset of the tests</li>
+<li>853 test duration time is changing</li>
+<li>852 Assembly Reload: &quot;Reload before each test run&quot; does not work</li>
+<li>851 Double click test to start</li>
+<li>848 Incorrect display when opening a project file without the proper extension installed.</li>
+<li>846 Error when attempting to open an assembly targeting .NET Standard</li>
+<li>827 Mono,Win10 Error</li>
+</ul>
+<h4 id="build-3">Build</h4>
+<ul>
+<li>844 Remove unused copies of engine files from the repository</li>
+<li>829 Eliminate TestCentric.Common project</li>
+<li>828 Make TestCentric Engine a separate project</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha4-october-2-2021">TestCentric Runner for NUnit 2.0.0-alpha4- October 2, 2021</h3>
+<p>This release incorporates a critical fix to a bug, which caused the program to crash when run on a machine with .NET 6.0 installed.</p>
+<h4 id="bug-2">Bug</h4>
+<ul>
+<li>821 System.ArgumentException: 'Unknown .NET Core version: 6.0 Parameter name: version'</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha3-september-30-2021">TestCentric Runner for NUnit 2.0.0-alpha3- September 30, 2021</h3>
+<p>The primary purpose of this release is to get a few more breaking changes into the repository. With this release, we switch to the dev-4.0 build of the NUnit Engine API, and stop building for .NET Standard 1.6 and .NET Core 1.1.</p>
+<h4 id="breaking-changes-1">Breaking Changes</h4>
+<ul>
+<li>809 Stop building for .NET Standard 1.6 and .NET Core 1.1</li>
+<li>808 Switch to the dev-40 build of the NUnit Engine API</li>
+</ul>
+<h4 id="feature-1">Feature</h4>
+<ul>
+<li>804 Remove references to the engine from the GUI proper</li>
+</ul>
+<h4 id="enhancement-2">Enhancement</h4>
+<ul>
+<li>705 Modify Arguments to Agent Process</li>
+</ul>
+<h4 id="build-4">Build</h4>
+<ul>
+<li>813 Upgrade to the latest Cake version</li>
+<li>812 Use VS Project properties to generate the assemblyinfo files</li>
+<li>805 Stop use of Image Directory where not needed</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha2-august-15-2021">TestCentric Runner for NUnit 2.0.0-alpha2- August 15, 2021</h3>
+<p>The 2.0.0 release will be the first major upgrade of the TestCentric Gui
+with a number of breaking changes as well as new features.</p>
+<p>The primary change in this second alpha release is that the old Standard
+GUI is no longer used. The former Experimental GUI is now the only version
+of the GUI in use. The GUI also has a few new features in this release:</p>
+<ul>
+<li>When using the full GUI  layout, the progress bar now appears in the right-hand panel.</li>
+<li>The Run Summary report is now displayed directly beneath the progress bar.</li>
+<li>The toolbar now includes icons for normal and forced stop (kill) and for displaying a summary of the last run.</li>
+</ul>
+<h4 id="features-3">Features</h4>
+<ul>
+<li>780 Restore TestPropertiesDialog for use with the mini-GUI</li>
+<li>762 Variable positioning of progress bar</li>
+<li>761 Make Menu Bar full width of main window</li>
+<li>758 Make &quot;Stop Run&quot; a separate button on menu bar&quot;</li>
+<li>757 Remove &quot;Run Failed&quot; from split button choices in menu bar</li>
+<li>745 Port XmlView from experimental GUI</li>
+<li>744 Port PropertyView from experimental GUI</li>
+<li>742 Remove Not Run tab</li>
+<li>741 Move Progress Bar to left-hand panel</li>
+<li>740 Remove right-hand panel Run and Cancel buttons</li>
+<li>735 Remove Categories Tab from left-hand GUI panel</li>
+<li>732 Merge features of the experimental GUI into the 2.0 standard GUI</li>
+<li>609 Allow selecting normal versus forced stop</li>
+<li>230 Save and restore Visual state</li>
+</ul>
+<h4 id="enhancements-2">Enhancements</h4>
+<ul>
+<li>798 Improve Test Run Report Presentation</li>
+<li>794 Adjust PropertiesDialog Layout to be closer to that of TestPropertiesView</li>
+<li>790 Hide result box in TestPropertiesDialog when there is no result</li>
+<li>789 Display package settings in TestPropertiesView</li>
+<li>786 Show package settings at top of PropertiesDialog and only show for tests representing packages</li>
+<li>755 Display last run summary on demand</li>
+<li>737 Remove checkbox-related buttons from below tree display</li>
+</ul>
+<h4 id="bugs-3">Bugs</h4>
+<ul>
+<li>791 TestPropertiesDialog does not update after test run</li>
+<li>788 Location of form should be saved before changing GUI layout</li>
+<li>783 NRE when File Menu pops up without an open project</li>
+<li>778 Visibility of StatusBar is not saved</li>
+<li>770 Need icon for display format button</li>
+<li>769 Groupings, which do not apply to the current display format, should be disabled</li>
+<li>767 GroupBy dropdown has no effect when changing</li>
+</ul>
+<h4 id="build-5">Build</h4>
+<ul>
+<li>800 Retry failed publishing steps in build</li>
+<li>753 Move &quot;common&quot; gui components to the  Gui project</li>
+<li>733 Remove unneeded conditionals from the engine</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha1-june-30-2021">TestCentric Runner for NUnit 2.0.0-alpha1- June 30, 2021</h3>
+<p>The 2.0.0 release is the first major upgrade of the TestCentric Gui.
+It includes a number of breaking changes as well as new features.</p>
+<h4 id="significant-gui-changes">Significant Gui Changes</h4>
+<ul>
+<li><p>The ProcessModel and DomainUsage menus have been eliminated.</p>
+</li>
+<li><p>A new Select Agents menu allows the user to choose a non-default
+agent when more than one is available for a particular assembly.</p>
+</li>
+</ul>
+<h4 id="significant-engine-changes">Significant Engine Changes</h4>
+<ul>
+<li><p>In-process execution of tests and the ProcessModel package setting
+are no longer supported. Each test assembly is now run in its own
+separate process.</p>
+</li>
+<li><p>The DomainUsage package setting is no longer supported. The runner
+itself decides whether an AppDomain should  be used when running
+on a particular platform.</p>
+</li>
+<li><p>All test execution is now performed by agents, which are usually
+separate local processes. Agent selection may be automatic or
+user-specified using a package setting.</p>
+</li>
+<li><p>It is now possible to create &quot;pluggable agents&quot; by use of a new
+engine extension point. Currently, this capability is limited to
+local process agents, but it is intended to be extended to other
+agent types in the future.</p>
+</li>
+<li><p>Services are now initialized when they are first accessed through
+the service context rather than at startup.</p>
+</li>
+<li><p>There is no longer a .NET Standard build of the engine.</p>
+</li>
+<li><p>The metadata assembly is now a separate package, which is used
+by the engine.</p>
+</li>
+<li><p>X86 builds of .Net Core agents are no longer provided, since
+they are not needed.</p>
+</li>
+</ul>
+<h4 id="breaking-changes-2">Breaking Changes</h4>
+<ul>
+<li>664 Replace AppDomain and Process with &quot;Agent&quot; from user perspective</li>
+<li>656 Pluggable Agents</li>
+<li>665 Eliminate ProcessModel setting</li>
+<li>657 Eliminate DomainUsage option</li>
+<li>444 Eliminate in-process execution</li>
+</ul>
+<h4 id="features-4">Features</h4>
+<ul>
+<li>697 Agent Redesign</li>
+<li>694 Remove x86 build of agent for .NET Core</li>
+<li>693 Stop building engine for .NET Standard</li>
+<li>689 Remove DomainManager as a service</li>
+<li>684 Make metadata assembly a fully independent package</li>
+<li>678 Create package for use by pluggable agents</li>
+</ul>
+<h4 id="enhancements-3">Enhancements</h4>
+<ul>
+<li>715 Make dependencies of one service on another explicit</li>
+<li>677 Update AboutBox for 2.0 release</li>
+<li>666 Issue an error message when user provides an obsolete project setting. Ignore in project files.</li>
+</ul>
+<h4 id="bugs-4">Bugs</h4>
+<ul>
+<li>719 Crashing Testcentric on trying to change Process Model to X86</li>
+<li>707 ResultHelper.Aggregate doesn't count warnings</li>
+</ul>
+<h4 id="build-6">Build</h4>
+<ul>
+<li>729 Allow creation of draft and production GitHub releases for pre-release versions</li>
+<li>725 Upgrade NUnit framework to 3.12</li>
+<li>716 Provide test doubles for all services needed for testing.</li>
+<li>700 Use the GUI to run its own tests</li>
+<li>699 Create separate test assembly for nunit.agent.core</li>
+<li>682 Build script should check files for valid headers</li>
+</ul>
+
+	</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    </body>
+</html>
