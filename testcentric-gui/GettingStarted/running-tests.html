@@ -77,9 +77,12 @@
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
     <div id="infobar-headings"><h6>On This Page</h6><p><a href="#loading-tests">Loading Tests</a></p>
-<p><a href="#using-the-run-button">Using the Run Button</a></p>
+<p><a href="#changing-how-tests-are-displayed">Changing How Tests are Displayed</a></p>
+<p><a href="#using-the-run-all-button">Using the Run All Button</a></p>
+<p><a href="#using-the-run-selected-button">Using the Run Selected Button</a></p>
 <p><a href="#using-the-context-menu">Using the Context Menu</a></p>
-<p><a href="#using-the-tests-menu">Using the Tests Menu</a></p>
+<p><a href="#repeating-the-last-run">Repeating the Last Run</a></p>
+<p><a href="#running-only-failed-tests">Running Only Failed Tests</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -138,36 +141,38 @@
 	<section class="content">
 		<h1 id="loading-tests">Loading Tests</h1>
 <p>Normally, when you start the GUI, the most recently used test file will be loaded.</p>
-<p>If this is the first time you have used the GUI or if you want to load a different file,
-use the <code>File | Open</code> menu item, select a test assembly and open it. If you want to
-re-open a file that has been used before, you may use the <code>File | Recent Files</code> menu item.</p>
-<p>You may also select the file to open from the command-line, by putting it's path after
-the name of the program when you execute it.</p>
+<p>If this is the first time you have used the GUI or if you want to load a different file, use the <code>File | Open</code> menu item, select a test assembly and open it. If you want to re-open a file that has been used before, you may use the <code>File | Recent Files</code> menu item.</p>
+<p>You may also select the file to open from the command-line, by putting it's path after the name of the program when you execute it.</p>
 <p>When a test assembly has been loaded, the tests it contains are shown in the tree display.</p>
-<h1 id="using-the-run-button">Using the Run Button</h1>
-<p>The simplest way to run tests is to select the test or tests you want to run in the tree
-display and then click the Run button.</p>
-<p>Tests may be selected in two main ways.</p>
+<h1 id="changing-how-tests-are-displayed">Changing How Tests are Displayed</h1>
+<p>The <code>Display Format</code> button lets you choose how tests are displayed. There are three primary choices:</p>
 <ol>
-<li><p>Clicking on any test in the tree display highlights it, which means it has been selected.
-While only one tree node may be selected in this way, all the tests under that node are also
-considered to have been selected for execution.</p>
+<li><p>The <code>NUnit Tree</code> display uses the same layout as the NUnit V2 GUI. Tests are displayed within each test assembly as a tree, which matches the namespace organization of the assembly.</p>
 </li>
-<li><p>If you right click in the tree display, the context menu allows you to enable the display
-of checkboxes. When checkboxes are enabled, you may use them to select a single test or even
-multiple tests.</p>
+<li><p>The <code>Fixture List</code> display shows a list of fixtures. You may choose to group them by Assembly, Category, Outcome or Duration.</p>
+</li>
+<li><p>The <code>Test List</code> display shows a list of individual test cases. You may group them by Assembly, Fixture, Category, Outcome or duration.</p>
+</li>
+</ol>
+<h1 id="using-the-run-all-button">Using the Run All Button</h1>
+<p>The simplest way to run tests is to click on the <code>Run All</code> button in the toolbar. All your tests will be run.</p>
+<h1 id="using-the-run-selected-button">Using the Run Selected Button</h1>
+<p>First, select the test or tests you want to run in the tree display and then click the <code>Run Selected</code> button in the toolbar.</p>
+<p>Tests may be selected in two main ways, depending on whether you have enabled <code>Show Checkboxes</code> in the tree.</p>
+<ol>
+<li><p>If you right click in the tree display, the context menu allows you to enable the display of checkboxes. When checkboxes are enabled, you may use them to select a single test or even
+multiple tests. All the tests under each checked item will be executed.</p>
+</li>
+<li><p>When checkboxes are not displayed, <code>Run Selected</code> will execute the highlighted test. All the tests under the highlighted tree node are run. Note that you may also use this technique when checkboxes are turned on, but only if no boxes are currently checked.</p>
 </li>
 </ol>
 <h1 id="using-the-context-menu">Using the Context Menu</h1>
 <p>You may run a test - and any tests under it - by right-clicking on the node in the tree display
 and selecting <code>Run</code> in the menu that appears.</p>
-<h1 id="using-the-tests-menu">Using the Tests Menu</h1>
-<p>The <code>Tests</code> menu includes three menu items for running tests, each one with a shortcut key defined:</p>
-<ul>
-<li>Run All (F5) - Runs all the tests.</li>
-<li>Run Selected (F6) - Runs the currently selected tests, just like the Run button.</li>
-<li>Run Failed (F7) - Runs the tests that failed in the previous run.</li>
-</ul>
+<h1 id="repeating-the-last-run">Repeating the Last Run</h1>
+<p>Click on the <code>Rerun</code> toolbar button to repeat the last test run.</p>
+<h1 id="running-only-failed-tests">Running Only Failed Tests</h1>
+<p>Click on the <code>Run Failed</code> button in the toolbar to rerun all tests currently shown as having failed.</p>
 
 	</section>
                 
