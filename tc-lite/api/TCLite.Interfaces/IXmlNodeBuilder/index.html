@@ -160,15 +160,15 @@
 				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestListener">ITestListener</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestResult">ITestResult</a></li>
 				<li class="selected"><a href="/tc-lite/api/TCLite.Interfaces/IXmlNodeBuilder">IXmlNodeBuilder</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/RunState">RunState</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutputType">TestOutputType</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/TestStatus">TestStatus</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings">Framework<wbr>Package<wbr>Settings</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/PropertyEntry">PropertyEntry</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/ResultState">ResultState</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutput">TestOutput</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/RunState">RunState</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutputType">TestOutputType</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/TestStatus">TestStatus</a></li>
 
 
                     </ul>
@@ -211,8 +211,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/tc-lite/api/TCLite.Interfaces/IPropertyBag">IPropertyBag</a></li>								
 											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestResult">ITestResult</a></li>								
+											<li><a href="/tc-lite/api/TCLite.Interfaces/IPropertyBag">IPropertyBag</a></li>								
 											<li><a href="/tc-lite/api/TCLite.Interfaces/ITest">ITest</a></li>								
 											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestFilter">ITestFilter</a></li>								
 									</ul>
@@ -224,10 +224,10 @@
 							graph BT
 	Type["IXmlNodeBuilder"]
 class Type type-node
-	Implementing0["IPropertyBag"]-.-&gt;Type
-	click Implementing0 "/tc-lite/api/TCLite.Interfaces/IPropertyBag"
-	Implementing1["ITestResult"]-.-&gt;Type
-	click Implementing1 "/tc-lite/api/TCLite.Interfaces/ITestResult"
+	Implementing0["ITestResult"]-.-&gt;Type
+	click Implementing0 "/tc-lite/api/TCLite.Interfaces/ITestResult"
+	Implementing1["IPropertyBag"]-.-&gt;Type
+	click Implementing1 "/tc-lite/api/TCLite.Interfaces/IPropertyBag"
 	Implementing2["ITest"]-.-&gt;Type
 	click Implementing2 "/tc-lite/api/TCLite.Interfaces/ITest"
 	Implementing3["ITestFilter"]-.-&gt;Type

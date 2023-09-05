@@ -203,8 +203,8 @@
     tries to simulate what that might have been provided in a direct method call. 
     </p>
     <p>
-    For example, since you can’t apply attributes using <code class="cs">System.Decimal</code> arguments, we allow an
-    <code class="cs"><a href="/">int</a></code> or a <code class="cs">System.Double</code> value to be specified and then convert it to <code class="cs">System.Decimal</code>.
+    For example, since you can’t apply attributes using <code class="cs"><a href="/">decimal</a></code> arguments, we allow an
+    <code class="cs"><a href="/">int</a></code> or a <code class="cs"><a href="/">double</a></code> value to be specified and then convert it to <code class="cs"><a href="/">decimal</a></code>.
     </p>
     <p>
     This class is unsealed and may be inherited by custom user attributes that take test arguments
@@ -234,11 +234,11 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/tc-lite/api/TCLite/RangeAttribute">RangeAttribute</a></li>								
-											<li><a href="/tc-lite/api/TCLite/ValueSourceAttribute">ValueSourceAttribute</a></li>								
 											<li><a href="/tc-lite/api/TCLite/RandomAttribute">RandomAttribute</a></li>								
-											<li><a href="/tc-lite/api/TCLite/ValuesAttribute">ValuesAttribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/ValueSourceAttribute">ValueSourceAttribute</a></li>								
 											<li><a href="/tc-lite/api/TCLite/TestCaseAttribute">TestCaseAttribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/RangeAttribute">RangeAttribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/ValuesAttribute">ValuesAttribute</a></li>								
 									</ul>
 								</dd>			
 							
@@ -253,16 +253,16 @@
 	Base1--&gt;Base2["object"]
 	Type["DataParamAttribute"]
 class Type type-node
-	Derived0["RangeAttribute"]--&gt;Type
-	click Derived0 "/tc-lite/api/TCLite/RangeAttribute"
+	Derived0["RandomAttribute"]--&gt;Type
+	click Derived0 "/tc-lite/api/TCLite/RandomAttribute"
 	Derived1["ValueSourceAttribute"]--&gt;Type
 	click Derived1 "/tc-lite/api/TCLite/ValueSourceAttribute"
-	Derived2["RandomAttribute"]--&gt;Type
-	click Derived2 "/tc-lite/api/TCLite/RandomAttribute"
-	Derived3["ValuesAttribute"]--&gt;Type
-	click Derived3 "/tc-lite/api/TCLite/ValuesAttribute"
-	Derived4["TestCaseAttribute"]--&gt;Type
-	click Derived4 "/tc-lite/api/TCLite/TestCaseAttribute"
+	Derived2["TestCaseAttribute"]--&gt;Type
+	click Derived2 "/tc-lite/api/TCLite/TestCaseAttribute"
+	Derived3["RangeAttribute"]--&gt;Type
+	click Derived3 "/tc-lite/api/TCLite/RangeAttribute"
+	Derived4["ValuesAttribute"]--&gt;Type
+	click Derived4 "/tc-lite/api/TCLite/ValuesAttribute"
 
 						</div>
 					</div>

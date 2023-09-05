@@ -139,22 +139,12 @@
     Legacy version 1 Documentation. <a href="/testcentric-gui">View current Version 2 Documentation.</a>
 </div>
 <h1 id="normal-stop">Normal Stop</h1>
-<p>Once a test run begins, the Stop button is enabled. Clicking it initiates a normal stop.
-We often call this a "cooperative stop" because it requires cooperation from the test
-framework.</p>
-<p>When a Stop is initiated, a command is set to the framework. The intent is that it should
-allow all executing tests and all teardowns to complete. No further tests should be started.
-This usually terminates the run quickly, unless there is a problem like an infinite loop
-in the test code.</p>
+<p>Once a test run begins, the Stop button is enabled. Clicking it initiates a normal stop. We often call this a "cooperative stop" because it requires cooperation from the test framework.</p>
+<p>When a Stop is initiated, a command is set to the framework. The intent is that it should allow all executing tests and all teardowns to complete. No further tests should be started. This usually terminates the run quickly, unless there is a problem like an infinite loop in the test code.</p>
 <h1 id="forced-stop">Forced Stop</h1>
-<p>As soon as the Stop is initiated, the Stop button text changes to "Forced Stop." The user
-is able to observe the completion of each test in the GUI and may decide that one of the
-tests is hung and needs to be stopped forcibly. Clicking "Forced Stop" initiates that process.
-The framework is expected to terminate all threads, which are running tests and return.</p>
+<p>As soon as the Stop is initiated, the Stop button text changes to "Forced Stop." The user is able to observe the completion of each test in the GUI and may decide that one of the tests is hung and needs to be stopped forcibly. Clicking "Forced Stop" initiates that process. The framework is expected to terminate all threads, which are running tests and return.</p>
 <h1 id="last-resort">Last Resort</h1>
-<p>Some frameworks may not support Forced Stop or it may not work due to a bug. After waiting
-a period of time (currently 5 seconds) for the run to terminate, the GUI takes the extreme
-action of unloading all test AppDomains and Processes.</p>
+<p>Some frameworks may not support Forced Stop or it may not work due to a bug. After waiting a period of time (currently 5 seconds) for the run to terminate, the GUI takes the extreme action of unloading all test AppDomains and Processes.</p>
 
 	</section>
                 

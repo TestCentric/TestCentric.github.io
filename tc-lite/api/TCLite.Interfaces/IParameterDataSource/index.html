@@ -160,15 +160,15 @@
 				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestListener">ITestListener</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestResult">ITestResult</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/IXmlNodeBuilder">IXmlNodeBuilder</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/RunState">RunState</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutputType">TestOutputType</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/TestStatus">TestStatus</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings">Framework<wbr>Package<wbr>Settings</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/PropertyEntry">PropertyEntry</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/ResultState">ResultState</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutput">TestOutput</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/RunState">RunState</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutputType">TestOutputType</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/TestStatus">TestStatus</a></li>
 
 
                     </ul>
@@ -209,9 +209,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/tc-lite/api/TCLite/RangeAttribute">RangeAttribute</a></li>								
-											<li><a href="/tc-lite/api/TCLite/ValueSourceAttribute">ValueSourceAttribute</a></li>								
 											<li><a href="/tc-lite/api/TCLite/RandomAttribute">RandomAttribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/ValueSourceAttribute">ValueSourceAttribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/RangeAttribute">RangeAttribute</a></li>								
 											<li><a href="/tc-lite/api/TCLite/ValuesAttribute">ValuesAttribute</a></li>								
 									</ul>
 								</dd>				
@@ -222,12 +222,12 @@
 							graph BT
 	Type["IParameterDataSource"]
 class Type type-node
-	Implementing0["RangeAttribute"]-.-&gt;Type
-	click Implementing0 "/tc-lite/api/TCLite/RangeAttribute"
+	Implementing0["RandomAttribute"]-.-&gt;Type
+	click Implementing0 "/tc-lite/api/TCLite/RandomAttribute"
 	Implementing1["ValueSourceAttribute"]-.-&gt;Type
 	click Implementing1 "/tc-lite/api/TCLite/ValueSourceAttribute"
-	Implementing2["RandomAttribute"]-.-&gt;Type
-	click Implementing2 "/tc-lite/api/TCLite/RandomAttribute"
+	Implementing2["RangeAttribute"]-.-&gt;Type
+	click Implementing2 "/tc-lite/api/TCLite/RangeAttribute"
 	Implementing3["ValuesAttribute"]-.-&gt;Type
 	click Implementing3 "/tc-lite/api/TCLite/ValuesAttribute"
 

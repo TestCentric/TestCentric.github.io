@@ -206,13 +206,13 @@
 				<li><a href="/tc-lite/api/TCLite.Constraints/TrueConstraint">TrueConstraint</a></li>
 				<li><a href="/tc-lite/api/TCLite.Constraints/TypeConstraint">TypeConstraint</a></li>
 				<li><a href="/tc-lite/api/TCLite.Constraints/UniqueItemsConstraint">Unique<wbr>Items<wbr>Constraint</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/tc-lite/api/TCLite.Constraints/ConstraintStatus">ConstraintStatus</a></li>
-				<li><a href="/tc-lite/api/TCLite.Constraints/ToleranceMode">ToleranceMode</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/tc-lite/api/TCLite.Constraints/IConstraint">IConstraint</a></li>
 				<li><a href="/tc-lite/api/TCLite.Constraints/IConstraintResult">IConstraintResult</a></li>
 				<li><a href="/tc-lite/api/TCLite.Constraints/IResolveConstraint">IResolveConstraint</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/tc-lite/api/TCLite.Constraints/ConstraintStatus">ConstraintStatus</a></li>
+				<li><a href="/tc-lite/api/TCLite.Constraints/ToleranceMode">ToleranceMode</a></li>
 			<li class="header">Delegate Types</li>
 				<li><a href="/tc-lite/api/TCLite.Constraints/ActualValueDelegate_1">ActualValueDelegate<wbr>&lt;T&gt;<wbr></a></li>
 
@@ -267,12 +267,12 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/tc-lite/api/TCLite.Constraints/AllItemsConstraint">AllItemsConstraint</a></li>								
-											<li><a href="/tc-lite/api/TCLite.Constraints/NotConstraint">NotConstraint</a></li>								
-											<li><a href="/tc-lite/api/TCLite.Constraints/NoItemConstraint">NoItemConstraint</a></li>								
 											<li><a href="/tc-lite/api/TCLite.Constraints/PropertyConstraint">PropertyConstraint</a></li>								
 											<li><a href="/tc-lite/api/TCLite.Constraints/SomeItemsConstraint">SomeItemsConstraint</a></li>								
+											<li><a href="/tc-lite/api/TCLite.Constraints/NoItemConstraint">NoItemConstraint</a></li>								
 											<li><a href="/tc-lite/api/TCLite.Constraints/ThrowsConstraint">ThrowsConstraint</a></li>								
+											<li><a href="/tc-lite/api/TCLite.Constraints/NotConstraint">NotConstraint</a></li>								
+											<li><a href="/tc-lite/api/TCLite.Constraints/AllItemsConstraint">AllItemsConstraint</a></li>								
 									</ul>
 								</dd>			
 							
@@ -290,18 +290,18 @@
 	click Interface1 "/tc-lite/api/TCLite.Constraints/IResolveConstraint"
 	Type["PrefixConstraint"]
 class Type type-node
-	Derived0["AllItemsConstraint"]--&gt;Type
-	click Derived0 "/tc-lite/api/TCLite.Constraints/AllItemsConstraint"
-	Derived1["NotConstraint"]--&gt;Type
-	click Derived1 "/tc-lite/api/TCLite.Constraints/NotConstraint"
+	Derived0["PropertyConstraint"]--&gt;Type
+	click Derived0 "/tc-lite/api/TCLite.Constraints/PropertyConstraint"
+	Derived1["SomeItemsConstraint"]--&gt;Type
+	click Derived1 "/tc-lite/api/TCLite.Constraints/SomeItemsConstraint"
 	Derived2["NoItemConstraint"]--&gt;Type
 	click Derived2 "/tc-lite/api/TCLite.Constraints/NoItemConstraint"
-	Derived3["PropertyConstraint"]--&gt;Type
-	click Derived3 "/tc-lite/api/TCLite.Constraints/PropertyConstraint"
-	Derived4["SomeItemsConstraint"]--&gt;Type
-	click Derived4 "/tc-lite/api/TCLite.Constraints/SomeItemsConstraint"
-	Derived5["ThrowsConstraint"]--&gt;Type
-	click Derived5 "/tc-lite/api/TCLite.Constraints/ThrowsConstraint"
+	Derived3["ThrowsConstraint"]--&gt;Type
+	click Derived3 "/tc-lite/api/TCLite.Constraints/ThrowsConstraint"
+	Derived4["NotConstraint"]--&gt;Type
+	click Derived4 "/tc-lite/api/TCLite.Constraints/NotConstraint"
+	Derived5["AllItemsConstraint"]--&gt;Type
+	click Derived5 "/tc-lite/api/TCLite.Constraints/AllItemsConstraint"
 
 						</div>
 					</div>
