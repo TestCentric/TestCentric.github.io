@@ -141,27 +141,23 @@
 <style>
   img {float:right; margin-left: 20px; margin-bottom: 20px; max-width: 500px}
 </style>
+<div class="notice">
+    Page under development. Needs revision for TestCentric GUI Version 2.
+</div>
 <h1 id="gui-settings-general">Gui Settings - General</h1>
 <p><img src="/testcentric-gui/img/generalSettings.png" class="img-fluid" alt="Settings Dialog"></p>
 <h2 id="gui-display">Gui Display</h2>
 <h3 id="full-gui">Full Gui</h3>
-<p>Displays the complete gui - as in prior versions of NUnit. This includes the
-test result tabs and the progress bar.</p>
+<p>Displays the complete gui - as in prior versions of NUnit. This includes the test result tabs and the progress bar.</p>
 <h3 id="mini-gui">Mini Gui</h3>
 <p>Switches the display to the mini-gui, which consists of the tree display only.</p>
 <h2 id="recent-files">Recent Files</h2>
 <h3 id="list.files-in-menu">List ... files in menu</h3>
-<p>This is an UpDown Counter, which allows the user to choose the maximum number
-of entries to be shown in the recent files list.</p>
+<p>This is an UpDown Counter, which allows the user to choose the maximum number of entries to be shown in the recent files list.</p>
 <h3 id="check-that-files-exist-before-listing">Check that files exist before listing</h3>
-<p>Normally, TestCentric checks that files still exist before
-displaying them in the recent files list. This can cause long delays if the
-file is on a network connection that is no longer available. Unchecking
-this box will avoid the delay, so long as the missing file is not actually selected.</p>
+<p>Normally, TestCentric checks that files still exist before displaying them in the recent files list. This can cause long delays if the file is on a network connection that is no longer available. Unchecking this box will avoid the delay, so long as the missing file is not actually selected.</p>
 <h3 id="load-most-recent-project-at-startup">Load most recent project at startup</h3>
-<p>If this is checked, the GUI will load the
-last file opened unless it is run with a specific filename or with the
-<code>/noload</code> parameter.</p>
+<p>If this is checked, the GUI will load the last file opened unless it is run with a specific filename or with the <code>/noload</code> parameter.</p>
 <!-- Gui Settings - Tree Display -->
 <h1 id="gui-settings-tree-display">Gui Settings - Tree Display</h1>
 <p><img src="/testcentric-gui/img/treeDisplaySettings.png" class="img-fluid" alt="Tree Display Settings"></p>
@@ -175,34 +171,21 @@ last file opened unless it is run with a specific filename or with the
 <li><strong>Hide Tests</strong> - expands all suites except for the fixtures themselves.</li>
 </ul>
 <h3 id="tree-images">Tree Images</h3>
-<p>TestCentric provides four sets of <b>Tree Images</b>, which are used to mark tests in
-the gui as passing, failing, etc. Use the list box to select the preferred set.
-A preview of the selected set is displayed.</p>
+<p>TestCentric provides four sets of <b>Tree Images</b>, which are used to mark tests in the gui as passing, failing, etc. Use the list box to select the preferred set. A preview of the selected set is displayed.</p>
 <h3 id="clear-results-when-reloading">Clear results when reloading</h3>
-<p>If this is checked, an automatic or manual reload will reinitialize all
-test nodes in the tree (grey display) - if it is not checked, result information for tests that do
-not seem to have changed will be retained.</p>
+<p>If this is checked, an automatic or manual reload will reinitialize all test nodes in the tree (grey display) - if it is not checked, result information for tests that do not seem to have changed will be retained.</p>
 <h3 id="save-visual-state-of-each-project">Save visual state of each project</h3>
-<p>If this is checked, TestCentric saves the state of the tree
-and restores it when the project is next opened. The information saved includes which
-branches of the tree are expanded, the selected node, any checked nodes and any
-category selection.</p>
+<p>If this is checked, TestCentric saves the state of the tree and restores it when the project is next opened. The information saved includes which branches of the tree are expanded, the selected node, any checked nodes and any category selection.</p>
 <h3 id="display-a-checkbox-next-to-each-tree-item">Display a checkbox next to each tree item</h3>
-<p>If this is checked, the tree includes checkboxes, which may
-be used to select multiple tests for running. This setting is also available
-in the <strong>View | Tree</strong> menu.</p>
+<p>If this is checked, the tree includes checkboxes, which may be used to select multiple tests for running. This setting is also available in the <strong>View | Tree</strong> menu.</p>
 <!-- Gui Settings - Text Output -->
 <h1 id="gui-settings-text-output">Gui Settings - Text Output</h1>
 <p><img src="/testcentric-gui/img/textOutputSettings.png" class="img-fluid" alt="Text Output Settings"></p>
 <h2 id="test-case-labels">Test Case Labels</h2>
 <p>The selected setting controls the display of labels for each test in the output window.</p>
 <ul>
-<li><strong>On</strong> - All text in the output window is preceded with the name
-of the test that produced it. If tests running in parallel produce output, the label is
-redisplayed as often as necessary.</li>
-<li><strong>Before</strong> - Displays a label for every test case when it begins, irrespective of whether
-any output is produced. In case any output <strong>is</strong> produced, the label is repeated as
-necessary, just as for the <code>On</code> setting.</li>
+<li><strong>On</strong> - All text in the output window is preceded with the name of the test that produced it. If tests running in parallel produce output, the label is redisplayed as often as necessary.</li>
+<li><strong>Before</strong> - Displays a label for every test case when it begins, irrespective of whether any output is produced. In case any output <strong>is</strong> produced, the label is repeated as necessary, just as for the <code>On</code> setting.</li>
 <li><strong>Off</strong> - No labels are displayed with the text output.</li>
 </ul>
 <!-- Gui Settings - Assembly Reload -->
@@ -210,11 +193,9 @@ necessary, just as for the <code>On</code> setting.</li>
 <p><img src="/testcentric-gui/img/assemblyReloadSettings.png" class="img-fluid" alt="Reload Settings"></p>
 <h2 id="assembly-reload">Assembly Reload</h2>
 <h3 id="reload-before-each-test-run">Reload before each test run</h3>
-<p>If this is checked, a reload will occur whenever the run button is
-pressed whether the assemblies appear to have changed or not.</p>
+<p>If this is checked, a reload will occur whenever the run button is pressed whether the assemblies appear to have changed or not.</p>
 <h3 id="reload-when-test-assembly-changes">Reload when test assembly changes</h3>
-<p>If this is checked, assemblies are watched for any change and
-an automatic reload is initiated.</p>
+<p>If this is checked, assemblies are watched for any change and an automatic reload is initiated.</p>
 <h3 id="re-run-last-tests-run">Re-run last tests run</h3>
 <p>If this is checked, tests are re-run whenever a Reload takes place.</p>
 <h3 id="clear-results-when-reloading-1">Clear results when reloading</h3>
@@ -223,25 +204,13 @@ an automatic reload is initiated.</p>
 <h1 id="engine-settings-advanced">Engine Settings - Advanced</h1>
 <p><img src="/testcentric-gui/img/advancedSettings.png" class="img-fluid" alt="Advanced Settings"></p>
 <h2 id="agent-limit">Agent Limit</h2>
-<p>Normally, when running tests in separate processes, they are all run in parallel.
-If the checkbox is checked and the limit is set to a positive value, no more than
-the specified number of processes will be active at one time.</p>
+<p>Normally, when running tests in separate processes, they are all run in parallel.If the checkbox is checked and the limit is set to a positive value, no more than the specified number of processes will be active at one time.</p>
 <h2 id="shadow-copy">Shadow Copy</h2>
-<p>NUnit normally uses .Net shadow-copying in order to allow you to edit
-and recompile assemblies while it is running. Uncheck this box to disable
-shadow-copy only if you have a particular problem that requires it.</p>
-<p><strong>Note:</strong> If you are tempted to disable shadow copy in order to access
-files in the same directory as your assembly, you should be aware that there
-are alternatives. Consider using the <code>TestContext.TestDirectory</code> to determine
-the directory that contains your test assembly.</p>
+<p>NUnit normally uses .Net shadow-copying in order to allow you to edit and recompile assemblies while it is running. Uncheck this box to disable shadow-copy only if you have a particular problem that requires it.</p>
+<p><strong>Note:</strong> If you are tempted to disable shadow copy in order to access files in the same directory as your assembly, you should be aware that there are alternatives. Consider using the <code>TestContext.TestDirectory</code> to determine the directory that contains your test assembly.</p>
 <h2 id="principal-policy">Principal Policy</h2>
-<p>Because NUnit access current thread's <strong>Principal</strong> before running tests,
-it is not possible to effectively call <code>SetPrincipalPolicy()</code> in a test or
-in the system being tested.</p>
-<p>To remedy this problem, NUnit can call <code>SetPrincipalPolicy()</code> on your
-behalf. If <strong>Set Principal Policy...</strong> is checked, NUnit will call it
-using the <code>PrincipalPolicy</code> type selected in the list when it sets up
-each test <strong>AppDomain</strong>.</p>
+<p>Because NUnit access current thread's <strong>Principal</strong> before running tests, it is not possible to effectively call <code>SetPrincipalPolicy()</code> in a test or in the system being tested.</p>
+<p>To remedy this problem, NUnit can call <code>SetPrincipalPolicy()</code> on your behalf. If <strong>Set Principal Policy...</strong> is checked, NUnit will call it using the <code>PrincipalPolicy</code> type selected in the list when it sets up each test <strong>AppDomain</strong>.</p>
 
 	</section>
                 

@@ -140,6 +140,11 @@
 			<li class="header">Namespace</li>
 		<li><a href="/tc-lite/api/TCLite.Interfaces">TCLite<wbr>.Interfaces</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Class Types</li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings">Framework<wbr>Package<wbr>Settings</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/PropertyEntry">PropertyEntry</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ResultState">ResultState</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutput">TestOutput</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/IApplyToContext">IApplyToContext</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/IApplyToTest">IApplyToTest</a></li>
@@ -164,11 +169,6 @@
 				<li><a href="/tc-lite/api/TCLite.Interfaces/RunState">RunState</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutputType">TestOutputType</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/TestStatus">TestStatus</a></li>
-			<li class="header">Class Types</li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings">Framework<wbr>Package<wbr>Settings</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/PropertyEntry">PropertyEntry</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/ResultState">ResultState</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutput">TestOutput</a></li>
 
 
                     </ul>
@@ -210,9 +210,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestCaseData">ITestCaseData</a></li>								
-											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestFixtureData">ITestFixtureData</a></li>								
 											<li><a href="/tc-lite/api/TCLite/TestCaseAttribute">TestCaseAttribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestFixtureData">ITestFixtureData</a></li>								
+											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestCaseData">ITestCaseData</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -222,12 +222,12 @@
 							graph BT
 	Type["ITestData"]
 class Type type-node
-	Implementing0["ITestCaseData"]-.-&gt;Type
-	click Implementing0 "/tc-lite/api/TCLite.Interfaces/ITestCaseData"
+	Implementing0["TestCaseAttribute"]-.-&gt;Type
+	click Implementing0 "/tc-lite/api/TCLite/TestCaseAttribute"
 	Implementing1["ITestFixtureData"]-.-&gt;Type
 	click Implementing1 "/tc-lite/api/TCLite.Interfaces/ITestFixtureData"
-	Implementing2["TestCaseAttribute"]-.-&gt;Type
-	click Implementing2 "/tc-lite/api/TCLite/TestCaseAttribute"
+	Implementing2["ITestCaseData"]-.-&gt;Type
+	click Implementing2 "/tc-lite/api/TCLite.Interfaces/ITestCaseData"
 
 						</div>
 					</div>

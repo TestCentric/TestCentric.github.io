@@ -135,7 +135,10 @@
 			<h1>Stopping a Test Run</h1>
 		</section>
 	<section class="content">
-		<h1 id="normal-stop">Normal Stop</h1>
+		<div class="notice">
+    Page under development. Needs revision for TestCentric GUI Version 2.
+</div>
+<h1 id="normal-stop">Normal Stop</h1>
 <p>Once a test run begins, the Stop button is enabled. Clicking it initiates a normal stop. We often call this a "cooperative stop" because it requires cooperation from the test framework.</p>
 <p>When a Stop is initiated, a command is sent to the framework. The intent is that it should allow all executing tests and all teardowns to complete. No further tests should be started. This usually terminates the run quickly, unless there is a problem like an infinite loop in the test code.</p>
 <h1 id="forced-stop">Forced Stop</h1>

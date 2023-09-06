@@ -133,9 +133,85 @@
 			<h1>Release Notes</h1>
 		</section>
 	<section class="content">
-		<h3 id="testcentric-runner-for-nunit-2.0.0-alpha7-february-6-2023">TestCentric Runner for NUnit 2.0.0-alpha7- February 6, 2023</h3>
-<p>The primary feature added in this release comes from use of version 2.0.0-alpha7 of the test engine. The GUI is now able to run tests, which target .NET 6.0 and .NET 7.0.</p>
+		<h3 id="testcentric-runner-for-nunit-2.0.0-beta2-september-3-2023">TestCentric Runner for NUnit 2.0.0-beta2- September 3, 2023</h3>
+<p>This release is part of a group of related releases:</p>
+<ul>
+<li>TestCentric Runner 2.0.0-beta2</li>
+<li>TestCentric Engine 2.0.0-beta2</li>
+<li>Net 4.6.2 Pluggable Agent 2.1.1</li>
+<li>Net 6.0 Pluggable Agent 2.1.0</li>
+<li>Net 7.0 Pluggable Agent 2.1.0</li>
+</ul>
+<p>Together they form a kind of plateau in the development of TestCentric and a basis for redirecting that development. Specifically, they will be the last releases where the code is constrained to remain compatibility with the NUnit engine and console runner.</p>
+<p>At this point, it's clear that the NUnit and TestCentric engines are evolving in somewhat different directions and that re-merging the code is no longer very likely. The next releases of these packages - and other packages - by TestCentric will continue to support a certain degree of compatibility in usage but we no longer anticipate merging the two engines in the future.</p>
+<p>Specific features in these releases:</p>
+<ul>
+<li>There is no longer a zip package for the GUI</li>
+<li>Agents may now be run from the command-line. (This is intended for testing and debugging rather than as a substitute for the use of the runner.)</li>
+</ul>
+<h4 id="breaking-change">Breaking Change</h4>
+<ul>
+<li>986 Eliminate zip package</li>
+</ul>
+<h4 id="feature">Feature</h4>
+<ul>
+<li>817 Run the agent standalone</li>
+</ul>
+<h4 id="enhancement">Enhancement</h4>
+<ul>
+<li>990 Update GUI to match latest builds of the engine, pluggable agents and recipe.</li>
+</ul>
+<h4 id="bug">Bug</h4>
+<ul>
+<li>987 Need a better message if no agents are available</li>
+</ul>
+<h4 id="documentation">Documentation</h4>
+<ul>
+<li>985 TestCentric.GuiRunner 2.0.0-beta1: no agents in zip package</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-beta1-may-9-2023">TestCentric Runner for NUnit 2.0.0-beta1- May 9, 2023</h3>
+<p>This is the first beta release of the TestCentric Gui Runner.</p>
+<p>The major change from the alpha8 release is that agents are now loaded separately from the engine. All built-in agents have now been removed from the engine itself. This completes our pivot to using pluggable agent extensions for all tests. At this point, the engine alone is no longer capable of running any tests. It's up to the runner making use of the agent to ensure that at least one agent extension is installed. To put it another way: the runner decides what kinds of tests it is capable of running and in what environments, not the engine.</p>
+<p>In this release of the GUI, agents for .NET Framework 4.6.2, .NET 6.0 and .NET 7.0 are included as dependent packages.. The following additional agents are currently available for user installation: .NET 8.0, .NET 5.0, .NET Core 3.1, .NET Core 2.1, .NET Framework 2.0.</p>
+<p>This release was built using the first production release of our TestCentric.Cake.Recipe package.</p>
 <h4 id="features">Features</h4>
+<ul>
+<li>977 Add Net70PluggableAgent as a dependency of the GUI</li>
+<li>978 Add Net60PluggableAgent as a dependency of the GUI</li>
+<li>979 Add Net462PluggableAgent as a dependency of the GUI</li>
+</ul>
+<h4 id="bug-1">Bug</h4>
+<ul>
+<li>974 TestCentric.GuiRunner 2.0.0-alpha8: testcentric.extensibility.dll is missing in net462 agent</li>
+</ul>
+<h4 id="build">Build</h4>
+<ul>
+<li>983 Update recipe to production version 1.0.0</li>
+<li>984 Update engine reference to beta1 release</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha8-april-25-2023">TestCentric Runner for NUnit 2.0.0-alpha8- April 25, 2023</h3>
+<p>This release uses the alpha8 build of the engine and makes extensive use of pluggable agents, which had been available as an experimental feature up to now. Built-in support for the .NET Core 3.1 and .NET 5.0 runtimes has been removed and pluggable agents for each of them have been released as separate extensions. Without the extensions, such tests will now be run under .NET 6.0. In addition, tests may now be run under .NET 8.0 using the .NET 8.0 pluggable engine, available as a download from our MyGet feed. That agent is still in pre-alpha development.</p>
+<p>The runner is now built using our cake recipe, TestCentric.Cake.Recipe, which was extended in order to support it.</p>
+<h4 id="bug-2">Bug</h4>
+<ul>
+<li>945 TestCentric 2.0.0-alpha7: Invalid DisplayStrategy and NullReferenceException</li>
+</ul>
+<h4 id="build-1">Build</h4>
+<ul>
+<li>947 Add test of .NET Core 2.1 Pluggable Agent</li>
+<li>948 Make build script consistent with that of the Engine</li>
+<li>951 Add local-only test of .NET 8.0 pluggable agent</li>
+<li>955 Test with .NET Core 2.1 and .NET 8.0 pluggable agents, version 2.1.0</li>
+<li>957 Build using TestCentric.Cake.Recipe</li>
+<li>961 Use TestLevel to reduce number of package tests run</li>
+<li>967 Convert unit tests to use NUnitLite</li>
+<li>970 Update to latest engine build; eliminate built-in agents for netcore 3.1 and net 5.0</li>
+<li>971 Standardize testing of extensions</li>
+<li>972 Remove pluggable agent tests from build</li>
+</ul>
+<h3 id="testcentric-runner-for-nunit-2.0.0-alpha7-february-6-2023">TestCentric Runner for NUnit 2.0.0-alpha7- February 6, 2023</h3>
+<p>The primary feature added in this release comes from use of version 2.0.0-alpha7 of the test engine. The GUI is now able to run tests, which target .NET 6.0 and .NET 7.0.</p>
+<h4 id="features-1">Features</h4>
 <ul>
 <li>706 Specify test run parameters on command-line</li>
 <li>890 Support use of VisualState when test assembly has changed.</li>
@@ -155,7 +231,7 @@
 <li>911 Run Summary should close automatically when new run is starting</li>
 <li>941 Unhandled exception starting GUI if settings file is corrupted</li>
 </ul>
-<h4 id="build">Build</h4>
+<h4 id="build-2">Build</h4>
 <ul>
 <li>934 Get build working again!</li>
 <li>939 Use TestCentric-specific environment variable names for API keys</li>
@@ -163,39 +239,39 @@
 </ul>
 <h3 id="testcentric-runner-for-nunit-1.6.4-december-2-2022">TestCentric Runner for NUnit 1.6.4- December 2, 2022</h3>
 <p>This release fixes a critical bug in version 1.6.3. In addition, due to changes in the environment and in Microsoft tool and runtime support, further changes were made to allow the build scripts to function.</p>
-<h4 id="bug">Bug</h4>
+<h4 id="bug-3">Bug</h4>
 <ul>
 <li>925 TestCentric-Gui 1.6.3 + NUnit IDriverFactory extension</li>
 </ul>
-<h4 id="build-1">Build</h4>
+<h4 id="build-3">Build</h4>
 <ul>
 <li>929 Update cake scripts</li>
 <li>926 Update Version 1 GUI to build with current tools</li>
 </ul>
 <h3 id="testcentric-runner-for-nunit-1.6.3-july-31-2022">TestCentric Runner for NUnit 1.6.3- July 31, 2022</h3>
-<h4 id="feature">Feature</h4>
+<h4 id="feature-1">Feature</h4>
 <ul>
 <li>921 Remove Experimental GUI</li>
 </ul>
-<h4 id="enhancement">Enhancement</h4>
+<h4 id="enhancement-1">Enhancement</h4>
 <ul>
 <li>919 Eliminate dependency on CLR version when initializing TestCentric</li>
 </ul>
-<h4 id="bug-1">Bug</h4>
+<h4 id="bug-4">Bug</h4>
 <ul>
 <li>916 Testcentric 1.6.2 does not start when .Net 6.0 is installed</li>
 </ul>
-<h4 id="build-2">Build</h4>
+<h4 id="build-4">Build</h4>
 <ul>
 <li>917 Set up branch for V1 releases</li>
 </ul>
 <h3 id="testcentric-runner-for-nunit-2.0.0-alpha6-june-18-2022">TestCentric Runner for NUnit 2.0.0-alpha6- June 18, 2022</h3>
-<h4 id="features-1">Features</h4>
+<h4 id="features-2">Features</h4>
 <ul>
 <li>903 Update GUI to use engine version 2.0.0-alpha6</li>
 <li>895 VisualState should handle adding new tests while maintaining the display correctly</li>
 </ul>
-<h4 id="enhancement-1">Enhancement</h4>
+<h4 id="enhancement-2">Enhancement</h4>
 <ul>
 <li>892 Visual state at reloading assembly</li>
 </ul>
@@ -206,7 +282,7 @@
 <li>891 VisualState- When a single test is deleted other tests are mis-identified</li>
 <li>887 Tree view reload after assembly is reloaded</li>
 </ul>
-<h4 id="documentation">Documentation</h4>
+<h4 id="documentation-1">Documentation</h4>
 <ul>
 <li>885 Document GUI Alpha releases</li>
 </ul>
@@ -219,7 +295,7 @@
 <li>842 Eliminate built-in .NET Core 2.1 agent</li>
 <li>841 Eliminate built-in net20 agent</li>
 </ul>
-<h4 id="features-2">Features</h4>
+<h4 id="features-3">Features</h4>
 <ul>
 <li>881 Specify full- vs mini-gui on command line</li>
 <li>877 Re-Implement Debugging of tests__](<a href="https://github.com/TestCentric/testcentric-gui/issues/921">https://github.com/TestCentric/testcentric-gui/issues/921</a>)</li>
@@ -245,7 +321,7 @@
 <li>846 Error when attempting to open an assembly targeting .NET Standard</li>
 <li>827 Mono,Win10 Error</li>
 </ul>
-<h4 id="build-3">Build</h4>
+<h4 id="build-5">Build</h4>
 <ul>
 <li>844 Remove unused copies of engine files from the repository</li>
 <li>829 Eliminate TestCentric.Common project</li>
@@ -253,7 +329,7 @@
 </ul>
 <h3 id="testcentric-runner-for-nunit-2.0.0-alpha4-october-2-2021">TestCentric Runner for NUnit 2.0.0-alpha4- October 2, 2021</h3>
 <p>This release incorporates a critical fix to a bug, which caused the program to crash when run on a machine with .NET 6.0 installed.</p>
-<h4 id="bug-2">Bug</h4>
+<h4 id="bug-5">Bug</h4>
 <ul>
 <li>821 System.ArgumentException: 'Unknown .NET Core version: 6.0 Parameter name: version'</li>
 </ul>
@@ -264,15 +340,15 @@
 <li>809 Stop building for .NET Standard 1.6 and .NET Core 1.1</li>
 <li>808 Switch to the dev-40 build of the NUnit Engine API</li>
 </ul>
-<h4 id="feature-1">Feature</h4>
+<h4 id="feature-2">Feature</h4>
 <ul>
 <li>804 Remove references to the engine from the GUI proper</li>
 </ul>
-<h4 id="enhancement-2">Enhancement</h4>
+<h4 id="enhancement-3">Enhancement</h4>
 <ul>
 <li>705 Modify Arguments to Agent Process</li>
 </ul>
-<h4 id="build-4">Build</h4>
+<h4 id="build-6">Build</h4>
 <ul>
 <li>813 Upgrade to the latest Cake version</li>
 <li>812 Use VS Project properties to generate the assemblyinfo files</li>
@@ -289,7 +365,7 @@ of the GUI in use. The GUI also has a few new features in this release:</p>
 <li>The Run Summary report is now displayed directly beneath the progress bar.</li>
 <li>The toolbar now includes icons for normal and forced stop (kill) and for displaying a summary of the last run.</li>
 </ul>
-<h4 id="features-3">Features</h4>
+<h4 id="features-4">Features</h4>
 <ul>
 <li>780 Restore TestPropertiesDialog for use with the mini-GUI</li>
 <li>762 Variable positioning of progress bar</li>
@@ -326,7 +402,7 @@ of the GUI in use. The GUI also has a few new features in this release:</p>
 <li>769 Groupings, which do not apply to the current display format, should be disabled</li>
 <li>767 GroupBy dropdown has no effect when changing</li>
 </ul>
-<h4 id="build-5">Build</h4>
+<h4 id="build-7">Build</h4>
 <ul>
 <li>800 Retry failed publishing steps in build</li>
 <li>753 Move &quot;common&quot; gui components to the  Gui project</li>
@@ -382,7 +458,7 @@ they are not needed.</p>
 <li>657 Eliminate DomainUsage option</li>
 <li>444 Eliminate in-process execution</li>
 </ul>
-<h4 id="features-4">Features</h4>
+<h4 id="features-5">Features</h4>
 <ul>
 <li>697 Agent Redesign</li>
 <li>694 Remove x86 build of agent for .NET Core</li>
@@ -402,7 +478,7 @@ they are not needed.</p>
 <li>719 Crashing Testcentric on trying to change Process Model to X86</li>
 <li>707 ResultHelper.Aggregate doesn't count warnings</li>
 </ul>
-<h4 id="build-6">Build</h4>
+<h4 id="build-8">Build</h4>
 <ul>
 <li>729 Allow creation of draft and production GitHub releases for pre-release versions</li>
 <li>725 Upgrade NUnit framework to 3.12</li>
