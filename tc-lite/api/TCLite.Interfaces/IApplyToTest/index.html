@@ -141,11 +141,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/tc-lite/api/TCLite.Interfaces">TCLite<wbr>.Interfaces</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings">Framework<wbr>Package<wbr>Settings</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/PropertyEntry">PropertyEntry</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/ResultState">ResultState</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutput">TestOutput</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/IApplyToContext">IApplyToContext</a></li>
 				<li class="selected"><a href="/tc-lite/api/TCLite.Interfaces/IApplyToTest">IApplyToTest</a></li>
@@ -170,6 +165,11 @@
 				<li><a href="/tc-lite/api/TCLite.Interfaces/RunState">RunState</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutputType">TestOutputType</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/TestStatus">TestStatus</a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings">Framework<wbr>Package<wbr>Settings</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/PropertyEntry">PropertyEntry</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ResultState">ResultState</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutput">TestOutput</a></li>
 
 
                     </ul>
@@ -210,14 +210,14 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/tc-lite/api/TCLite/CategoryAttribute">CategoryAttribute</a></li>								
-											<li><a href="/tc-lite/api/TCLite/IgnoreAttribute">IgnoreAttribute</a></li>								
-											<li><a href="/tc-lite/api/TCLite/IncludeAttribute">IncludeAttribute</a></li>								
-											<li><a href="/tc-lite/api/TCLite/DescriptionAttribute">DescriptionAttribute</a></li>								
-											<li><a href="/tc-lite/api/TCLite/TestFixtureAttribute">TestFixtureAttribute</a></li>								
 											<li><a href="/tc-lite/api/TCLite/PropertyAttribute">PropertyAttribute</a></li>								
-											<li><a href="/tc-lite/api/TCLite/CombinatorialAttribute">Combinatorial<wbr>Attribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/CategoryAttribute">CategoryAttribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/IncludeAttribute">IncludeAttribute</a></li>								
 											<li><a href="/tc-lite/api/TCLite/CombiningStrategyAttribute">Combining<wbr>Strategy<wbr>Attribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/TestFixtureAttribute">TestFixtureAttribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/CombinatorialAttribute">Combinatorial<wbr>Attribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/IgnoreAttribute">IgnoreAttribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/DescriptionAttribute">DescriptionAttribute</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -227,22 +227,22 @@
 							graph BT
 	Type["IApplyToTest"]
 class Type type-node
-	Implementing0["CategoryAttribute"]-.-&gt;Type
-	click Implementing0 "/tc-lite/api/TCLite/CategoryAttribute"
-	Implementing1["IgnoreAttribute"]-.-&gt;Type
-	click Implementing1 "/tc-lite/api/TCLite/IgnoreAttribute"
+	Implementing0["PropertyAttribute"]-.-&gt;Type
+	click Implementing0 "/tc-lite/api/TCLite/PropertyAttribute"
+	Implementing1["CategoryAttribute"]-.-&gt;Type
+	click Implementing1 "/tc-lite/api/TCLite/CategoryAttribute"
 	Implementing2["IncludeAttribute"]-.-&gt;Type
 	click Implementing2 "/tc-lite/api/TCLite/IncludeAttribute"
-	Implementing3["DescriptionAttribute"]-.-&gt;Type
-	click Implementing3 "/tc-lite/api/TCLite/DescriptionAttribute"
+	Implementing3["CombiningStrategyAttribute"]-.-&gt;Type
+	click Implementing3 "/tc-lite/api/TCLite/CombiningStrategyAttribute"
 	Implementing4["TestFixtureAttribute"]-.-&gt;Type
 	click Implementing4 "/tc-lite/api/TCLite/TestFixtureAttribute"
-	Implementing5["PropertyAttribute"]-.-&gt;Type
-	click Implementing5 "/tc-lite/api/TCLite/PropertyAttribute"
-	Implementing6["CombinatorialAttribute"]-.-&gt;Type
-	click Implementing6 "/tc-lite/api/TCLite/CombinatorialAttribute"
-	Implementing7["CombiningStrategyAttribute"]-.-&gt;Type
-	click Implementing7 "/tc-lite/api/TCLite/CombiningStrategyAttribute"
+	Implementing5["CombinatorialAttribute"]-.-&gt;Type
+	click Implementing5 "/tc-lite/api/TCLite/CombinatorialAttribute"
+	Implementing6["IgnoreAttribute"]-.-&gt;Type
+	click Implementing6 "/tc-lite/api/TCLite/IgnoreAttribute"
+	Implementing7["DescriptionAttribute"]-.-&gt;Type
+	click Implementing7 "/tc-lite/api/TCLite/DescriptionAttribute"
 
 						</div>
 					</div>

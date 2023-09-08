@@ -4,7 +4,19 @@
 	<title>TestCentric</title>
 	<link rel="self" href="http://test-centric.org/" />
 	<rights>2023</rights>
-	<updated>2023-09-08T19:26:54Z</updated>
+	<updated>2023-09-08T21:57:19Z</updated>
+	<entry>
+		<id>http://test-centric.org/blog/net60-pluggable-agent-2.1.0</id>
+		<title>Net 6.0 Pluggable Agent Released</title>
+		<author>
+			<name>Charlie Poole</name>
+		</author>
+		<link href="http://test-centric.org/blog/net60-pluggable-agent-2.1.0" />
+		<updated>2023-09-03T00:00:00Z</updated>
+		<content>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;</summary>
+	</entry>
 	<entry>
 		<id>http://test-centric.org/blog/testcentric-gui-2.0.0-beta2</id>
 		<title>TestCentric Runner 2.0.0-beta2 Released</title>
@@ -53,13 +65,13 @@ This release contains one breaking change and one new feature:&lt;/p&gt;
 		<summary>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;</summary>
 	</entry>
 	<entry>
-		<id>http://test-centric.org/blog/net60-pluggable-agent-2.1.0</id>
-		<title>Net 6.0 Pluggable Agent Released</title>
+		<id>http://test-centric.org/blog/net462-pluggable-agent-2.1.0</id>
+		<title>Net 4.6.2 Pluggable Agent 2.1.0 Released</title>
 		<author>
 			<name>Charlie Poole</name>
 		</author>
-		<link href="http://test-centric.org/blog/net60-pluggable-agent-2.1.0" />
-		<updated>2023-09-03T00:00:00Z</updated>
+		<link href="http://test-centric.org/blog/net462-pluggable-agent-2.1.0" />
+		<updated>2023-09-02T00:00:00Z</updated>
 		<content>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;</summary>
@@ -76,17 +88,5 @@ This release contains one breaking change and one new feature:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow agents to be run independently for testing purposes&lt;/p&gt;
 </content>
 		<summary>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Make testcentric.extensibiltiy.dll available as an independent package.&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>http://test-centric.org/blog/net462-pluggable-agent-2.1.0</id>
-		<title>Net 4.6.2 Pluggable Agent 2.1.0 Released</title>
-		<author>
-			<name>Charlie Poole</name>
-		</author>
-		<link href="http://test-centric.org/blog/net462-pluggable-agent-2.1.0" />
-		<updated>2023-09-02T00:00:00Z</updated>
-		<content>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;</summary>
 	</entry>
 </feed>

@@ -140,11 +140,6 @@
 			<li class="header">Namespace</li>
 		<li><a href="/tc-lite/api/TCLite.Interfaces">TCLite<wbr>.Interfaces</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings">Framework<wbr>Package<wbr>Settings</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/PropertyEntry">PropertyEntry</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/ResultState">ResultState</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutput">TestOutput</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/IApplyToContext">IApplyToContext</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/IApplyToTest">IApplyToTest</a></li>
@@ -169,6 +164,11 @@
 				<li><a href="/tc-lite/api/TCLite.Interfaces/RunState">RunState</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutputType">TestOutputType</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/TestStatus">TestStatus</a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings">Framework<wbr>Package<wbr>Settings</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/PropertyEntry">PropertyEntry</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ResultState">ResultState</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutput">TestOutput</a></li>
 
 
                     </ul>
@@ -214,11 +214,11 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/tc-lite/api/TCLite/TestCaseDataAttribute">Test<wbr>Case<wbr>Data<wbr>Attribute</a></li>								
 											<li><a href="/tc-lite/api/TCLite/TestCaseFactoryAttribute">Test<wbr>Case<wbr>Factory<wbr>Attribute</a></li>								
-											<li><a href="/tc-lite/api/TCLite/TestCaseAttribute">TestCaseAttribute</a></li>								
-											<li><a href="/tc-lite/api/TCLite/CombinatorialAttribute">Combinatorial<wbr>Attribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/TestCaseDataAttribute">Test<wbr>Case<wbr>Data<wbr>Attribute</a></li>								
 											<li><a href="/tc-lite/api/TCLite/CombiningStrategyAttribute">Combining<wbr>Strategy<wbr>Attribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/CombinatorialAttribute">Combinatorial<wbr>Attribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/TestCaseAttribute">TestCaseAttribute</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -228,16 +228,16 @@
 							graph BT
 	Type["IImplyFixture"]
 class Type type-node
-	Implementing0["TestCaseDataAttribute"]-.-&gt;Type
-	click Implementing0 "/tc-lite/api/TCLite/TestCaseDataAttribute"
-	Implementing1["TestCaseFactoryAttribute"]-.-&gt;Type
-	click Implementing1 "/tc-lite/api/TCLite/TestCaseFactoryAttribute"
-	Implementing2["TestCaseAttribute"]-.-&gt;Type
-	click Implementing2 "/tc-lite/api/TCLite/TestCaseAttribute"
+	Implementing0["TestCaseFactoryAttribute"]-.-&gt;Type
+	click Implementing0 "/tc-lite/api/TCLite/TestCaseFactoryAttribute"
+	Implementing1["TestCaseDataAttribute"]-.-&gt;Type
+	click Implementing1 "/tc-lite/api/TCLite/TestCaseDataAttribute"
+	Implementing2["CombiningStrategyAttribute"]-.-&gt;Type
+	click Implementing2 "/tc-lite/api/TCLite/CombiningStrategyAttribute"
 	Implementing3["CombinatorialAttribute"]-.-&gt;Type
 	click Implementing3 "/tc-lite/api/TCLite/CombinatorialAttribute"
-	Implementing4["CombiningStrategyAttribute"]-.-&gt;Type
-	click Implementing4 "/tc-lite/api/TCLite/CombiningStrategyAttribute"
+	Implementing4["TestCaseAttribute"]-.-&gt;Type
+	click Implementing4 "/tc-lite/api/TCLite/TestCaseAttribute"
 
 						</div>
 					</div>
