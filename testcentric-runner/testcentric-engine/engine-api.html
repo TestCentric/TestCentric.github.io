@@ -164,10 +164,10 @@
 		</section>
 	<section class="content">
 		<div class="notice">
-<b>WARNING:</b> Some parts of this description are out of date.
+<b>WARNING:</b> As of the 2.0.0-beta2 release, the API assembly contains only a small number of interfaces and we continue to rely on the NUnit API (version 3.16.2) for most things. This will change over the course of the next beta release.
 </div>
 <p>The engine exposes an API designed to be used by test runners, which is only updated in a backwards-compatible way wherever possible. In order to ensure future compatibility, runners should interact with the engine strictly through the API. The engine also hosts various extension points, to allow further customization.</p>
-<p>The API is published on <strong>nuget.org</strong> in package <strong>TestCentric.Engine.Api</strong>. Runners should reference <code>testcentric.engine.api.dll</code>.</p>
+<p>The API is published on <strong>nuget.org</strong> in package <strong>TestCentric.Engine.Api</strong>. Runners should reference both <code>testcentric.engine.api.dll</code> and <code>nunit.engine.api.dll</code>.</p>
 <h1 id="getting-an-engine-reference">Getting an Engine Reference</h1>
 <p>The static class TestEngineActivator is used to get an interface to the engine. Its CreateInstance member has two overloads, depending on whether a particular minimum version of the engine is required.</p>
 <pre><code class="language-c#">public static ITestEngine CreateInstance(bool unused = false);
@@ -175,6 +175,7 @@ public static ITestEngine CreateInstance(Version minVersion, bool unused = false
 </code></pre>
 <p>(The unused bool parameter previously allowed users to indicate if wished to restrict usage of global NUnit Engine installations. The latter functionality is no longer available.)</p>
 <p>The TestEngineActivator searches for an engine to load in two places. First, the current App Domain Base Directory is searched, and then any path set as the App Domain's RelativeSearchPath.</p>
+<p>#if false</p>
 <h1 id="itestengine-interface">ITestEngine Interface</h1>
 <p>This is the primary interface to the engine, which provides all other interfaces to the caller.</p>
 <pre><code class="language-c#">namespace NUnit.Engine
@@ -341,6 +342,7 @@ T GetService<t>() where T : class;<p></p>
 <div class="notice">
 <b>TODO</b>: Add info about each service that is available.
 </div>
+#endif
 
 	</t></section>
                 
