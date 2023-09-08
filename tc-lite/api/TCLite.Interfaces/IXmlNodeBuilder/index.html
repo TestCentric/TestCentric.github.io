@@ -61,9 +61,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                         <li><a href="/">Home</a></li>
-            <li><a href="/testcentric-gui">TestCentric Runner</a></li>
-            <li><a href="/testcentric-engine">TestCentric Engine</a></li>
-            <li><a href="/pluggable-agents">Pluggable Agents</a></li>
+            <li><a href="/testcentric-runner">TestCentric Runner</a></li>
             <li class="active"><a href="/tc-lite">TC-Lite Framework</a></li>
  
                         </ul>       
@@ -142,6 +140,11 @@
 			<li class="header">Namespace</li>
 		<li><a href="/tc-lite/api/TCLite.Interfaces">TCLite<wbr>.Interfaces</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Class Types</li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings">Framework<wbr>Package<wbr>Settings</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/PropertyEntry">PropertyEntry</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/ResultState">ResultState</a></li>
+				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutput">TestOutput</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/IApplyToContext">IApplyToContext</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/IApplyToTest">IApplyToTest</a></li>
@@ -162,11 +165,6 @@
 				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestListener">ITestListener</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/ITestResult">ITestResult</a></li>
 				<li class="selected"><a href="/tc-lite/api/TCLite.Interfaces/IXmlNodeBuilder">IXmlNodeBuilder</a></li>
-			<li class="header">Class Types</li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/FrameworkPackageSettings">Framework<wbr>Package<wbr>Settings</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/PropertyEntry">PropertyEntry</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/ResultState">ResultState</a></li>
-				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutput">TestOutput</a></li>
 			<li class="header">Enum Types</li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/RunState">RunState</a></li>
 				<li><a href="/tc-lite/api/TCLite.Interfaces/TestOutputType">TestOutputType</a></li>
@@ -213,10 +211,10 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/tc-lite/api/TCLite.Interfaces/ITest">ITest</a></li>								
-											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestResult">ITestResult</a></li>								
-											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestFilter">ITestFilter</a></li>								
 											<li><a href="/tc-lite/api/TCLite.Interfaces/IPropertyBag">IPropertyBag</a></li>								
+											<li><a href="/tc-lite/api/TCLite.Interfaces/ITest">ITest</a></li>								
+											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestFilter">ITestFilter</a></li>								
+											<li><a href="/tc-lite/api/TCLite.Interfaces/ITestResult">ITestResult</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -226,14 +224,14 @@
 							graph BT
 	Type["IXmlNodeBuilder"]
 class Type type-node
-	Implementing0["ITest"]-.-&gt;Type
-	click Implementing0 "/tc-lite/api/TCLite.Interfaces/ITest"
-	Implementing1["ITestResult"]-.-&gt;Type
-	click Implementing1 "/tc-lite/api/TCLite.Interfaces/ITestResult"
+	Implementing0["IPropertyBag"]-.-&gt;Type
+	click Implementing0 "/tc-lite/api/TCLite.Interfaces/IPropertyBag"
+	Implementing1["ITest"]-.-&gt;Type
+	click Implementing1 "/tc-lite/api/TCLite.Interfaces/ITest"
 	Implementing2["ITestFilter"]-.-&gt;Type
 	click Implementing2 "/tc-lite/api/TCLite.Interfaces/ITestFilter"
-	Implementing3["IPropertyBag"]-.-&gt;Type
-	click Implementing3 "/tc-lite/api/TCLite.Interfaces/IPropertyBag"
+	Implementing3["ITestResult"]-.-&gt;Type
+	click Implementing3 "/tc-lite/api/TCLite.Interfaces/ITestResult"
 
 						</div>
 					</div>

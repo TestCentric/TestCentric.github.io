@@ -61,9 +61,7 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                         <li><a href="/">Home</a></li>
-            <li><a href="/testcentric-gui">TestCentric Runner</a></li>
-            <li><a href="/testcentric-engine">TestCentric Engine</a></li>
-            <li><a href="/pluggable-agents">Pluggable Agents</a></li>
+            <li><a href="/testcentric-runner">TestCentric Runner</a></li>
             <li class="active"><a href="/tc-lite">TC-Lite Framework</a></li>
  
                         </ul>       
@@ -173,11 +171,11 @@
 				<li><a href="/tc-lite/api/TCLite/ValuesAttribute">ValuesAttribute</a></li>
 				<li><a href="/tc-lite/api/TCLite/ValueSourceAttribute">ValueSourceAttribute</a></li>
 				<li><a href="/tc-lite/api/TCLite/Warn">Warn</a></li>
+			<li class="header">Enum Types</li>
+				<li><a href="/tc-lite/api/TCLite/AssertionStatus">AssertionStatus</a></li>
 			<li class="header">Delegate Types</li>
 				<li><a href="/tc-lite/api/TCLite/IncludeDelegate">IncludeDelegate</a></li>
 				<li><a href="/tc-lite/api/TCLite/TestDelegate">TestDelegate</a></li>
-			<li class="header">Enum Types</li>
-				<li><a href="/tc-lite/api/TCLite/AssertionStatus">AssertionStatus</a></li>
 
 
                     </ul>
@@ -236,10 +234,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/tc-lite/api/TCLite/RangeAttribute">RangeAttribute</a></li>								
-											<li><a href="/tc-lite/api/TCLite/ValuesAttribute">ValuesAttribute</a></li>								
 											<li><a href="/tc-lite/api/TCLite/TestCaseAttribute">TestCaseAttribute</a></li>								
 											<li><a href="/tc-lite/api/TCLite/ValueSourceAttribute">ValueSourceAttribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/RangeAttribute">RangeAttribute</a></li>								
+											<li><a href="/tc-lite/api/TCLite/ValuesAttribute">ValuesAttribute</a></li>								
 											<li><a href="/tc-lite/api/TCLite/RandomAttribute">RandomAttribute</a></li>								
 									</ul>
 								</dd>			
@@ -255,14 +253,14 @@
 	Base1--&gt;Base2["object"]
 	Type["DataParamAttribute"]
 class Type type-node
-	Derived0["RangeAttribute"]--&gt;Type
-	click Derived0 "/tc-lite/api/TCLite/RangeAttribute"
-	Derived1["ValuesAttribute"]--&gt;Type
-	click Derived1 "/tc-lite/api/TCLite/ValuesAttribute"
-	Derived2["TestCaseAttribute"]--&gt;Type
-	click Derived2 "/tc-lite/api/TCLite/TestCaseAttribute"
-	Derived3["ValueSourceAttribute"]--&gt;Type
-	click Derived3 "/tc-lite/api/TCLite/ValueSourceAttribute"
+	Derived0["TestCaseAttribute"]--&gt;Type
+	click Derived0 "/tc-lite/api/TCLite/TestCaseAttribute"
+	Derived1["ValueSourceAttribute"]--&gt;Type
+	click Derived1 "/tc-lite/api/TCLite/ValueSourceAttribute"
+	Derived2["RangeAttribute"]--&gt;Type
+	click Derived2 "/tc-lite/api/TCLite/RangeAttribute"
+	Derived3["ValuesAttribute"]--&gt;Type
+	click Derived3 "/tc-lite/api/TCLite/ValuesAttribute"
 	Derived4["RandomAttribute"]--&gt;Type
 	click Derived4 "/tc-lite/api/TCLite/RandomAttribute"
 
