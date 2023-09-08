@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <meta name="description" />
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>TestCentric - Release Notes</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
+        <link href="/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet" />
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/testcentriclogo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/testcentriclogo.png"></span>
+                                            </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                        <li><a href="/">Home</a></li>
+            <li><a href="/testcentric-gui">TestCentric Runner</a></li>
+            <li class="active"><a href="/testcentric-engine">TestCentric Engine</a></li>
+            <li><a href="/pluggable-agents">Pluggable Agents</a></li>
+            <li><a href="/tc-lite">TC-Lite Framework</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+    <div id="infobar-headings"></div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    
+
+                    <ul class="sidebar-menu">
+                        
+
+                <li><a href="/testcentric-engine/overview">Overview</a></li>
+                <li><a href="/testcentric-engine/engine-api">TestCentric Engine API</a></li>
+                <li class="selected"><a href="/testcentric-engine/release-notes">Release Notes</a></li>
+                <li><a href="/testcentric-engine/license">License</a></li>
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+		<section class="content-header">
+			<h1>Release Notes</h1>
+		</section>
+	<section class="content">
+		<h3 id="testcentric-engine-2.0.0-beta2-september-3-2023">TestCentric Engine 2.0.0-beta2 - September 3, 2023</h3>
+<p>This release includes several new features as well as bug fixes.</p>
+<p>It is also being made to provide a new starting point for future changes. After this release, we will no longer attempt to maintain compatibility with the NUnit engine as we have in the past.</p>
+<h4 id="features">Features</h4>
+<ul>
+<li>129 Make testcentric.extensibiltiy.dll available as an independent package.</li>
+<li>138 Allow agents to be run independently for testing purposes</li>
+</ul>
+<h4 id="bugs">Bugs</h4>
+<ul>
+<li>128 TCP agent protocol causes agent crashes without displaying the reason</li>
+<li>142 Clicking 'X' leaves the runner process in memory</li>
+</ul>
+<h4 id="build">Build</h4>
+<ul>
+<li>130 Eliminate use of nuspec files for creating packages</li>
+</ul>
+<h3 id="testcentric-engine-2.0.0-beta1-may-9-2023">TestCentric Engine 2.0.0-beta1 - May 9, 2023</h3>
+<p>This is the first beta release of the TestCentric engine.</p>
+<p>The major change from the alpha8 release is that all built-in agents have now been removed from the engine itself. This completes our pivot to using pluggable agent extensions for all tests. At this point, the engine alone is no longer capable of running any tests. It's up to the runner making use of the agent to ensure that at least one agent extension is installed. To put it another way: the runner decides what kinds of tests it is capable of running and in what environments, not the engine.</p>
+<p><strong>Note:</strong> The upcoming beta release of the GUI will include agents for .NET Framework 4.6.2, .NET 6.0 and .NET 7.0. The following additional agents are currently available for user installation: .NET 8.0, .NET 5.0, .NET Core 3.1, .NET Core 2.1, .NET Framework 2.0.</p>
+<p>This release was built using the first production release of our TestCentric.Cake.Recipe package.</p>
+<h4 id="features-1">Features</h4>
+<ul>
+<li>2 Create .NET 6.0 Pluggable Agent Extension</li>
+<li>3 Make all agents pluggable extensions</li>
+<li>15 Remove Built-in .NET 4.6.2 Framework Agent from the engine</li>
+<li>108 Create .NET 7.0 Pluggable Agent</li>
+<li>109 Remove built-in net6.0 agent from the engine</li>
+<li>110 Remove built-in net7.0 agent from the engine</li>
+<li>111 Create net462 agent extension</li>
+</ul>
+<h4 id="build-1">Build</h4>
+<ul>
+<li>118 Add tests using Net462PluggableAgent</li>
+<li>119 Add tests using Net60Pluggable agent</li>
+<li>120 Add tests using Net70PluggableAgent</li>
+<li>126 Update recipe to production version 1.0.0</li>
+</ul>
+<h3 id="testcentric-engine-2.0.0-alpha8-april-24-2023">TestCentric Engine 2.0.0-alpha8 - April 24, 2023</h3>
+<p>This release makes extensive use of pluggable agents, which had been available as an experimental feature up to now. Built-in support for the .NET Core 3.1 and .NET 5.0 runtimes has been removed and pluggable agents for each of them have been released as separate extensions. Without the extensions, such tests will now be run under .NET 6.0. In addition, tests may now be run under .NET 8.0 using the .NET 8.0 pluggable engine, available as a download from our MyGet feed. That agent is still in pre-alpha development.</p>
+<p>The engine is now built using our cake recipe, TestCentric.Cake.Recipe, which was extended in order to support it.</p>
+<h4 id="features-2">Features</h4>
+<ul>
+<li>17 Remove Built-in .NET Core 3.1 Agent from the engine</li>
+<li>18 Remove Built-in .NET 5.0 Agent from the engine</li>
+<li>82 Create .NET 8.0 Pluggable Agent</li>
+</ul>
+<h4 id="enhancement">Enhancement</h4>
+<ul>
+<li>91 Select best agent of those available for running tests</li>
+</ul>
+<h4 id="bugs-1">Bugs</h4>
+<ul>
+<li>83 TestCentric.Engine.Core package does not contain .Net Core 3.1 build of testcentric.engine.core</li>
+<li>85 TestAssemblyResolver doesn't handle dotnet preview releases correctly</li>
+</ul>
+<h4 id="build-2">Build</h4>
+<ul>
+<li>74 Use TestCentric-specific environment variable names for API keys</li>
+<li>77 Build script should specify versions of extensions used</li>
+<li>79 Add test using .NET Core 2.1 Pluggable Agent</li>
+<li>80 Make build script consistent with that of the GUI</li>
+<li>89 Update TestCentric.Metadata to version 2.0.0</li>
+<li>93 Eliminate unnecessary builds of TestCentric.Engine.Api</li>
+<li>96 Test with new pluggable agent releases</li>
+<li>97 Use TestCentric.Cake.Recipe for build</li>
+<li>101 Use test level to reduce number of package tests run</li>
+<li>105 Remove pluggable agent tests from build</li>
+</ul>
+<h3 id="testcentric-engine-2.0.0-alpha7-january-29-2023">TestCentric Engine 2.0.0-alpha7 - January 29, 2023</h3>
+<h4 id="features-3">Features</h4>
+<ul>
+<li>56 Separate assembly for NUnit extensibility</li>
+<li>59 Return to use of the NUnit 3.0 API</li>
+<li>61 Create a builtin .NET 7.0 agent</li>
+<li>62 Build testcentric.engine.core for .NET Core 3.1</li>
+<li>66 Create a built-in .NET 6.0 agent</li>
+</ul>
+<h4 id="enhancement-1">Enhancement</h4>
+<ul>
+<li>64 Implement InternalTrace logging in extensibility assembly</li>
+</ul>
+<h4 id="bugs-2">Bugs</h4>
+<ul>
+<li>54 All assemblies appear to run even when selecting items from a single assembly</li>
+<li>72 Exception thrown when an extension is found for which there is no extension point.</li>
+</ul>
+<h4 id="build-3">Build</h4>
+<ul>
+<li>57 Get build working again</li>
+<li>70 Remove testcentric-agent.runtimeconfig.dev.json from nuget package</li>
+</ul>
+<h3 id="testcentric-engine-2.0.0-alpha6-june-17-2022">TestCentric Engine 2.0.0-alpha6 - June 17, 2022</h3>
+<h4 id="enhancement-2">Enhancement</h4>
+<ul>
+<li>35 Add package setting indicating the agent actually used</li>
+</ul>
+<h4 id="bugs-3">Bugs</h4>
+<ul>
+<li>29 When opening a non-test assembly, error message is unclear</li>
+<li>30 Should recognize .NET Standard runtime even though we don't run tests targeting it</li>
+<li>36 Engine assemblies not showing correct version</li>
+<li>39 The Stop button doesn't work on test cases</li>
+<li>43 Cannot load extensions with a required engine version specified</li>
+</ul>
+<h4 id="build-4">Build</h4>
+<ul>
+<li>32 Use current version of nunit.engine.api</li>
+<li>42 Get engine tests working with extensions</li>
+</ul>
+<h3 id="testcentric-engine-2.0.0-alpha5-november-24-2021">TestCentric Engine 2.0.0-alpha5 - November 24, 2021</h3>
+<p>This is the first independent release of the TestCentric Engine, which was previously part of the TestCentric GUI project. Bundled releases were done in conjunction with the GUI through 2.0.0-alpha4. Consequently, this new release is designated as 2.0.0-alpha5.</p>
+<h4 id="breaking-changes">Breaking Changes</h4>
+<ul>
+<li>4 Remove .NET 2.0 Framework Agent from the engine</li>
+<li>16 Remove .NET Core 2.1 Agent from the engine</li>
+</ul>
+<h4 id="build-5">Build</h4>
+<ul>
+<li>20 Eliminate end-of-life checks for .NET Core 2.1 builds</li>
+</ul>
+
+	</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    </body>
+</html>
