@@ -5,16 +5,78 @@
 		<link>http://test-centric.org/</link>
 		<description />
 		<copyright>2023</copyright>
-		<pubDate>Fri, 08 Sep 2023 17:49:38 GMT</pubDate>
-		<lastBuildDate>Fri, 08 Sep 2023 17:49:38 GMT</lastBuildDate>
+		<pubDate>Fri, 08 Sep 2023 19:26:54 GMT</pubDate>
+		<lastBuildDate>Fri, 08 Sep 2023 19:26:54 GMT</lastBuildDate>
 		<item>
-			<title>New Release</title>
-			<link>http://test-centric.org/blog/new-release</link>
-			<description>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;</description>
-			<author>me</author>
-			<guid>http://test-centric.org/blog/new-release</guid>
-			<pubDate>Fri, 01 Jan 2016 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;
+			<title>TestCentric Runner 2.0.0-beta2 Released</title>
+			<link>http://test-centric.org/blog/testcentric-gui-2.0.0-beta2</link>
+			<description>&lt;p&gt;This release is part of a group of related releases:&lt;/p&gt;</description>
+			<author>Charlie Poole</author>
+			<guid>http://test-centric.org/blog/testcentric-gui-2.0.0-beta2</guid>
+			<pubDate>Sun, 03 Sep 2023 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;This release is part of a group of related releases:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;TestCentric Runner 2.0.0-beta2
+TestCentric Engine 2.0.0-beta2
+Net 4.6.2 Pluggable Agent 2.1.1
+Net 6.0 Pluggable Agent 2.1.0
+Net 7.0 Pluggable Agent 2.1.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Together they form a kind of plateau in the development of TestCentric and a basis for redirecting that development. Specifically, they will be the last releases where the code is constrained to remain compatibility with the NUnit engine and console runner.&lt;/p&gt;
+&lt;p&gt;At this point, it's clear that the NUnit and TestCentric engines are evolving in somewhat different directions and that re-merging the code is no longer very likely. The next releases of these packages - and other packages - by TestCentric will continue to support a certain degree of compatibility in usage but we no longer anticipate merging the two engines in the future.
+This release contains one breaking change and one new feature:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Breaking Change&lt;/strong&gt;: There is no longer a zip package for the GUI. This simplifies our build process without limiting usage significantly. For those who want to install an extra copy of the gui for experimentation or testing we suggest installing the nuget package into a chosen directory from command-line.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Agents may now be run from the command-line. This is intended for testing and debugging rather than as a substitute for the use of the runner. Currently, this has been implented for the three agents bundled with the GUI.&lt;/p&gt;
+</content:encoded>
+		</item>
+		<item>
+			<title>Net 4.6.2 Pluggable Agent 2.1.1 Released</title>
+			<link>http://test-centric.org/blog/net462-pluggable-agent-2.1.1</link>
+			<description>&lt;p&gt;Fixes a critical bug in the 2.1.0 release&lt;/p&gt;</description>
+			<author>Charlie Poole</author>
+			<guid>http://test-centric.org/blog/net462-pluggable-agent-2.1.1</guid>
+			<pubDate>Sun, 03 Sep 2023 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;Fixes a critical bug in the 2.1.0 release&lt;/p&gt;
+</content:encoded>
+		</item>
+		<item>
+			<title>Net 7.0 Pluggable Agent Released</title>
+			<link>http://test-centric.org/blog/net70-pluggable-agent-2.1.0</link>
+			<description>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;</description>
+			<author>Charlie Poole</author>
+			<guid>http://test-centric.org/blog/net70-pluggable-agent-2.1.0</guid>
+			<pubDate>Sun, 03 Sep 2023 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;
+</content:encoded>
+		</item>
+		<item>
+			<title>Net 6.0 Pluggable Agent Released</title>
+			<link>http://test-centric.org/blog/net60-pluggable-agent-2.1.0</link>
+			<description>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;</description>
+			<author>Charlie Poole</author>
+			<guid>http://test-centric.org/blog/net60-pluggable-agent-2.1.0</guid>
+			<pubDate>Sun, 03 Sep 2023 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;
+</content:encoded>
+		</item>
+		<item>
+			<title>TestCentric Engine 2.0.0-beta2 Released</title>
+			<link>http://test-centric.org/blog/testcentric-engine-2.0.0-beta2</link>
+			<description>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Make testcentric.extensibiltiy.dll available as an independent package.&lt;/p&gt;</description>
+			<author>Charlie Poole</author>
+			<guid>http://test-centric.org/blog/testcentric-engine-2.0.0-beta2</guid>
+			<pubDate>Sat, 02 Sep 2023 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Make testcentric.extensibiltiy.dll available as an independent package.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow agents to be run independently for testing purposes&lt;/p&gt;
+</content:encoded>
+		</item>
+		<item>
+			<title>Net 4.6.2 Pluggable Agent 2.1.0 Released</title>
+			<link>http://test-centric.org/blog/net462-pluggable-agent-2.1.0</link>
+			<description>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;</description>
+			<author>Charlie Poole</author>
+			<guid>http://test-centric.org/blog/net462-pluggable-agent-2.1.0</guid>
+			<pubDate>Sat, 02 Sep 2023 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;
 </content:encoded>
 		</item>
 	</channel>

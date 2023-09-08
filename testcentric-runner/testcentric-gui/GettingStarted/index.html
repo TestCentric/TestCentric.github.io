@@ -65,6 +65,7 @@
                                         <li><a href="/">Home</a></li>
             <li class="active"><a href="/testcentric-runner">TestCentric Runner</a></li>
             <li><a href="/tc-lite">TC-Lite Framework</a></li>
+            <li><a href="/blog">Blog</a></li>
  
                         </ul>       
                     </div>
