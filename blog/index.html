@@ -90,7 +90,7 @@
                         
 
         <li class="header"><i class="fa fa-bookmark"></i> Categories</li>    
-            <li><a href="/blog/Release">Release</a></li>
+            <li><a href="/blog/TestCentric">TestCentric</a></li>
     
     <li class="header"><i class="fa fa-calendar"></i> Archive</li>    
         <li><a href="/blog/archive/2023/09">September, 2023</a></li>
@@ -115,79 +115,40 @@
 	<section class="content">
 		
 
-        <h2><a href="/blog/net60-pluggable-agent-2.1.0">Net 6.0 Pluggable Agent Released</a></h2>
+        <h2><a href="/blog/testcentric-beta2-and-beyond">TestCentric Beta 2 and Beyond</a></h2>
 
 <dl class="dl-horizontal" style="margin-bottom: 12px;">
     <dt style="text-align: left;"><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Sunday, September 3, 2023</dd>
+    <dd>Saturday, September 16, 2023</dd>
         <dt style="text-align: left;"><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release">Release</a></dd>
+        <dd><a href="/blog/TestCentric">TestCentric</a></dd>
             <dt style="text-align: left;"><i class="fa fa-user"></i> Author</dt>
         <dd><a href="/blog/author/Charlie-Poole">Charlie Poole</a></dd>
 </dl>
             <div>
-                <p><strong>New Feature</strong>: Allow running agent from command-line</p>
+                <p>I released version 2.0.0-beta2 of the TestCentric Runner about two weeks ago. This release is both an ending and a beginning. On the one hand, it marks the end of a particular phase of development. On the other, it will serve as the basis for a fairly significant change in future releases.</p>
+<p>Specifically, this will be the last release in which we try to keep the code close to that of the NUnit engine and console runner.</p>
+<p>When I started developing the TestCentric GUI Runner and engine, there was a strong expectation that the engine would eventually be merged into Version 4 of the NUnit engine and that the GUI would then use that engine instead of having its own. At this point, however, it's clear that the NUnit and TestCentric engines are evolving in somewhat different directions and that re-merging the code is no longer an option.</p>
+<p>Keeping that option open up to now has made progress slightly more difficult and certain features unfeasible. Eliminating it should open up a number of possibilities for future development.</p>
+<h2 id="progress-to-date">Progress to Date</h2>
+<p>Before getting into what comes next, let's quickly look at a few of the changes already made. I'll limit myself to only the major changes.</p>
+<h3 id="focus-on-agents">Focus on Agents</h3>
+<p>Version 1 of the GUI used agents but kept them more or less hidden from the casual user. In version 2, agents have more visibility. In fact, users have the option of selecting a particular agent to run tests. Agent selection replaces a lot of options which were previously specified, such as use of Process and AppDomain isolation for the tests. These choices are now implied by the selection of an agent.</p>
+<h3 id="eliminate-built-in-agents">Eliminate Built-in Agents</h3>
+<p>Since beta1, the engine no longer includes any built-in agents. All agents for running tests are now pluggable extensions and at least one agent must be installed in order to make the engine usable.</p>
+<p>The intent is that each runner using the engine should bundle one or more appropriate agents as package dependencies. Our current GUI package is distributed with a dependency on three runners: .NET 4.6.2, .NET 6.0 and .NET 7.0. As a result, it is immediately usable out of the box, but users may remove and add agents at will.</p>
+<p>The bundled runners will change as new platforms go into production or reach end of life. One effect of this is that we can continue to support legacy platforms by simply keeping the pluggable agent for each platform available.</p>
+<p>In addition to the three bundled agents, agents are currently available for .NET 2.0, .NET 4.0, .NET Core 2.1, .NET Core 3.1, .NET 5.0 and .NET 8.0 preview 7.</p>
+<h3 id="dropping-the-zip-package">Dropping the Zip Package</h3>
+<p>As of beta2, there is no longer a zip package for the GUI. We've had some online discussion about this and the conclusion was that removing the zip would simplify our build and release process without limiting usage significantly. For those who want to install an extra copy of the gui for experimentation or testing the nuget package is available. It can be installed any chosen directory using <code>nuget.exe</code> from the command-line.</p>
+<h3 id="running-agents-from-the-command-line">Running Agents from the Command-line</h3>
+<p>Also as of beta2, agents may now be run from the command-line, passing the name of a test assembly. This permits running them without using the GUI for testing and debugging. It allows us to test new pluggable agents without a circular dependency on the GUI. Note that this feature is not intended to replace use of a runner, so the available command-line options are kept fairly limited by design.</p>
+<p>This feature has been implemented for the three agents bundled with the GUI (.NET 4.6.2, 6.0 and 7.0) and will be rolled out gradually in updates to each of the other pluggable agents.</p>
+<h2 id="what-comes-next">What Comes Next?</h2>
+<p>The beta3 release will primarily focus on the boilerplate changes needed to reduce and eventually eliminate dependency on the NUnit Api assembly, which is the only one we use. We'll stop using the nunit signing key. Our pluggable agent extensions, which are only supported by TestCentric, will use the &quot;TestCentric&quot; prefix rather than &quot;NUnit&quot;. There is enough of this kind of work to do that the beta3 release will probably not have many new features - possibly none at all.</p>
+<p>Beyond beta3, expect to see TestCentric become more modular. Additional builtin components will become extensions. The ExtensionManager itself is already in a separate assembly, which allows us to implement GUI extensions outside of the engine. Some extensions will have both a GUI and an Engine component.</p>
+<p>Either a console mode of operation or a separate console runner is likely to be part of the final release.</p>
 
-            </div>
-        <hr />
-        <h2><a href="/blog/testcentric-gui-2.0.0-beta2">TestCentric Runner 2.0.0-beta2 Released</a></h2>
-
-<dl class="dl-horizontal" style="margin-bottom: 12px;">
-    <dt style="text-align: left;"><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Sunday, September 3, 2023</dd>
-        <dt style="text-align: left;"><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release">Release</a></dd>
-            <dt style="text-align: left;"><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/Charlie-Poole">Charlie Poole</a></dd>
-</dl>
-            <div>
-                <p>This release is part of a group of related releases:</p>
-                <a href="/blog/testcentric-gui-2.0.0-beta2">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/net462-pluggable-agent-2.1.1">Net 4.6.2 Pluggable Agent 2.1.1 Released</a></h2>
-
-<dl class="dl-horizontal" style="margin-bottom: 12px;">
-    <dt style="text-align: left;"><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Sunday, September 3, 2023</dd>
-        <dt style="text-align: left;"><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release">Release</a></dd>
-            <dt style="text-align: left;"><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/Charlie-Poole">Charlie Poole</a></dd>
-</dl>
-            <div>
-                <p>Fixes a critical bug in the 2.1.0 release</p>
-                <a href="/blog/net462-pluggable-agent-2.1.1">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/net70-pluggable-agent-2.1.0">Net 7.0 Pluggable Agent Released</a></h2>
-
-<dl class="dl-horizontal" style="margin-bottom: 12px;">
-    <dt style="text-align: left;"><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Sunday, September 3, 2023</dd>
-        <dt style="text-align: left;"><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release">Release</a></dd>
-            <dt style="text-align: left;"><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/Charlie-Poole">Charlie Poole</a></dd>
-</dl>
-            <div>
-                <p><strong>New Feature</strong>: Allow running agent from command-line</p>
-                <a href="/blog/net70-pluggable-agent-2.1.0">Read more...</a>
-            </div>
-        <hr />
-        <h2><a href="/blog/net462-pluggable-agent-2.1.0">Net 4.6.2 Pluggable Agent 2.1.0 Released</a></h2>
-
-<dl class="dl-horizontal" style="margin-bottom: 12px;">
-    <dt style="text-align: left;"><i class="fa fa-calendar"></i> Published</dt>
-    <dd>Saturday, September 2, 2023</dd>
-        <dt style="text-align: left;"><i class="fa fa-bookmark"></i> Category</dt>
-        <dd><a href="/blog/Release">Release</a></dd>
-            <dt style="text-align: left;"><i class="fa fa-user"></i> Author</dt>
-        <dd><a href="/blog/author/Charlie-Poole">Charlie Poole</a></dd>
-</dl>
-            <div>
-                <p><strong>New Feature</strong>: Allow running agent from command-line</p>
-                <a href="/blog/net462-pluggable-agent-2.1.0">Read more...</a>
             </div>
         <hr />
     <nav>
@@ -195,7 +156,6 @@
             <li class="previous">                
             </li>
             <li class="next">
-                    <a href="/blog/page2">Older <span aria-hidden="true">&rarr;</span></a>
             </li>
         </ul>
     </nav>

@@ -4,89 +4,38 @@
 	<title>TestCentric</title>
 	<link rel="self" href="http://test-centric.org/" />
 	<rights>2023</rights>
-	<updated>2023-09-08T21:57:19Z</updated>
+	<updated>2023-09-17T04:37:38Z</updated>
 	<entry>
-		<id>http://test-centric.org/blog/net60-pluggable-agent-2.1.0</id>
-		<title>Net 6.0 Pluggable Agent Released</title>
+		<id>http://test-centric.org/blog/testcentric-beta2-and-beyond</id>
+		<title>TestCentric Beta 2 and Beyond</title>
 		<author>
 			<name>Charlie Poole</name>
 		</author>
-		<link href="http://test-centric.org/blog/net60-pluggable-agent-2.1.0" />
-		<updated>2023-09-03T00:00:00Z</updated>
-		<content>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;
+		<link href="http://test-centric.org/blog/testcentric-beta2-and-beyond" />
+		<updated>2023-09-16T00:00:00Z</updated>
+		<content>&lt;p&gt;I released version 2.0.0-beta2 of the TestCentric Runner about two weeks ago. This release is both an ending and a beginning. On the one hand, it marks the end of a particular phase of development. On the other, it will serve as the basis for a fairly significant change in future releases.&lt;/p&gt;
+&lt;p&gt;Specifically, this will be the last release in which we try to keep the code close to that of the NUnit engine and console runner.&lt;/p&gt;
+&lt;p&gt;When I started developing the TestCentric GUI Runner and engine, there was a strong expectation that the engine would eventually be merged into Version 4 of the NUnit engine and that the GUI would then use that engine instead of having its own. At this point, however, it's clear that the NUnit and TestCentric engines are evolving in somewhat different directions and that re-merging the code is no longer an option.&lt;/p&gt;
+&lt;p&gt;Keeping that option open up to now has made progress slightly more difficult and certain features unfeasible. Eliminating it should open up a number of possibilities for future development.&lt;/p&gt;
+&lt;h2 id="progress-to-date"&gt;Progress to Date&lt;/h2&gt;
+&lt;p&gt;Before getting into what comes next, let's quickly look at a few of the changes already made. I'll limit myself to only the major changes.&lt;/p&gt;
+&lt;h3 id="focus-on-agents"&gt;Focus on Agents&lt;/h3&gt;
+&lt;p&gt;Version 1 of the GUI used agents but kept them more or less hidden from the casual user. In version 2, agents have more visibility. In fact, users have the option of selecting a particular agent to run tests. Agent selection replaces a lot of options which were previously specified, such as use of Process and AppDomain isolation for the tests. These choices are now implied by the selection of an agent.&lt;/p&gt;
+&lt;h3 id="eliminate-built-in-agents"&gt;Eliminate Built-in Agents&lt;/h3&gt;
+&lt;p&gt;Since beta1, the engine no longer includes any built-in agents. All agents for running tests are now pluggable extensions and at least one agent must be installed in order to make the engine usable.&lt;/p&gt;
+&lt;p&gt;The intent is that each runner using the engine should bundle one or more appropriate agents as package dependencies. Our current GUI package is distributed with a dependency on three runners: .NET 4.6.2, .NET 6.0 and .NET 7.0. As a result, it is immediately usable out of the box, but users may remove and add agents at will.&lt;/p&gt;
+&lt;p&gt;The bundled runners will change as new platforms go into production or reach end of life. One effect of this is that we can continue to support legacy platforms by simply keeping the pluggable agent for each platform available.&lt;/p&gt;
+&lt;p&gt;In addition to the three bundled agents, agents are currently available for .NET 2.0, .NET 4.0, .NET Core 2.1, .NET Core 3.1, .NET 5.0 and .NET 8.0 preview 7.&lt;/p&gt;
+&lt;h3 id="dropping-the-zip-package"&gt;Dropping the Zip Package&lt;/h3&gt;
+&lt;p&gt;As of beta2, there is no longer a zip package for the GUI. We've had some online discussion about this and the conclusion was that removing the zip would simplify our build and release process without limiting usage significantly. For those who want to install an extra copy of the gui for experimentation or testing the nuget package is available. It can be installed any chosen directory using &lt;code&gt;nuget.exe&lt;/code&gt; from the command-line.&lt;/p&gt;
+&lt;h3 id="running-agents-from-the-command-line"&gt;Running Agents from the Command-line&lt;/h3&gt;
+&lt;p&gt;Also as of beta2, agents may now be run from the command-line, passing the name of a test assembly. This permits running them without using the GUI for testing and debugging. It allows us to test new pluggable agents without a circular dependency on the GUI. Note that this feature is not intended to replace use of a runner, so the available command-line options are kept fairly limited by design.&lt;/p&gt;
+&lt;p&gt;This feature has been implemented for the three agents bundled with the GUI (.NET 4.6.2, 6.0 and 7.0) and will be rolled out gradually in updates to each of the other pluggable agents.&lt;/p&gt;
+&lt;h2 id="what-comes-next"&gt;What Comes Next?&lt;/h2&gt;
+&lt;p&gt;The beta3 release will primarily focus on the boilerplate changes needed to reduce and eventually eliminate dependency on the NUnit Api assembly, which is the only one we use. We'll stop using the nunit signing key. Our pluggable agent extensions, which are only supported by TestCentric, will use the &amp;quot;TestCentric&amp;quot; prefix rather than &amp;quot;NUnit&amp;quot;. There is enough of this kind of work to do that the beta3 release will probably not have many new features - possibly none at all.&lt;/p&gt;
+&lt;p&gt;Beyond beta3, expect to see TestCentric become more modular. Additional builtin components will become extensions. The ExtensionManager itself is already in a separate assembly, which allows us to implement GUI extensions outside of the engine. Some extensions will have both a GUI and an Engine component.&lt;/p&gt;
+&lt;p&gt;Either a console mode of operation or a separate console runner is likely to be part of the final release.&lt;/p&gt;
 </content>
-		<summary>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>http://test-centric.org/blog/testcentric-gui-2.0.0-beta2</id>
-		<title>TestCentric Runner 2.0.0-beta2 Released</title>
-		<author>
-			<name>Charlie Poole</name>
-		</author>
-		<link href="http://test-centric.org/blog/testcentric-gui-2.0.0-beta2" />
-		<updated>2023-09-03T00:00:00Z</updated>
-		<content>&lt;p&gt;This release is part of a group of related releases:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;TestCentric Runner 2.0.0-beta2
-TestCentric Engine 2.0.0-beta2
-Net 4.6.2 Pluggable Agent 2.1.1
-Net 6.0 Pluggable Agent 2.1.0
-Net 7.0 Pluggable Agent 2.1.0
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Together they form a kind of plateau in the development of TestCentric and a basis for redirecting that development. Specifically, they will be the last releases where the code is constrained to remain compatibility with the NUnit engine and console runner.&lt;/p&gt;
-&lt;p&gt;At this point, it's clear that the NUnit and TestCentric engines are evolving in somewhat different directions and that re-merging the code is no longer very likely. The next releases of these packages - and other packages - by TestCentric will continue to support a certain degree of compatibility in usage but we no longer anticipate merging the two engines in the future.
-This release contains one breaking change and one new feature:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Breaking Change&lt;/strong&gt;: There is no longer a zip package for the GUI. This simplifies our build process without limiting usage significantly. For those who want to install an extra copy of the gui for experimentation or testing we suggest installing the nuget package into a chosen directory from command-line.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Agents may now be run from the command-line. This is intended for testing and debugging rather than as a substitute for the use of the runner. Currently, this has been implented for the three agents bundled with the GUI.&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;This release is part of a group of related releases:&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>http://test-centric.org/blog/net462-pluggable-agent-2.1.1</id>
-		<title>Net 4.6.2 Pluggable Agent 2.1.1 Released</title>
-		<author>
-			<name>Charlie Poole</name>
-		</author>
-		<link href="http://test-centric.org/blog/net462-pluggable-agent-2.1.1" />
-		<updated>2023-09-03T00:00:00Z</updated>
-		<content>&lt;p&gt;Fixes a critical bug in the 2.1.0 release&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;Fixes a critical bug in the 2.1.0 release&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>http://test-centric.org/blog/net70-pluggable-agent-2.1.0</id>
-		<title>Net 7.0 Pluggable Agent Released</title>
-		<author>
-			<name>Charlie Poole</name>
-		</author>
-		<link href="http://test-centric.org/blog/net70-pluggable-agent-2.1.0" />
-		<updated>2023-09-03T00:00:00Z</updated>
-		<content>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>http://test-centric.org/blog/net462-pluggable-agent-2.1.0</id>
-		<title>Net 4.6.2 Pluggable Agent 2.1.0 Released</title>
-		<author>
-			<name>Charlie Poole</name>
-		</author>
-		<link href="http://test-centric.org/blog/net462-pluggable-agent-2.1.0" />
-		<updated>2023-09-02T00:00:00Z</updated>
-		<content>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow running agent from command-line&lt;/p&gt;</summary>
-	</entry>
-	<entry>
-		<id>http://test-centric.org/blog/testcentric-engine-2.0.0-beta2</id>
-		<title>TestCentric Engine 2.0.0-beta2 Released</title>
-		<author>
-			<name>Charlie Poole</name>
-		</author>
-		<link href="http://test-centric.org/blog/testcentric-engine-2.0.0-beta2" />
-		<updated>2023-09-02T00:00:00Z</updated>
-		<content>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Make testcentric.extensibiltiy.dll available as an independent package.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Allow agents to be run independently for testing purposes&lt;/p&gt;
-</content>
-		<summary>&lt;p&gt;&lt;strong&gt;New Feature&lt;/strong&gt;: Make testcentric.extensibiltiy.dll available as an independent package.&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;I released version 2.0.0-beta2 of the TestCentric Runner about two weeks ago. This release is both an ending and a beginning. On the one hand, it marks the end of a particular phase of development. On the other, it will serve as the basis for a fairly significant change in future releases.&lt;/p&gt;</summary>
 	</entry>
 </feed>
