@@ -1,0 +1,10 @@
+div.notice {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+    border: 1px solid goldenrod;
+    margin: 1em 10%;
+    padding: 12px;
+    background-color: #FEEFB3;
+    color: #9F6000;
+}

@@ -1,196 +1,240 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="description" />
-        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>TestCentric - ValueSourceAttribute</title>
-        <link href="/assets/css/highlight.css" rel="stylesheet">
-        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
-        <link href="/assets/css/theme/theme.css" rel="stylesheet" />
-        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
-        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="/assets/css/override.css" rel="stylesheet" />
-        <script src="/assets/js/jquery-2.2.3.min.js"></script>
-        <script src="/assets/js/bootstrap.min.js"></script>        
-        <script src="/assets/js/app.min.js"></script>         
-        <script src="/assets/js/highlight.pack.js"></script>   
-        <script src="/assets/js/jquery.slimscroll.min.js"></script>
-        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
-        <script src="/assets/js/mermaid.min.js"></script>
-        <script src="/assets/js/svg-pan-zoom.min.js"></script>
-        <!--[if lt IE 9]>
-        <script src="/assets/js/html5shiv.min.js"></script>
-        <script src="/assets/js/respond.min.js"></script>
-        <![endif]-->  
+
+        <link href="/assets/bootstrap/bootstrap.css" rel="stylesheet" />
+                <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" data-no-mirror>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.26.0/themes/prism.css">
+        <link href="/assets/css/theme.css" rel="stylesheet" />
+        <link href="/assets/css/styles.css" rel="stylesheet" />
+        <link href="/css/overrides.css" rel="stylesheet" />
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a1cad7ed9a.js" crossorigin="anonymous" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.26.0/components/prism-core.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.26.0/plugins/autoloader/prism-autoloader.min.js" data-no-mirror></script>
+        <script src="https://cdn.jsdelivr.net/npm/quicklink@2.0.0/dist/quicklink.umd.js"></script>
+	    
+        <!-- Lunr search -->
 
         
+
+        
+
+        <title>TestCentric - ValueSourceAttribute</title>
     </head>
-    <body class="hold-transition wyam layout-boxed  ">    
-        <div class="top-banner"></div>
-        <div class="wrapper with-container">
-            <!-- Header -->
-            <header class="main-header">   
-                     
-                <a href="/" class="logo">
+    <body class="d-flex flex-column">
+        <div class="flex-grow-1 d-flex flex-column">
+            <div class="bg-nav">
+                <div class="container-xl py-3">
+                    <div class="row">
+                        <div class="offset-lg-2 col-12 col-lg-8 px-0">
+                            <nav class="navbar navbar-expand-md navbar-light align-items-start">
+    <a class="navbar-brand" href="/">
+                <img id="logo" src="/img/NewTestCentricLogo.png" alt="TestCentric">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse-topnav" aria-controls="collapse-topnav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="collapse-topnav" class="collapse navbar-collapse flex-wrap">
+        <ul class="navbar-nav mr-auto">
+            
+        </ul>
+        <ul class="navbar-nav">
+                    <li class="nav-item">
+            <a class="nav-link" href="/testcentric-runner">TestCentric Runner</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/tc-lite">TC-Lite Framework</a>
+        </li>
 
-                                <!-- mini logo for sidebar mini 50x50 pixels -->
-                                <span class="logo-mini"><img src="/assets/img/testcentriclogo.png"></span>
-                                <!-- logo for regular state and mobile devices -->
-                                <span class="logo-lg"><img src="/assets/img/testcentriclogo.png"></span>
-                                            </a>   
-                         
-                <nav class="navbar navbar-static-top" role="navigation">
-                    <!-- Sidebar toggle button-->
-                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
-                            <span class="sr-only">Toggle side menu</span>
-                            <i class="fa fa-chevron-circle-right"></i>
-                        </a>
-                                        
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-                            <span class="sr-only">Toggle side menu</span>
-                            <i class="fa fa-chevron-circle-down"></i>
-                        </button>
+            
+        </ul>
+    </div>
+</nav>
+                        </div>
                     </div>
+                </div>
+            </div>
             
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
-                        <ul class="nav navbar-nav">                            
-                                        <li><a href="/">Home</a></li>
-            <li><a href="/testcentric-runner">TestCentric Runner</a></li>
-            <li class="active"><a href="/tc-lite">TC-Lite Framework</a></li>
-            <li><a href="/blog">Blog</a></li>
- 
-                        </ul>       
+            <div class="flex-grow-1 d-flex flex-column">
+                    <!-- Titlebar -->
+                    <div id="titlebar" class="py-4">
+                        <div class="container-xl">
+                            <div class="row">
+                                <div class="offset-lg-2 col-12 col-lg-8 px-3 px-lg-0 w-100 d-flex flex-wrap align-items-end">
+                                    <div class="flex-grow-1">
+                                        <div class="breadcrumbs d-flex flex-column flex-md-row text-break">
+
+        <span><a href="/tc-lite">TC-Lite Framework</a></span>
+        <span><a href="/tc-lite/Features">Features</a></span>
+        <span><a href="/tc-lite/Features/Attributes">Attributes</a></span>
+                                        </div>
+                                        <div class="text-white m-0 text-break title">
+
+ValueSourceAttribute
+                                        </div>
+                                    </div>
+                                        <div class="navbar navbar-expand-md navbar-dark p-0">
+                                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#left-sidebar" aria-controls="left-sidebar" aria-expanded="false" aria-label="Toggle navigation">
+                                                <span class="navbar-toggler-icon"></span>
+                                            </button>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- /.navbar-collapse -->
-                
-                    <!-- Navbar Right Menu -->
-                </nav>
-            </header>
-            
-            <!-- Left side column. contains the logo and sidebar -->
-            <aside class="main-sidebar ">
-                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
-                    	
-    <div id="infobar-headings"></div>
+                    <!-- Under title -->
+                    <div id="undertitle">
+                        <div class="container-xl">
+                            <div class="row">
+                                    <div class="col-md-3 col-lg-2">
+                                    </div>
+                                    <div class="col-md-9 col-lg-8 bg-white">
+                                    </div>
+                                <div class="col-lg-2 d-none d-lg-block">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                </section>
-                <section class="sidebar">    
-                                     
-                    
+                <!-- Body -->
+                <div class="flex-grow-1 d-flex flex-column">
+                        <div class="container-xl flex-grow-1 d-flex flex-column">
+                            <div class="row flex-grow-1 align-items-stretch">
+                                        <div class="col-md-3 col-lg-2 p-md-0 m-md-0 bg-body">
+                                            <div id="left-sidebar" class="sidebar collapse px-0 px-md-3 pt-3">
 
-                    <ul class="sidebar-menu">
-                        
+<div class="sidebar-root">
 
-                <li><a href="/tc-lite/overview">Overview</a></li>
-                <li class="treeview">
-                    <a href="/tc-lite/Concepts">Concepts</a> <a href="#" class="expand"></a>
-                    <ul class="treeview-menu">
-                        
-                <li><a href="/tc-lite/Concepts/microtests">Microtests</a></li>
-                <li><a href="/tc-lite/Concepts/test-cases">Test Cases</a></li>
-                <li><a href="/tc-lite/Concepts/test-fixtures">Test Fixtures</a></li>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite">TC-Lite Framework</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/overview">Overview</a>
+</div>
+<div class="sidebar-nav-item has-children">
+    <a href="/tc-lite/Concepts">Concepts</a>
+</div>                <div class="sidebar-nav-children">
 
-                    </ul>
-                </li>
-                <li class="treeview">
-                    <a href="/tc-lite/GettingStarted">Getting Started</a> <a href="#" class="expand"></a>
-                    <ul class="treeview-menu">
-                        
-                <li><a href="/tc-lite/GettingStarted/project-creation">Creating a Test Project</a></li>
-                <li><a href="/tc-lite/GettingStarted/writing-tests">Writing Tests</a></li>
-                <li><a href="/tc-lite/GettingStarted/running-tests">Running Your Tests</a></li>
-                <li><a href="/tc-lite/GettingStarted/command-line">Command-Line Options</a></li>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Concepts/microtests">Microtests</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Concepts/test-cases">Test Cases</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Concepts/test-fixtures">Test Fixtures</a>
+</div>                </div>
 
-                    </ul>
-                </li>
-                <li class="treeview active">
-                    <a href="/tc-lite/Features">Features</a> <a href="#" class="expand"></a>
-                    <ul class="treeview-menu">
-                        
-                <li class="treeview">
-                    <a href="/tc-lite/Features/Assertions">Assertions</a> <a href="#" class="expand"></a>
-                    <ul class="treeview-menu">
-                        
-                <li class="treeview">
-                    <a href="/tc-lite/Features/Assertions/classic-model">Classic Model</a> <a href="#" class="expand"></a>
-                    <ul class="treeview-menu">
-                        
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-istrue">Assert.IsTrue</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-isnull">Assert.IsNull</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-isnotnull">Assert.IsNotNull</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-isempty">Assert.IsEmpty</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-isnotempty">Assert.IsNotEmpty</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-areequal">Assert.AreEqual</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-arenotequal">Assert.AreNotEqual</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-aresame">Assert.AreSame</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-arenotsame">Assert.AreNotSame</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-pass">Assert.Pass</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-fail">Assert.Fail</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-warn">Assert.Warn</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-ignore">Assert.Ignore</a></li>
-                <li><a href="/tc-lite/Features/Assertions/classic-model/assert-inconclusive">Assert.Inconclusive</a></li>
+<div class="sidebar-nav-item has-children">
+    <a href="/tc-lite/GettingStarted">Getting Started</a>
+</div>                <div class="sidebar-nav-children">
 
-                    </ul>
-                </li>
-                <li><a href="/tc-lite/Features/Assertions/constraint-model">Constraint Model</a></li>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/GettingStarted/project-creation">Creating a Test Project</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/GettingStarted/writing-tests">Writing Tests</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/GettingStarted/running-tests">Running Your Tests</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/GettingStarted/command-line">Command-Line Options</a>
+</div>                </div>
 
-                    </ul>
-                </li>
-                <li class="treeview active">
-                    <a href="/tc-lite/Features/Attributes">Attributes</a> <a href="#" class="expand"></a>
-                    <ul class="treeview-menu">
-                        
-                <li><a href="/tc-lite/Features/Attributes/category-attribute">CategoryAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/combinatorial-attribute">CombinatorialAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/defaulttolerance-attribute">DefaultToleranceAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/description-attribute">DescriptionAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/ignore-attribute">IgnoreAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/property-attribute">PropertyAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/random-attribute">RandomAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/range-attribute">RangeAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/testcase-attribute">TestCaseAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/testcasedata-attribute">TestCaseDataAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/testcasefactory-attribute">TestCaseFactoryAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/testfixture-attribute">TestFixtureAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/testfixturesource-attribute">TestFixtureSourceAttribute</a></li>
-                <li><a href="/tc-lite/Features/Attributes/values-attribute">ValuesAttribute</a></li>
-                <li class="selected"><a href="/tc-lite/Features/Attributes/valuesource-attribute">ValueSourceAttribute</a></li>
+<div class="sidebar-nav-item has-children">
+    <a href="/tc-lite/Features">Features</a>
+</div>                <div class="sidebar-nav-children">
 
-                    </ul>
-                </li>
-                <li><a href="/tc-lite/Features/constraints">Constraints</a></li>
-                <li><a href="/tc-lite/Features/parallel-execution">Parallel Test Execution</a></li>
-                <li><a href="/tc-lite/Features/theories">Theories</a></li>
+<div class="sidebar-nav-item has-children">
+    <a href="/tc-lite/Features/Assertions">Assertions</a>
+</div>                            <div class="sidebar-nav-children">
 
-                    </ul>
-                </li>
-                <li><a href="/tc-lite/api">TC-Lite API</a></li>
-                <li><a href="/tc-lite/license">License</a></li>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Assertions/classic-model">Classic Model</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Assertions/constraint-model">Constraint Model</a>
+</div>                            </div>
 
-                    </ul>
-                            
-                </section>                
-            </aside>
-            
-            <!-- Content Wrapper. Contains page content -->
-            <div class="content-wrapper">
-                
+<div class="sidebar-nav-item has-children">
+    <a href="/tc-lite/Features/Attributes">Attributes</a>
+</div>                            <div class="sidebar-nav-children">
 
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/category-attribute">CategoryAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/combinatorial-attribute">CombinatorialAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/defaulttolerance-attribute">DefaultToleranceAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/description-attribute">DescriptionAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/ignore-attribute">IgnoreAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/property-attribute">PropertyAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/random-attribute">RandomAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/range-attribute">RangeAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/testcase-attribute">TestCaseAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/testcasedata-attribute">TestCaseDataAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/testcasefactory-attribute">TestCaseFactoryAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/testfixture-attribute">TestFixtureAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/testfixturesource-attribute">TestFixtureSourceAttribute</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/Attributes/values-attribute">ValuesAttribute</a>
+</div>
+<div class="sidebar-nav-item active">
+    <a href="/tc-lite/Features/Attributes/valuesource-attribute">ValueSourceAttribute</a>
+</div>                            </div>
 
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/constraints">Constraints</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/parallel-execution">Parallel Test Execution</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/Features/theories">Theories</a>
+</div>                </div>
 
-		<section class="content-header">
-			<h1>ValueSourceAttribute</h1>
-		</section>
-	<section class="content">
-		<p><strong>ValueSource</strong> is used on individual parameters of a test method to identify a named source for the argument values to be supplied. The attribute has two public constructors.</p>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/api">TC-Lite API</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/tc-lite/license">License</a>
+</div></div>                                            </div>
+                                        </div>
+                                        <div id="content" class="col-md-9 col-lg-8 p-4 pt-md-0 bg-white">
+<p><strong>ValueSource</strong> is used on individual parameters of a test method to identify a named source for the argument values to be supplied. The attribute has two public constructors.</p>
 <pre><code class="language-c#">ValueSourceAttribute(Type sourceType, string sourceName);
 ValueSourceAttribute(string sourceName);
 </code></pre>
@@ -204,29 +248,108 @@ ValueSourceAttribute(string sourceName);
 <li>The individual items returned from the enumerator must be compatible with the type of the parameter on which the attribute appears.</li>
 </ul>
 
-	</section>
-                
-            </div>           
-            
-            <!-- Footer -->
-            <footer class="main-footer">
-            </footer>
-            
+
+                                        </div>
+                                <div class="col-lg-2 p-md-0 m-md-0 bg-body">
+                                    <div id="right-sidebar" class="sidebar px-0 px-md-3 pt-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
         </div>
-        <div class="wrapper bottom-wrapper">
-            <footer class="bottom-footer">
-                Generated by <a href="https://wyam.io">Wyam</a>
-            </footer>
+
+        <!-- Footer -->
+        <div id="footer" class="p-3 text-white">
+            <div class="container-xl">
+                <div class="row">
+    <div class="offset-lg-2 col-12 col-lg-8">
+        <div class="pt-2 font-size-sm text-muted text-center">
+            Generated By <a class="text-muted" href="https://statiq.dev">Statiq</a>
         </div>
-        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
-        
-        <script>           
-            // Close the sidebar if we select an anchor link
-            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
-                $(document.body).removeClass('sidebar-open');
-            });
-            
+    </div>
+</div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script>
             $(document).ready(function() {
+                quicklink.listen();
+
+                // Bootstrap tooltips
+                $('[data-toggle="tooltip"]').tooltip();
+
+				// Keeps the sidebars in view on wider viewports
+				let left = null;
+				let leftParent = null;
+				let right = null;
+				let rightParent = null;
+                function stickSidebars()
+				{
+				    if (left == null) {
+                        left = $('#left-sidebar');
+                        right = $('#right-sidebar');
+                    }
+                    if (left.length) {
+                        if (window.innerWidth >= 768) {
+                            if (leftParent == null) {
+                                leftParent = left.parent()[0];
+                            }
+                            if (leftParent) {
+                                let leftRect = leftParent.getBoundingClientRect();
+                                stickSidebar(left,  leftRect);
+                            }
+                        } else {
+                            left.css('position', 'relative');
+                            if (left.css('bottom') != 0) {
+                                left.css('bottom', '0');
+                            }
+                        }
+                    }
+                    if (right.length) {
+                        if (window.innerWidth >= 768) {
+                            if (rightParent == null) {
+                                rightParent = right.parent()[0];
+                            }
+                            if (rightParent) {
+                                let rightRect = rightParent.getBoundingClientRect();
+                                stickSidebar(right,  rightRect);
+                            }
+                        } else {
+                            right.css('position', 'relative');
+                            if (right.css('bottom') != 0) {
+                                right.css('bottom', '0');
+                            }
+                        }
+                    }
+				}
+				function stickSidebar(sidebar, rect) {
+                    // Bottom
+                    if (rect.bottom > window.innerHeight) {
+                        sidebar.css('bottom', rect.bottom - window.innerHeight + "px");
+                    } else {
+                        sidebar.css('bottom', 0);
+                    }
+                    // Top
+                    if (rect.top < 0) {
+                        sidebar.css('position', 'sticky');
+                    } else {
+                        sidebar.css('position', 'absolute');
+                    }
+				}
+				$(window).on("load", function() {
+				    stickSidebars();
+				});
+                $(window).scroll(function() {
+				    stickSidebars();
+				});
+				$(window).resize(function() {
+				    stickSidebars();
+				})
+
+                // Mermaid diagrams
                 mermaid.initialize(
                 {
                     flowchart:
@@ -235,12 +358,12 @@ ValueSourceAttribute(string sourceName);
                     },
 					startOnLoad: false,
 					cloneCssStyles: false
-                });     
+                });
                 mermaid.init(undefined, ".mermaid");
 
                 // Remove the max-width setting that Mermaid sets
                 var mermaidSvg = $('.mermaid svg');
-                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.addClass('img-fluid');
                 mermaidSvg.css('max-width', '');
 
                 // Make it scrollable
@@ -254,40 +377,24 @@ ValueSourceAttribute(string sourceName);
 						center: true,
                         maxZoom: 20,
                         zoomScaleSensitivity: 0.6
-					});			                          
+					});
 
                     // Do the reset once right away to fit the diagram
                     panZoom.resize();
                     panZoom.fit();
                     panZoom.center();
-                    
+
                     $(window).resize(function(){
                         panZoom.resize();
                         panZoom.fit();
                         panZoom.center();
                     });
 				}
-                
-                $('pre code').each(function(i, block) {
-                    hljs.highlightBlock(block);
-                });  
-            });
-
-            hljs.initHighlightingOnLoad();
-
-            // Back to top
-            $(window).scroll(function() {
-                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
-                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
-                } else {
-                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
-                }
-            });
-            $('#return-to-top').click(function() {      // When arrow is clicked
-                $('body,html').animate({
-                    scrollTop : 0                       // Scroll to top of body
-                }, 500);
             });
         </script>
+
+        
+
+        
     </body>
 </html>
