@@ -28,7 +28,7 @@
 
         
 
-        <title>TestCentric - TestCentric GUI</title>
+        <title>TestCentric - TestCentric Beta4 Release</title>
     </head>
     <body class="d-flex flex-column">
         <div class="flex-grow-1 d-flex flex-column">
@@ -76,12 +76,17 @@
                                     <div class="flex-grow-1">
                                         <div class="breadcrumbs d-flex flex-column flex-md-row text-break">
 
-        <span><a href="/testcentric-runner">TestCentric Runner</a></span>
+        <span><a href="/blog">Blog</a></span>
                                         </div>
                                         <div class="text-white m-0 text-break title">
 
-TestCentric GUI
+TestCentric Beta4 Release
                                         </div>
+                                            <div class="meta">
+                                                <div>Published: Saturday, December 2, 2023</div>
+                                                <!--                                                    <i>Tags: TestCentric</i>
+-->
+                                            </div>
                                     </div>
                                         <div class="navbar navbar-expand-md navbar-dark p-0">
                                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#left-sidebar" aria-controls="left-sidebar" aria-expanded="false" aria-label="Toggle navigation">
@@ -110,223 +115,11 @@ TestCentric GUI
                 <div class="flex-grow-1 d-flex flex-column">
                         <div class="container-xl flex-grow-1 d-flex flex-column">
                             <div class="row flex-grow-1 align-items-stretch">
-                                        <div class="col-md-3 col-lg-2 p-md-0 m-md-0 bg-body">
-                                            <div id="left-sidebar" class="sidebar collapse px-0 px-md-3 pt-3">
+                                        <div id="content" class="offset-lg-2 col-12 col-lg-8 p-4 pt-md-0 bg-white">
+<p>In  an <a href="testcentric-beta2-and-beyond.html">earlier post</a>, I talked about plans for moving ahead with TestCentric, separating it more completely from its remaining dependencies on NUnit. I predicted that the beta3 release would probably not have any new features, being concerned primarily with internal changes in how the TestCentric runner and engine were structured. That turned out to be true.</p>
+<p>The beta4 release built on beta3 and incorporated one new and fairly important feature. To coincide with Microsoft's release of .NET 8.0 last week, the Gui now bundles an updated agent for .NET 8.0 tests along with the .NET 4.6.2, 6.0 and 7.0 agents, which were already included.</p>
+<p>In addition to providing an important new feature for users, the beta4 release serves to illustrate the value of our earlier decision to make all agents separate components. With this release, development work on an agent only requires installation of whatever runtime that agent is intended to support. Work on the engine or the GUI can proceed independently. The engine itself is delivered without any agents and the bundling of particular agents with the GUI is a packaging decision, which can be made on a just-in-time basis.</p>
 
-<div class="sidebar-root">
-
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner">TestCentric Runner</a>
-</div>
-<div class="sidebar-nav-item active has-children">
-    <a href="/testcentric-runner/testcentric-gui">TestCentric GUI</a>
-</div>                <div class="sidebar-nav-children">
-
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/overview">Overview</a>
-</div>
-<div class="sidebar-nav-item has-children">
-    <a href="/testcentric-runner/testcentric-gui/GettingStarted">Getting Started</a>
-</div>                            <div class="sidebar-nav-children">
-
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/GettingStarted/installation">Installing the GUI</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/GettingStarted/starting">Starting the GUI</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/GettingStarted/running-tests">Running Tests</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/GettingStarted/stopping-tests">Stopping a Test Run</a>
-</div>                            </div>
-
-<div class="sidebar-nav-item has-children">
-    <a href="/testcentric-runner/testcentric-gui/Features">GUI Elements</a>
-</div>                            <div class="sidebar-nav-children">
-
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/Features/main-window">Main Window</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/Features/main-menu">Main Menu</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/Features/context-menu">Context Menu</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/Features/mini-gui">Mini-Gui</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/Features/settings-dialog">Settings Dialog</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/Features/extensions-dialog">Extensions Dialog</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/Features/test-properties">Test Properties</a>
-</div>                            </div>
-
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/command-line">Command Line</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/release-notes">Release Notes</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/license">License</a>
-</div>                </div>
-
-<div class="sidebar-nav-item has-children">
-    <a href="/testcentric-runner/testcentric-engine">TestCentric Engine</a>
-</div>                <div class="sidebar-nav-children">
-
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-engine/overview">Overview</a>
-</div>
-<div class="sidebar-nav-item has-children">
-    <a href="/testcentric-runner/testcentric-engine/engine-api">Engine API</a>
-</div>                            <div class="sidebar-nav-children">
-
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-engine/engine-api/test-engine-activator">Test Engine Activator</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-engine/engine-api/interfaces">Interfaces</a>
-</div>                            </div>
-
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-engine/release-notes">Release Notes</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-engine/license">License</a>
-</div>                </div>
-
-<div class="sidebar-nav-item has-children">
-    <a href="/testcentric-runner/pluggable-agents">Pluggable Agents</a>
-</div>                <div class="sidebar-nav-children">
-
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/pluggable-agents/overview">Overview</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/pluggable-agents/available-agents">Available Agents</a>
-</div>                </div>
-</div>                                            </div>
-                                        </div>
-                                        <div id="content" class="col-md-9 col-lg-8 p-4 pt-md-0 bg-white">
-
-
-        <h4 class="h-section mb-2">Child Pages</h4>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-gui/overview">Overview</a></h2>
-
-            <div class="font-size-sm">Provides a general overview of the TestCentric GUI.</div>
-
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-gui/GettingStarted">Getting Started</a></h2>
-
-            <div class="font-size-sm">How to install and use the TestCentric GUI.</div>
-
-                <table style="margin: 0 2em">
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-gui/GettingStarted/installation">Installing the GUI</a></th>
-                        <td style="padding: 0 2em">How to install the TestCentric GUI.</td>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-gui/GettingStarted/starting">Starting the GUI</a></th>
-                        <td style="padding: 0 2em">Starting the TestCentric GUI.</td>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-gui/GettingStarted/running-tests">Running Tests</a></th>
-                        <td style="padding: 0 2em">How to load and run a set of tests under.</td>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-gui/GettingStarted/stopping-tests">Stopping a Test Run</a></th>
-                        <td style="padding: 0 2em">How to stop a test run without waiting for it to complete.</td>
-                    </tr>
-                </table>
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-gui/Features">GUI Elements</a></h2>
-
-            <div class="font-size-sm">Describes the principal elements of the TestCentric GUI.</div>
-
-                <table style="margin: 0 2em">
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-gui/Features/main-window">Main Window</a></th>
-                        <td style="padding: 0 2em">Describes the Main Window of the runner, where a user spends most of their time.</td>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-gui/Features/main-menu">Main Menu</a></th>
-                        <td style="padding: 0 2em">Explains commands available in the main menu of the runner.</td>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-gui/Features/context-menu">Context Menu</a></th>
-                        <td style="padding: 0 2em">Explains commands available in the context menu displayed by the test tree.</td>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-gui/Features/mini-gui">Mini-Gui</a></th>
-                        <td style="padding: 0 2em">Describes an alternative GUI display requiring less screen space.</td>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-gui/Features/settings-dialog">Settings Dialog</a></th>
-                        <td style="padding: 0 2em">Displays settings that control TestCentric and allows changing them.</td>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-gui/Features/extensions-dialog">Extensions Dialog</a></th>
-                        <td style="padding: 0 2em">Lists engine extension points and installed extensions.</td>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-gui/Features/test-properties">Test Properties</a></th>
-                        <td style="padding: 0 2em">Displays details about an individual test and its execution.</td>
-                    </tr>
-                </table>
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-gui/command-line">Command Line</a></h2>
-
-            <div class="font-size-sm">Displays the runner command-line options.</div>
-
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-gui/release-notes">Release Notes</a></h2>
-
-            <div class="font-size-sm">Displays the GUI Runner release notes.</div>
-
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-gui/license">License</a></h2>
-
-            <div class="font-size-sm">Displays the TestCentric Runner license.</div>
-
-    </div>
-
-            </div>
                                         </div>
                                 <div class="col-lg-2 p-md-0 m-md-0 bg-body">
                                     <div id="right-sidebar" class="sidebar px-0 px-md-3 pt-3">
