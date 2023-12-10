@@ -28,7 +28,7 @@
 
         
 
-        <title>TestCentric - TestCentric Engine</title>
+        <title>TestCentric - Result Tabs</title>
     </head>
     <body class="d-flex flex-column">
         <div class="flex-grow-1 d-flex flex-column">
@@ -77,10 +77,12 @@
                                         <div class="breadcrumbs d-flex flex-column flex-md-row text-break">
 
         <span><a href="/testcentric-runner">TestCentric Runner</a></span>
+        <span><a href="/testcentric-runner/testcentric-gui">TestCentric GUI</a></span>
+        <span><a href="/testcentric-runner/testcentric-gui/Features">GUI Elements</a></span>
                                         </div>
                                         <div class="text-white m-0 text-break title">
 
-TestCentric Engine
+Result Tabs
                                         </div>
                                     </div>
                                         <div class="navbar navbar-expand-md navbar-dark p-0">
@@ -161,7 +163,7 @@ TestCentric Engine
 <div class="sidebar-nav-item">
     <a href="/testcentric-runner/testcentric-gui/Features/progress-bar">Progress Bar</a>
 </div>
-<div class="sidebar-nav-item">
+<div class="sidebar-nav-item active">
     <a href="/testcentric-runner/testcentric-gui/Features/result-tabs">Result Tabs</a>
 </div>
 <div class="sidebar-nav-item">
@@ -190,7 +192,7 @@ TestCentric Engine
     <a href="/testcentric-runner/testcentric-gui/license">License</a>
 </div>                </div>
 
-<div class="sidebar-nav-item active has-children">
+<div class="sidebar-nav-item has-children">
     <a href="/testcentric-runner/testcentric-engine">TestCentric Engine</a>
 </div>                <div class="sidebar-nav-children">
 
@@ -228,60 +230,33 @@ TestCentric Engine
 </div>                                            </div>
                                         </div>
                                         <div id="content" class="col-md-9 col-lg-8 p-4 pt-md-0 bg-white">
+<div class="notice">
+    Under Construction!
+</div>
+<h1 id="result-tabs">Result Tabs</h1>
+<p>Three tabs along the bottom of the display show the results of running a test.</p>
+<h2 id="errors-failures-and-warnings">Errors, Failures and Warnings</h2>
+<p>The <strong>Errors, Failures and Warnings</strong> tab displays the error message and stack trace for both unexpected exceptions and assertion failures. Either the raw stacktrace or actual source code for each stack location can be displayed in this tab, provided that the program was compiled with debug information.</p>
+<h2 id="tests-not-run">Tests Not Run</h2>
+<p>The <strong>Tests Not Run</strong> tab provides a list of all tests that were selected for running but were not run, together with the reason.</p>
+<h2 id="text-output">Text Output</h2>
+<p>The <strong>Text Output</strong> tab displays text output from the tests in a format similar to that shown by the console runner, including labels for the tests if specified by the user in the settings dialog.</p>
 
 
-        <h4 class="h-section mb-2">Child Pages</h4>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/overview">Overview</a></h2>
-
-            <div class="font-size-sm">Provides a general overview of the TestCentric Engine.</div>
-
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/engine-api">Engine API</a></h2>
-
-            <div class="font-size-sm">Describes the API used by runners to access the engine.</div>
-
-                <table style="margin: 0 2em">
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-engine/engine-api/test-engine-activator">Test Engine Activator</a></th>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-engine/engine-api/interfaces">Interfaces</a></th>
-                    </tr>
-                </table>
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/release-notes">Release Notes</a></h2>
-
-            <div class="font-size-sm">Displays the Engine release notes.</div>
-
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/license">License</a></h2>
-
-            <div class="font-size-sm">Displays the TestCentric Engine license.</div>
-
-    </div>
-
-            </div>
                                         </div>
                                 <div class="col-lg-2 p-md-0 m-md-0 bg-body">
                                     <div id="right-sidebar" class="sidebar px-0 px-md-3 pt-3">
+        <div class=" mb-3 sidebar-root">
+            <div class="sidebar-nav-item sidebar-header">On This Page</div>
+            <div class="sidebar-nav-children">
+                    <div class="sidebar-nav-item"><a href="#result-tabs">Result Tabs</a></div>
+                        <div class="sidebar-nav-children">
+                                <div class="sidebar-nav-item"><a href="#errors-failures-and-warnings">Errors, Failures and Warnings</a></div>
+                                <div class="sidebar-nav-item"><a href="#tests-not-run">Tests Not Run</a></div>
+                                <div class="sidebar-nav-item"><a href="#text-output">Text Output</a></div>
+                        </div>
+            </div>
+        </div>
                                     </div>
                                 </div>
                             </div>

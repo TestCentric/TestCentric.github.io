@@ -28,7 +28,7 @@
 
         
 
-        <title>TestCentric - TestCentric Engine</title>
+        <title>TestCentric - Menu Entries</title>
     </head>
     <body class="d-flex flex-column">
         <div class="flex-grow-1 d-flex flex-column">
@@ -77,10 +77,12 @@
                                         <div class="breadcrumbs d-flex flex-column flex-md-row text-break">
 
         <span><a href="/testcentric-runner">TestCentric Runner</a></span>
+        <span><a href="/testcentric-runner/testcentric-gui">TestCentric GUI</a></span>
+        <span><a href="/testcentric-runner/testcentric-gui/Features">GUI Elements</a></span>
                                         </div>
                                         <div class="text-white m-0 text-break title">
 
-TestCentric Engine
+Menu Entries
                                         </div>
                                     </div>
                                         <div class="navbar navbar-expand-md navbar-dark p-0">
@@ -149,7 +151,7 @@ TestCentric Engine
 <div class="sidebar-nav-item">
     <a href="/testcentric-runner/testcentric-gui/Features/main-window">Main Window</a>
 </div>
-<div class="sidebar-nav-item">
+<div class="sidebar-nav-item active">
     <a href="/testcentric-runner/testcentric-gui/Features/menu-entries">Menu Entries</a>
 </div>
 <div class="sidebar-nav-item">
@@ -190,7 +192,7 @@ TestCentric Engine
     <a href="/testcentric-runner/testcentric-gui/license">License</a>
 </div>                </div>
 
-<div class="sidebar-nav-item active has-children">
+<div class="sidebar-nav-item has-children">
     <a href="/testcentric-runner/testcentric-engine">TestCentric Engine</a>
 </div>                <div class="sidebar-nav-children">
 
@@ -228,60 +230,146 @@ TestCentric Engine
 </div>                                            </div>
                                         </div>
                                         <div id="content" class="col-md-9 col-lg-8 p-4 pt-md-0 bg-white">
+<h1 id="file-menu">File Menu</h1>
+<hr />
+<img class="float-right" alt="File Menu" src="../img/filemenu.png" />
+<!---#### New Project...
+Closes any open project, prompting the user to save it if it has been changed and then opens a
+FileSave dialog to allow selecting the name and location of the new project.
+
+## Open Project...
+Closes any open project, prompting the user to save it if it has been changed and then opens a
+FileOpen dialog to allow selecting the name and location of an assembly or a test project.--->
+<h2 id="open">Open...</h2>
+<p>Closes any open files and then displays a FileOpen dialog to allow selecting the name and location of an assembly or supported project file.</p>
+<h2 id="close">Close</h2>
+<p>Closes any open files.</p>
+<!---Closes any open project, prompting the user to save it if it has been changed.--->
+<h2 id="add-test-file">Add Test File...</h2>
+<p>Displays a FileOpen dialog to allow ## Properties</p>
+<p>Displays the <a href="test-properties.html">Test Properties</a> for the selected test node.
+selecting the name and location of an assembly or supported project file, which is then added to the currently open file set.</p>
+<!---## Save
+Saves the currently open project. Opens the Save As dialog if this is the first time the project
+is being saved.
+
+## Save As...
+Opens a FileSave dialog to allow specifying the name and location to which the project
+should be saved.
+
+## Reload Project
+Completely reloads the current project by closing and re-opening it.--->
+<h2 id="reload-tests">Reload Tests</h2>
+<p>Reloads the tests, merging any changes into the tree.</p>
+<h2 id="select-agents">Select Agents</h2>
+<p>Displays a list of installed agents from which you may choose one to use in reloading the tests. This submenu is only enabled if there is more than one suitable agent available. In the image above, the loaded assembly targeted .NET 6.0. By default it was loaded using the closest installed agent. However, the user may choose to specifically select one of the other agents able to load that runtime, i.e. .NET 6.0, 7.0 or 8.0.</p>
+<h2 id="run-as-x86">Run as X86</h2>
+<p>When checked, forces the tests to run in a 32-bit process or processes.</p>
+<h2 id="recent-files">Recent Files...</h2>
+<p>Displays a list of recently opened projects and assemblies from which the user is able to select one for opening.</p>
+<h2 id="exit">Exit</h2>
+<p>Closes and exits the application. If a test is running, the user is given the opportunity to cancel it and or to allow it to continue.</p>
+<hr />
+<h1 id="view-menu">View Menu</h1>
+<hr />
+<img class="float-right" alt="View Menu" src="../img/viewmenu.png" />
+<h2 id="full-gui">Full Gui</h2>
+<p>Displays the complete gui - as in prior versions of NUnit. This includes the errors and failures and other tabs and the progress bar.</p>
+<h2 id="mini-gui">Mini Gui</h2>
+<p>Switches the display to the mini-gui, which consists of the tree display only.</p>
+<h2 id="gui-font">GUI Font</h2>
+<p>Displays a submenu that allows changing the general font used by the GUI.</p>
+<ul>
+<li><p><strong>Increase</strong></p>
+<p>Increases the size of the font.</p>
+</li>
+<li><p><strong>Decrease</strong></p>
+<p>Decreases the size of the font.</p>
+</li>
+<li><p><strong>Change...</strong></p>
+<p>Displays the Font Change dialog.</p>
+</li>
+<li><p><strong>Restore</strong></p>
+<p>Restores the default font.</p>
+</li>
+</ul>
+<h2 id="fixed-font">Fixed Font</h2>
+<p>Displays a submenu that allows changing the fixed font used to display console output from the tests.</p>
+<ul>
+<li><p><strong>Increase</strong></p>
+<p>Increases the size of the fixed font.</p></p>
+</li>
+<li><p><strong>Decrease</strong></p>
+<p>Decreases the size of the fixed font.</p>
+</li>
+<li><p><strong>Restore</strong></p>
+<p>Restores the default fixed font.</p>
+</li>
+</ul>
+<hr />
+<h1 id="tools-menu">Tools Menu</h1>
+<hr />
+<img class="float-right" alt="Tools Menu" src="../img/toolsmenu.png" />
+<h2 id="save-test-results">Save Test Results...</h2>
+<p>Opens a FileSave Dialog for saving the test results as an nunit3-formatted XML file.</p>
+<h2 id="save-test-results-as">Save Test Results As...</h2>
+<p>Allows the user to select a format in which to save the test result, then opens a FileSave Dialog for saving the test results in the chosen format.</p>
+<h2 id="open-work-directory">Open Work Directory...</h2>
+<p>Opens the TestCentric Work Directory, containing any saved test results or logs.</p>
+<h2 id="extensions">Extensions</h2>
+<p>Displays the <a href="extensions-dialog.html">Extensions Dialog</a>.
+an nunit3-formatted XML file</p>
+<h2 id="settings">Settings...</h2>
+<p>Displays the <a href="settings-dialog.html">Settings Dialog</a>.</p>
+<hr />
+<h1 id="help-menu">Help Menu</h1>
+<hr />
+<img class="float-right" alt="Help Menu" src="../img/helpmenu.png" />
+<h2 id="testcentric-help">TestCentric Help</h2>
+<p>Displays the TestCentric documentation.</p>
+<h2 id="about-testcentric">About TestCentric...</h2>
+<p>Displays info about your version of TestCentric.</p>
 
 
-        <h4 class="h-section mb-2">Child Pages</h4>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/overview">Overview</a></h2>
-
-            <div class="font-size-sm">Provides a general overview of the TestCentric Engine.</div>
-
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/engine-api">Engine API</a></h2>
-
-            <div class="font-size-sm">Describes the API used by runners to access the engine.</div>
-
-                <table style="margin: 0 2em">
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-engine/engine-api/test-engine-activator">Test Engine Activator</a></th>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-engine/engine-api/interfaces">Interfaces</a></th>
-                    </tr>
-                </table>
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/release-notes">Release Notes</a></h2>
-
-            <div class="font-size-sm">Displays the Engine release notes.</div>
-
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/license">License</a></h2>
-
-            <div class="font-size-sm">Displays the TestCentric Engine license.</div>
-
-    </div>
-
-            </div>
                                         </div>
                                 <div class="col-lg-2 p-md-0 m-md-0 bg-body">
                                     <div id="right-sidebar" class="sidebar px-0 px-md-3 pt-3">
+        <div class=" mb-3 sidebar-root">
+            <div class="sidebar-nav-item sidebar-header">On This Page</div>
+            <div class="sidebar-nav-children">
+                    <div class="sidebar-nav-item"><a href="#file-menu">File Menu</a></div>
+                        <div class="sidebar-nav-children">
+                                <div class="sidebar-nav-item"><a href="#open">Open...</a></div>
+                                <div class="sidebar-nav-item"><a href="#close">Close</a></div>
+                                <div class="sidebar-nav-item"><a href="#add-test-file">Add Test File...</a></div>
+                                <div class="sidebar-nav-item"><a href="#reload-tests">Reload Tests</a></div>
+                                <div class="sidebar-nav-item"><a href="#select-agents">Select Agents</a></div>
+                                <div class="sidebar-nav-item"><a href="#run-as-x86">Run as X86</a></div>
+                                <div class="sidebar-nav-item"><a href="#recent-files">Recent Files...</a></div>
+                                <div class="sidebar-nav-item"><a href="#exit">Exit</a></div>
+                        </div>
+                    <div class="sidebar-nav-item"><a href="#view-menu">View Menu</a></div>
+                        <div class="sidebar-nav-children">
+                                <div class="sidebar-nav-item"><a href="#full-gui">Full Gui</a></div>
+                                <div class="sidebar-nav-item"><a href="#mini-gui">Mini Gui</a></div>
+                                <div class="sidebar-nav-item"><a href="#gui-font">GUI Font</a></div>
+                                <div class="sidebar-nav-item"><a href="#fixed-font">Fixed Font</a></div>
+                        </div>
+                    <div class="sidebar-nav-item"><a href="#tools-menu">Tools Menu</a></div>
+                        <div class="sidebar-nav-children">
+                                <div class="sidebar-nav-item"><a href="#save-test-results">Save Test Results...</a></div>
+                                <div class="sidebar-nav-item"><a href="#save-test-results-as">Save Test Results As...</a></div>
+                                <div class="sidebar-nav-item"><a href="#open-work-directory">Open Work Directory...</a></div>
+                                <div class="sidebar-nav-item"><a href="#extensions">Extensions</a></div>
+                                <div class="sidebar-nav-item"><a href="#settings">Settings...</a></div>
+                        </div>
+                    <div class="sidebar-nav-item"><a href="#help-menu">Help Menu</a></div>
+                        <div class="sidebar-nav-children">
+                                <div class="sidebar-nav-item"><a href="#testcentric-help">TestCentric Help</a></div>
+                                <div class="sidebar-nav-item"><a href="#about-testcentric">About TestCentric...</a></div>
+                        </div>
+            </div>
+        </div>
                                     </div>
                                 </div>
                             </div>

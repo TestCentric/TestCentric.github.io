@@ -28,7 +28,7 @@
 
         
 
-        <title>TestCentric - TestCentric Engine</title>
+        <title>TestCentric - Command Buttons</title>
     </head>
     <body class="d-flex flex-column">
         <div class="flex-grow-1 d-flex flex-column">
@@ -77,10 +77,12 @@
                                         <div class="breadcrumbs d-flex flex-column flex-md-row text-break">
 
         <span><a href="/testcentric-runner">TestCentric Runner</a></span>
+        <span><a href="/testcentric-runner/testcentric-gui">TestCentric GUI</a></span>
+        <span><a href="/testcentric-runner/testcentric-gui/Features">GUI Elements</a></span>
                                         </div>
                                         <div class="text-white m-0 text-break title">
 
-TestCentric Engine
+Command Buttons
                                         </div>
                                     </div>
                                         <div class="navbar navbar-expand-md navbar-dark p-0">
@@ -152,7 +154,7 @@ TestCentric Engine
 <div class="sidebar-nav-item">
     <a href="/testcentric-runner/testcentric-gui/Features/menu-entries">Menu Entries</a>
 </div>
-<div class="sidebar-nav-item">
+<div class="sidebar-nav-item active">
     <a href="/testcentric-runner/testcentric-gui/Features/command-buttons">Command Buttons</a>
 </div>
 <div class="sidebar-nav-item">
@@ -190,7 +192,7 @@ TestCentric Engine
     <a href="/testcentric-runner/testcentric-gui/license">License</a>
 </div>                </div>
 
-<div class="sidebar-nav-item active has-children">
+<div class="sidebar-nav-item has-children">
     <a href="/testcentric-runner/testcentric-engine">TestCentric Engine</a>
 </div>                <div class="sidebar-nav-children">
 
@@ -228,57 +230,36 @@ TestCentric Engine
 </div>                                            </div>
                                         </div>
                                         <div id="content" class="col-md-9 col-lg-8 p-4 pt-md-0 bg-white">
+<img class="float-right" alt="Command Buttons" src="../img/command-buttons.png" />
+<p>A set of buttons is displayed immediately below the menu bar and above the Tree Display.</p>
+<h2 id="run-all-tests">Run All Tests</h2>
+<p>Click on <img src="../img/run-all-button.png" alt="Run All Tests" /> to run all the loaded tests. This button is disabled while the tests are running.</p>
+<h2 id="run-selected-tests">Run Selected Tests</h2>
+<p>Clicking the <img src="../img/run-selected-button.png" alt="Run Selected Tests" /> button causes the test selected in the tree display to run. If the selected test contains subordinate tests nested beneath it, they all run as well. If the topmost tree node is selected, then all the tests are run. When checkboxes are enabled in the tree display, multiple non-nested tests may be selected. You may enable checkboxes using the <a href="tree-display.html">ContextMenu</a>. The run button is disabled while the tests are running.</p>
+<h2 id="rerun-tests">Rerun Tests</h2>
+<p>Use <img src="../img/rerun-tests-button.png" alt="Rerun Tests" /> to repeat the last test run. This button is disabled if no tests have been run as well as while the tests are running.</p>
+<h2 id="rerun-failed-tests">Rerun Failed Tests</h2>
+<p>The <img src="../img/rerun-failed-button.png" alt="Rerun Failed Tests" /> button reruns any tests that failed in the last test run. This button is disabled if no tests have been run as well as while the tests are running. It is only enabled if the last test run had failures.</p>
+<h2 id="stop-run">Stop Run</h2>
+<p>While a test is running the <img src="../img/stop-run-button.png" alt="Stop Run" /> button is enabled. Clicking it causes the tests to stop in an orderly fashion. No new test cases are started but all those currently running are allowed to complete. Any teardown methods - either individual or one-time - are allowed to execute so that the tests may clean up after themselves and dispose of any resources.</p>
+<h2 id="forced-stop">Forced Stop</h2>
+<p>While this orderly stop is in progress, the <img src="../img/stop-run-button.png" alt="Stop Run" /> button changes to <img src="../img/force-stop-button.png" alt="Forced Stop" />. This button is intended to be used in situations where the framework in use or the tests themselves are preventing an orderly stop from completing. For example, a test with an infinite loop might otherwise never terminate. Once <img src="../img/force-stop-button.png" alt="Forced Stop" /> is clicked, the runner instructs the test framework to terminate execution forcibly, bypassing any cleanup.</p>
+<p>Some frameworks may not have the ability to force termination or may not succeed in doing so because of a bug. As a last resort, after waiting 5 seconds for forced termination to complete, the GUI itself will try to terminate all test AppDomains or Processes, which have not yet terminated.</p>
+<img class="float-right" alt="Command Buttons" src="../img/tree-display-dropdown.png" />
+<h2 id="tree-display-format">Tree Display Format</h2>
+<p>The <img src="../img/tree-display-button.png" alt="Tree Display Format" /> button opens a dropdown menu allowing the format of the <strong>Tree Display</strong> to be changed.</p>
+<p>The <strong>Tree Display</strong> currently supports three display strategies...</p>
+<ul>
+<li>The <strong>NUnit Tree</strong> strategy displays the tree in a hierarchical manner almost identical to how the old NUnit GUI - as well as version 1 of TestCentric - displayed it.</li>
+<li>The <strong>Test List</strong> strategy provides a list of test cases modeled after the way that the Microsoft Test Explorer displays tests.</li>
+<li>The <strong>Fixture List</strong> strategy provides a list of fixtures, with test cases displayed beneath them.</li>
+</ul>
+<p>The second part of the dropdown provides alternative sorting for the <strong>Test List</strong> and <strong>Fixture List</strong> strategies. As of the beta 4 release,
+these options are only partly functional.</p>
+<h2 id="test-run-parameters">Test Run Parameters</h2>
+<p>The <img src="../img/test-parameters-button.png" alt="Test Run Parameters" /> button opens the <a href="test-parameters-dialog.html">Test Parameters Dialog</a>, which is used to set parameters for use in the test run. This button is disabled while the tests are running.</p>
 
 
-        <h4 class="h-section mb-2">Child Pages</h4>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/overview">Overview</a></h2>
-
-            <div class="font-size-sm">Provides a general overview of the TestCentric Engine.</div>
-
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/engine-api">Engine API</a></h2>
-
-            <div class="font-size-sm">Describes the API used by runners to access the engine.</div>
-
-                <table style="margin: 0 2em">
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-engine/engine-api/test-engine-activator">Test Engine Activator</a></th>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-engine/engine-api/interfaces">Interfaces</a></th>
-                    </tr>
-                </table>
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/release-notes">Release Notes</a></h2>
-
-            <div class="font-size-sm">Displays the Engine release notes.</div>
-
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/license">License</a></h2>
-
-            <div class="font-size-sm">Displays the TestCentric Engine license.</div>
-
-    </div>
-
-            </div>
                                         </div>
                                 <div class="col-lg-2 p-md-0 m-md-0 bg-body">
                                     <div id="right-sidebar" class="sidebar px-0 px-md-3 pt-3">

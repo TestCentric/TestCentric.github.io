@@ -16,6 +16,18 @@ div.meta {
     color: white;
 }
 
+div.float-left, img.float-left, table.float-left {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px
+}
+
+div.float-right, img.float-right, table.float-right {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px
+}
+
 .post-preview > .post-title
 {
     font-size: 30px;
@@ -32,7 +44,18 @@ div.meta {
 .post-preview > .post-meta
 {
     font-size: 18px;
-        font-style: italic;
-        margin-top: 0;
-        color: gray-600;
+    font-style: italic;
+    margin-top: 0;
+    color: gray-600;
+}
+
+figure
+{
+    width: fit-content;
+}
+
+figure figcaption
+{
+    font-weight: bold;
+    text-align: center;
 }

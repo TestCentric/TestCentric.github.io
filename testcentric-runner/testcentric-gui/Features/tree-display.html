@@ -28,7 +28,7 @@
 
         
 
-        <title>TestCentric - TestCentric Engine</title>
+        <title>TestCentric - Tree Display</title>
     </head>
     <body class="d-flex flex-column">
         <div class="flex-grow-1 d-flex flex-column">
@@ -77,10 +77,12 @@
                                         <div class="breadcrumbs d-flex flex-column flex-md-row text-break">
 
         <span><a href="/testcentric-runner">TestCentric Runner</a></span>
+        <span><a href="/testcentric-runner/testcentric-gui">TestCentric GUI</a></span>
+        <span><a href="/testcentric-runner/testcentric-gui/Features">GUI Elements</a></span>
                                         </div>
                                         <div class="text-white m-0 text-break title">
 
-TestCentric Engine
+Tree Display
                                         </div>
                                     </div>
                                         <div class="navbar navbar-expand-md navbar-dark p-0">
@@ -155,7 +157,7 @@ TestCentric Engine
 <div class="sidebar-nav-item">
     <a href="/testcentric-runner/testcentric-gui/Features/command-buttons">Command Buttons</a>
 </div>
-<div class="sidebar-nav-item">
+<div class="sidebar-nav-item active">
     <a href="/testcentric-runner/testcentric-gui/Features/tree-display">Tree Display</a>
 </div>
 <div class="sidebar-nav-item">
@@ -190,7 +192,7 @@ TestCentric Engine
     <a href="/testcentric-runner/testcentric-gui/license">License</a>
 </div>                </div>
 
-<div class="sidebar-nav-item active has-children">
+<div class="sidebar-nav-item has-children">
     <a href="/testcentric-runner/testcentric-engine">TestCentric Engine</a>
 </div>                <div class="sidebar-nav-children">
 
@@ -228,60 +230,77 @@ TestCentric Engine
 </div>                                            </div>
                                         </div>
                                         <div id="content" class="col-md-9 col-lg-8 p-4 pt-md-0 bg-white">
+<!-- Styling for the table on this page -->
+<style>
+    table {
+        float: left;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        border: 2px solid black;
+    }
+    td, th {
+        padding: 0 1em;
+    }
+</style>
+<table>
+    <tr><th colspan=2>Tree Display Symbols</th></tr>
+    <tr><td><img alt="Success" src="../img/Success.png"/></td>
+        <td>Passed</td></tr>
+    <tr><td><img alt="Failure" src="../img/Failure.png"/></td>
+        <td>Error or Failure</td></tr>
+    <tr><td><img alt="Ignored" src="../img/Ignored.png"/></td>
+        <td>Warning or Ignored</td></tr>
+    <tr><td><img alt="Skipped" src="../img/Skipped.png"/></td>
+        <td>Skipped</td></tr>
+    <tr><td><img alt="Inconclusive" src="../img/Inconclusive.png"/></td>
+        <td>Inconclusive</td></tr>
+</table>
+<p>The <strong>Tree Display</strong> occupies the left side of the main window and uses both colors and symbols to indicate the status of each test as they are run. The table shows the default set of symbols used to indicate test status. The user has the ability to change the symbols used through the <a href="settings-dialog.html#gui-settings-tree-display">SettingsDialog</a>.</p>
+<p><strong>Note:</strong> Tests marked with the <code>IgnoreAttribute</code> are shown in yellow immediately upon loading. Similarly, non-runnable tests (e.g.: wrong argument type) are shown in red immediately, without waiting for the user to press Run. Other statuses are not shown until after the test is run.</p>
+<h1 id="context-menu">Context Menu</h1>
+<p>A context menu is displayed when one of the tree nodes is right-clicked.</p>
+<img class="float-right" alt="Context Menu" src="../img/contextmenu.png" />
+<h2 id="run">Run</h2>
+<p>Runs the selected test - disabled if a test is running.</p>
+<h2 id="debug">Debug</h2>
+<p>Debugs the selected test - disabled if a test is running.
+The <strong>Tree Display</strong> occupies the left side of the main window and uses both colors and symbols to indicate the status of each test as they are run. The following table shows the default set of symbols used to indicate test status.</p>
+<h2 id="view-as-xml">View as XML...</h2>
+<p>Displays the XML representation of the particular test in a separate window.</p>
+<!--## Show Failed Assumptions
+
+//Turns on and off the display of cases under a **Theory** that have failed
+an assumption (Inconclusive results). This menu item is only displayed for
+nodes that are part of a **Theory**.-->
+<h2 id="show-checkboxes">Show Checkboxes</h2>
+<p>Turns the display of checkboxes in the tree on or off. The checkboxes may
+be used to select multiple tests for execution.</p>
+<h2 id="expand-all">Expand All</h2>
+<p>Expands all the nodes in the tree.</p>
+<h2 id="collapse-all">Collapse All</h2>
+<p>Collapses all the nodes in the tree.</p>
+<h2 id="display-fixtures">Display Fixtures</h2>
+<p>Expands nodes in the tree as far as fixtures only, hiding the tests under each fixture.</p>
 
 
-        <h4 class="h-section mb-2">Child Pages</h4>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/overview">Overview</a></h2>
-
-            <div class="font-size-sm">Provides a general overview of the TestCentric Engine.</div>
-
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/engine-api">Engine API</a></h2>
-
-            <div class="font-size-sm">Describes the API used by runners to access the engine.</div>
-
-                <table style="margin: 0 2em">
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-engine/engine-api/test-engine-activator">Test Engine Activator</a></th>
-                    </tr>
-                    <tr>
-                    <th><a href="/testcentric-runner/testcentric-engine/engine-api/interfaces">Interfaces</a></th>
-                    </tr>
-                </table>
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/release-notes">Release Notes</a></h2>
-
-            <div class="font-size-sm">Displays the Engine release notes.</div>
-
-    </div>
-
-            </div>
-            <div>
-                
-    <div class="p-3 mb-2 bg-light page-box">
-        <h2><a href="/testcentric-runner/testcentric-engine/license">License</a></h2>
-
-            <div class="font-size-sm">Displays the TestCentric Engine license.</div>
-
-    </div>
-
-            </div>
                                         </div>
                                 <div class="col-lg-2 p-md-0 m-md-0 bg-body">
                                     <div id="right-sidebar" class="sidebar px-0 px-md-3 pt-3">
+        <div class=" mb-3 sidebar-root">
+            <div class="sidebar-nav-item sidebar-header">On This Page</div>
+            <div class="sidebar-nav-children">
+                    <div class="sidebar-nav-item"><a href="#context-menu">Context Menu</a></div>
+                        <div class="sidebar-nav-children">
+                                <div class="sidebar-nav-item"><a href="#run">Run</a></div>
+                                <div class="sidebar-nav-item"><a href="#debug">Debug</a></div>
+                                <div class="sidebar-nav-item"><a href="#view-as-xml">View as XML...</a></div>
+                                <div class="sidebar-nav-item"><a href="#show-checkboxes">Show Checkboxes</a></div>
+                                <div class="sidebar-nav-item"><a href="#expand-all">Expand All</a></div>
+                                <div class="sidebar-nav-item"><a href="#collapse-all">Collapse All</a></div>
+                                <div class="sidebar-nav-item"><a href="#display-fixtures">Display Fixtures</a></div>
+                        </div>
+            </div>
+        </div>
                                     </div>
                                 </div>
                             </div>

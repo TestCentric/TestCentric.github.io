@@ -152,13 +152,25 @@ Settings Dialog
     <a href="/testcentric-runner/testcentric-gui/Features/main-window">Main Window</a>
 </div>
 <div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/Features/main-menu">Main Menu</a>
+    <a href="/testcentric-runner/testcentric-gui/Features/menu-entries">Menu Entries</a>
 </div>
 <div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/Features/context-menu">Context Menu</a>
+    <a href="/testcentric-runner/testcentric-gui/Features/command-buttons">Command Buttons</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/testcentric-runner/testcentric-gui/Features/tree-display">Tree Display</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/testcentric-runner/testcentric-gui/Features/progress-bar">Progress Bar</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/testcentric-runner/testcentric-gui/Features/result-tabs">Result Tabs</a>
 </div>
 <div class="sidebar-nav-item">
     <a href="/testcentric-runner/testcentric-gui/Features/mini-gui">Mini-Gui</a>
+</div>
+<div class="sidebar-nav-item">
+    <a href="/testcentric-runner/testcentric-gui/Features/test-properties">Test Properties</a>
 </div>
 <div class="sidebar-nav-item active">
     <a href="/testcentric-runner/testcentric-gui/Features/settings-dialog">Settings Dialog</a>
@@ -167,7 +179,7 @@ Settings Dialog
     <a href="/testcentric-runner/testcentric-gui/Features/extensions-dialog">Extensions Dialog</a>
 </div>
 <div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/Features/test-properties">Test Properties</a>
+    <a href="/testcentric-runner/testcentric-gui/Features/test-parameters-dialog">Test Parameters Dialog</a>
 </div>                            </div>
 
 <div class="sidebar-nav-item">
@@ -218,15 +230,13 @@ Settings Dialog
 </div>                                            </div>
                                         </div>
                                         <div id="content" class="col-md-9 col-lg-8 p-4 pt-md-0 bg-white">
-<!-- Page-specific styles -->
-<style>
-  img {float:right; margin-left: 20px; margin-bottom: 20px; max-width: 500px}
-</style>
 <div class="notice">
     Page under development. Needs revision for TestCentric GUI Version 2.
 </div>
+<hr />
 <h1 id="gui-settings-general">Gui Settings - General</h1>
-<p><img src="../img/generalSettings.png" alt="Settings Dialog" /></p>
+<hr />
+<img class="float-right" alt="Settings Dialog" src="../img/generalSettings.png" />
 <h2 id="gui-display">Gui Display</h2>
 <h3 id="full-gui">Full Gui</h3>
 <p>Displays the complete gui - as in prior versions of NUnit. This includes the test result tabs and the progress bar.</p>
@@ -240,8 +250,10 @@ Settings Dialog
 <h3 id="load-most-recent-project-at-startup">Load most recent project at startup</h3>
 <p>If this is checked, the GUI will load the last file opened unless it is run with a specific filename or with the <code>/noload</code> parameter.</p>
 <!-- Gui Settings - Tree Display -->
+<hr />
 <h1 id="gui-settings-tree-display">Gui Settings - Tree Display</h1>
-<p><img src="../img/treeDisplaySettings.png" alt="Tree Display Settings" /></p>
+<hr />
+<img class="float-right" alt="Tree DisplaySettings" src="../img/treeDisplaySettings.png" />
 <h2 id="tree-view">Tree View</h2>
 <h3 id="initial-display">Initial Display</h3>
 <p>This list box allows selecting the degree of expansion of the tree when tests are first loaded:</p>
@@ -260,8 +272,10 @@ Settings Dialog
 <h3 id="display-a-checkbox-next-to-each-tree-item">Display a checkbox next to each tree item</h3>
 <p>If this is checked, the tree includes checkboxes, which may be used to select multiple tests for running. This setting is also available in the <strong>View | Tree</strong> menu.</p>
 <!-- Gui Settings - Text Output -->
+<hr />
 <h1 id="gui-settings-text-output">Gui Settings - Text Output</h1>
-<p><img src="../img/textOutputSettings.png" alt="Text Output Settings" /></p>
+<hr />
+<img class="float-right" alt="Text Output Settings" src="../img/textOutputSettings.png" />
 <h2 id="test-case-labels">Test Case Labels</h2>
 <p>The selected setting controls the display of labels for each test in the output window.</p>
 <ul>
@@ -270,8 +284,10 @@ Settings Dialog
 <li><strong>Off</strong> - No labels are displayed with the text output.</li>
 </ul>
 <!-- Gui Settings - Assembly Reload -->
+<hr />
 <h1 id="gui-settings-assembly-reload">Gui Settings - Assembly Reload</h1>
-<p><img src="../img/assemblyReloadSettings.png" alt="Reload Settings" /></p>
+<hr />
+<img class="float-right" alt="Reload Settings" src="../img/assemblyReloadSettings.png" />
 <h2 id="assembly-reload">Assembly Reload</h2>
 <h3 id="reload-before-each-test-run">Reload before each test run</h3>
 <p>If this is checked, a reload will occur whenever the run button is pressed whether the assemblies appear to have changed or not.</p>
@@ -282,8 +298,10 @@ Settings Dialog
 <h3 id="clear-results-when-reloading-1">Clear results when reloading</h3>
 <p>If this is checked, any test results are cleared from the tree whenever a Reload takes place.</p>
 <!-- Engine Settings - Advanced -->
+<hr />
 <h1 id="engine-settings-advanced">Engine Settings - Advanced</h1>
-<p><img src="../img/advancedSettings.png" alt="Advanced Settings" /></p>
+<hr />
+<img class="float-right" alt="Advanced Settings" src="../img/advancedSettings.png" />
 <h2 id="agent-limit">Agent Limit</h2>
 <p>Normally, when running tests in separate processes, they are all run in parallel.If the checkbox is checked and the limit is set to a positive value, no more than the specified number of processes will be active at one time.</p>
 <h2 id="shadow-copy">Shadow Copy</h2>
