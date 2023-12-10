@@ -135,13 +135,7 @@ Progress Bar
     <a href="/testcentric-runner/testcentric-gui/GettingStarted/installation">Installing the GUI</a>
 </div>
 <div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/GettingStarted/starting">Starting the GUI</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/GettingStarted/running-tests">Running Tests</a>
-</div>
-<div class="sidebar-nav-item">
-    <a href="/testcentric-runner/testcentric-gui/GettingStarted/stopping-tests">Stopping a Test Run</a>
+    <a href="/testcentric-runner/testcentric-gui/GettingStarted/using-the-gui">Using the GUI</a>
 </div>                            </div>
 
 <div class="sidebar-nav-item has-children">
@@ -230,25 +224,25 @@ Progress Bar
 </div>                                            </div>
                                         </div>
                                         <div id="content" class="col-md-9 col-lg-8 p-4 pt-md-0 bg-white">
-<div class="notice">
-    Under Construction!
-</div>
-<h1 id="progress-bar">Progress Bar</h1>
-<p>The progress bar shows the progress of the test. It is colored according to the &quot;worst&quot; result obtained: red if there were any failures, yellow if some tests were ignored and green for success.</p>
-<h1 id="result-summary">Result Summary</h1>
-<p>At the end of the test run, a summary of the results is displayed immediately below the progress bar. If the result information does not fit in the space available, hovering over it shows the full information.</p>
+<img alt="Progress Bar" class="float-right" src="../img/progressBar.png" />
+<p>The progress bar shows the progress of the test. It is colored according to the &quot;worst&quot; result obtained:</p>
+<table style="background-color: #ccc; margin: 1em 2em; padding: 0.5em;">
+    <tr><td style="color: green; padding: 0 0.5em; vertical-align: top;">Green</td>
+        <td>100% of tests passing - no failures or warnings.</td></tr>
+    <tr><td style="color: yellow; padding: 0 0.5em; vertical-align: top;">Yellow</td>
+        <td>No tests failed but there was at least one warning.</td></tr>
+    <tr><td style="color: red; padding: 0 0.5em; vertical-align: top;">Red</td>
+        <td>At least one test failed.</td></tr>
+</table>
+<p>In keeping with normal NUnit practice, ignored tests are treated as warnings in order to give them visibility. Other methods of skipping tests should be used if you don't want that visibility.</p>
+<h2 id="result-summary">Result Summary</h2>
+<p>At the end of the test run, a summary of the results is displayed immediately below the progress bar, as shown above. If the result information does not fit in the space available, hovering over it shows the full information.</p>
+<p>The result summary may be closed by clicking the <img src="../img/summary-report-button.png" alt="Summary Report" /> button to the right of the progress bar. The same button may be used to re-display it at any time. The result summary always displays the result of the last test run.</p>
 
 
                                         </div>
                                 <div class="col-lg-2 p-md-0 m-md-0 bg-body">
                                     <div id="right-sidebar" class="sidebar px-0 px-md-3 pt-3">
-        <div class=" mb-3 sidebar-root">
-            <div class="sidebar-nav-item sidebar-header">On This Page</div>
-            <div class="sidebar-nav-children">
-                    <div class="sidebar-nav-item"><a href="#progress-bar">Progress Bar</a></div>
-                    <div class="sidebar-nav-item"><a href="#result-summary">Result Summary</a></div>
-            </div>
-        </div>
                                     </div>
                                 </div>
                             </div>
