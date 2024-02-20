@@ -55,7 +55,13 @@
             <a class="nav-link" href="/tc-lite">TC-Lite Framework</a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="/contributing">Contributing</a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/github">GitHub</a>
         </li>
 
             
@@ -224,10 +230,10 @@ Engine API
                                         </div>
                                         <div id="content" class="col-md-9 col-lg-8 p-4 pt-md-0 bg-white">
 <div class="notice">
-<b>WARNING:</b> As of the 2.0.0-beta2 release, the API assembly contains only a small number of interfaces and we continue to rely on the NUnit API (version 3.16.2) for most things. On this page, you can tell which interfaces are found in each API assembly by looking at the namespace in which the interface is defined. Over the next beta release, interfaces will be migrated to our own API assembly.
+<b>NOTE:</b> As of the 2.0.0-beta3 release, the TestCentric Engine is entirely separate from the NUnit engine. Earlier releases made use of the NUnit engine API.
 </div>
 <p>The engine exposes an API designed to be used by test runners, which is only updated in a backwards-compatible way wherever possible. In order to ensure future compatibility, runners should interact with the engine strictly through the API. The engine also hosts various extension points, to allow further customization.</p>
-<p>The API is published on <strong>nuget.org</strong> in package <strong>TestCentric.Engine.Api</strong>. Runners should reference both <code>testcentric.engine.api.dll</code> and <code>nunit.engine.api.dll</code>.</p>
+<p>The API is published on <strong>nuget.org</strong> in package <strong>TestCentric.Engine.Api</strong>.</p>
 
 
             <div>
