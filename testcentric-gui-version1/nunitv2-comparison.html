@@ -28,7 +28,7 @@
 
         
 
-        <title>TestCentric - Stopping a Test Run</title>
+        <title>TestCentric - Nunitv2 Comparison</title>
     </head>
     <body class="d-flex flex-column">
         <div class="flex-grow-1 d-flex flex-column">
@@ -83,11 +83,10 @@
                                         <div class="breadcrumbs d-flex flex-column flex-md-row text-break">
 
         <span><a href="/testcentric-gui-version1">TestCentric Runner Version 1</a></span>
-        <span><a href="/testcentric-gui-version1/GettingStarted">Getting Started</a></span>
                                         </div>
                                         <div class="text-white m-0 text-break title">
 
-Stopping a Test Run
+Nunitv2 Comparison
                                         </div>
                                     </div>
                                         <div class="navbar navbar-expand-md navbar-dark p-0">
@@ -141,7 +140,7 @@ Stopping a Test Run
 <div class="sidebar-nav-item">
     <a href="/testcentric-gui-version1/GettingStarted/running-tests">Running Tests</a>
 </div>
-<div class="sidebar-nav-item active">
+<div class="sidebar-nav-item">
     <a href="/testcentric-gui-version1/GettingStarted/stopping-tests">Stopping a Test Run</a>
 </div>                </div>
 
@@ -174,7 +173,7 @@ Stopping a Test Run
 <div class="sidebar-nav-item">
     <a href="/testcentric-gui-version1/command-line">Command Line</a>
 </div>
-<div class="sidebar-nav-item">
+<div class="sidebar-nav-item active">
     <a href="/testcentric-gui-version1/nunitv2-comparison">Nunitv2 Comparison</a>
 </div>
 <div class="sidebar-nav-item">
@@ -185,29 +184,26 @@ Stopping a Test Run
 </div></div>                                            </div>
                                         </div>
                                         <div id="content" class="col-md-9 col-lg-8 p-4 pt-md-0 bg-white">
-<div class="notice">
-    Legacy version 1 Documentation. <a href="/testcentric-runner/">View current Version 2 Documentation.</a>
-</div>
-<h1 id="normal-stop">Normal Stop</h1>
-<p>Once a test run begins, the Stop button is enabled. Clicking it initiates a normal stop. We often call this a &quot;cooperative stop&quot; because it requires cooperation from the test framework.</p>
-<p>When a Stop is initiated, a command is set to the framework. The intent is that it should allow all executing tests and all teardowns to complete. No further tests should be started. This usually terminates the run quickly, unless there is a problem like an infinite loop in the test code.</p>
-<h1 id="forced-stop">Forced Stop</h1>
-<p>As soon as the Stop is initiated, the Stop button text changes to &quot;Forced Stop.&quot; The user is able to observe the completion of each test in the GUI and may decide that one of the tests is hung and needs to be stopped forcibly. Clicking &quot;Forced Stop&quot; initiates that process. The framework is expected to terminate all threads, which are running tests and return.</p>
-<h1 id="last-resort">Last Resort</h1>
-<p>Some frameworks may not support Forced Stop or it may not work due to a bug. After waiting a period of time (currently 5 seconds) for the run to terminate, the GUI takes the extreme action of unloading all test AppDomains and Processes.</p>
+<p>The <strong>TestCentric GUI</strong> <em>looks</em> a lot like the NUnit version 2  GUI.</p>
+<p>That makes sense. I wrote both GUIs and I made the TC Version 1 GUI look like the NUnit GUI, so that users would feel comfortable with it. A lot of the code in this GUI comes from NUnit, but a lot of things had to be changed in order to run NUnit Version 3 tests. Consequently, there are some differences. On this page, I'll attempt to list the most important ones. Please file an issue if you find something I missed.</p>
+<h2 id="trace-and-debug-output-capture">Trace and Debug Output Capture</h2>
+<p>The NUnit V2 GUI captures trace output and debug output and displays it if this feature is selected in the settings. The TestCentric GUI doesn't support this unless the user has redirected output to one of the streams supported by the GUI, i.e. stdout, stderr or Progress.</p>
+<h2 id="log4net-output-capture">Log4Net Output Capture</h2>
+<p>The NUnit V2 GUI captures log4net output and displayes it based on the user settings. The feature is known to cause conflicts when the code under test also uses log4net. The TestCentric GUI doesn't support this feature.</p>
+<h2 id="no-bundled-extensions">No Bundled Extensions</h2>
+<p>Some of the NUnit V2 packages bundled extensions, which provided additional features. The TestCentric GUI does not do this, which may confuse some
+users. Any required extensions will need to be installed separately in order to retain the functionality they provide. Just as for the NUnit console
+runner, any extensions must be installed using the same package type used for the GUI itself. Usually this means either a nuget or a chocolatey
+install. We recommend chocolatey. In particular...</p>
+<ul>
+<li>Opening NUnit projects requires the NUnit Project Loader extension.</li>
+<li>Opening VS projects and solutions requires the NUnit VS Project Loader extension.</li>
+</ul>
 
 
                                         </div>
                                 <div class="col-lg-2 p-md-0 m-md-0 bg-body">
                                     <div id="right-sidebar" class="sidebar px-0 px-md-3 pt-3">
-        <div class=" mb-3 sidebar-root">
-            <div class="sidebar-nav-item sidebar-header">On This Page</div>
-            <div class="sidebar-nav-children">
-                    <div class="sidebar-nav-item"><a href="#normal-stop">Normal Stop</a></div>
-                    <div class="sidebar-nav-item"><a href="#forced-stop">Forced Stop</a></div>
-                    <div class="sidebar-nav-item"><a href="#last-resort">Last Resort</a></div>
-            </div>
-        </div>
                                     </div>
                                 </div>
                             </div>
