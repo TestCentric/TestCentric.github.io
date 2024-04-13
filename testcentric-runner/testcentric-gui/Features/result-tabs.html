@@ -250,7 +250,15 @@ Result Tabs
 <h1 id="text-output">Text Output</h1>
 <hr />
 <img class="float-right" alt="Text Output Tab" src="../img/textOutputTab.png" />
-<p>The <strong>Text Output</strong> tab displays text output from the tests in a format similar to that shown by the console runner, including labels for the tests if specified by the user in the settings dialog.</p>
+<p>The <strong>Text Output</strong> tab displays text output from the tests in a format similar to that shown by the console runner, including labels for the tests if specified by the user in the settings dialog. The following sections describe each type of output and how it appears. The times shown in the text are part of the user message and are not created by either NUnit or TestCentric.</p>
+<h2 id="labels">Labels</h2>
+<p>Any labels specified by the user in the settings dialog appear in the appropriate place in the output. &quot;Before&quot; labels appear before the remaining test output. &quot;After labels&quot; appear at the end of all output. In the image, both types of labels are displayed.</p>
+<h2 id="progress-output">Progress Output</h2>
+<p>Any output sent to <code>TestContext.Progress</code> is shown as soon as it is received. The first five lines after the initial label were produced in this way.</p>
+<h2 id="error-output">Error Output</h2>
+<p>Any output sent to <code>TestContext.Error</code> or written to <code>stderr</code> is shown as soon as it is received. The example image does not include this type of output.</p>
+<h2 id="standard-output">Standard Output</h2>
+<p>Any output sent to <code>TestContext.Out</code> or written to <code>stdout</code> is captured and added to the XML result file. When the test case ends, all that output is echoed to the Text Output screen and so appears after the other output types. The remainder of the output lines were produced in this way.</p>
 
 
                                         </div>
@@ -262,6 +270,12 @@ Result Tabs
                     <div class="sidebar-nav-item"><a href="#test-properties">Test Properties</a></div>
                     <div class="sidebar-nav-item"><a href="#errors-and-failures">Errors and Failures</a></div>
                     <div class="sidebar-nav-item"><a href="#text-output">Text Output</a></div>
+                        <div class="sidebar-nav-children">
+                                <div class="sidebar-nav-item"><a href="#labels">Labels</a></div>
+                                <div class="sidebar-nav-item"><a href="#progress-output">Progress Output</a></div>
+                                <div class="sidebar-nav-item"><a href="#error-output">Error Output</a></div>
+                                <div class="sidebar-nav-item"><a href="#standard-output">Standard Output</a></div>
+                        </div>
             </div>
         </div>
                                     </div>
